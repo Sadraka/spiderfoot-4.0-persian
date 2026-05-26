@@ -12,13 +12,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const togglerText = document.getElementById("toggler-text");
   let link = document.createElement("link");
 
-  if (localStorage.getItem("mode") === "Light Mode") {
-    togglerText.innerText = "Dark Mode";
-    document.getElementById("theme-toggler").checked = true; // ensure theme toggle is set to dark
-  } else { // initial mode ist null
-    togglerText.innerText = "Light Mode";
-    document.getElementById("theme-toggler").checked = false; // ensure theme toggle is set to light
-  }
+  var updateTogglerText = function() {
+    if (localStorage.getItem("mode") === "Light Mode") {
+      togglerText.innerText = t("dark_mode", "حالت تاریک");
+      document.getElementById("theme-toggler").checked = true;
+    } else {
+      togglerText.innerText = t("light_mode", "حالت روشن");
+      document.getElementById("theme-toggler").checked = false;
+    }
+  };
+
+  // Run once immediately (t() may not have translations yet)
+  updateTogglerText();
+  // Re-run after translations are guaranteed to be loaded
+  setTimeout(updateTogglerText, 500);
 
 
   themeToggler.addEventListener("click", () => {

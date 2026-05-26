@@ -226,7 +226,11 @@ function showlisttable(types, filter, data) {
         table += "<td><a href=" + docroot + "/scaninfo?id=" + data[i][0] + ">" + data[i][1] + "</a></td>";
         table += "<td>" + data[i][2] + "</td>";
         table += "<td>" + data[i][3] + "</td>";
-        table += "<td>" + (translations && translations[data[i][5].toLowerCase()] ? translations[data[i][5].toLowerCase()] : data[i][5]) + "</td>";
+        var finishedVal = data[i][4];
+        if (finishedVal && (finishedVal.toLowerCase() === "not yet" || finishedVal === "-" || finishedVal === "")) {
+            finishedVal = t("not_yet", "Not yet");
+        }
+        table += "<td>" + finishedVal + "</td>";
 
         var statusy = "";
 
@@ -242,7 +246,8 @@ function showlisttable(types, filter, data) {
             statusy = "alert-info";
         }
         var statusLabel = data[i][6].toLowerCase();
-        table += "<td class='text-center'><span class='badge " + statusy + "' data-translate='" + statusLabel + "'>" + data[i][6] + "</span></td>";
+        var statusText = t(statusLabel, data[i][6]);
+        table += "<td class='text-center'><span class='badge " + statusy + "'>" + statusText + "</span></td>";
         table += "<td class='text-center'>" + data[i][7] + "</td>";
         table += "<td class='text-center'>";
         table += "<span class='badge alert-danger'>" + data[i][8]['HIGH'] + "</span>";
