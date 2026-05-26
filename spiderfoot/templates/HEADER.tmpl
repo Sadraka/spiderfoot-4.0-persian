@@ -2,13 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>SpiderFoot v${version}</title>
+    <title data-translate="project_name">Advanced Analytical Junction</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" href="${docroot}/static/img/spiderfoot-icon.png">
+    <link rel="icon" type="image/png" href="${docroot}/static/img/logo-light.jpg">
 
     <script type='text/javascript' src='${docroot}/static/js/spiderfoot.js'></script>
+    <script type='text/javascript' src='${docroot}/static/js/translate.js'></script>
     <script type='text/javascript' src='${docroot}/static/js/viz.js'></script>
 
     <link href="${docroot}/static/css/spiderfoot.css" rel="stylesheet">
@@ -46,8 +47,8 @@
         <span class="icon-bar"></span>
       </button>
     </span>
-      <a class="navbar-brand brand-logo light" href="${docroot}/"><img class="spiderfoot-header-image" src="${docroot}/static/img/spiderfoot-header.png" /></a>
-      <a class="navbar-brand brand-logo dark" href="${docroot}/"><img class="spiderfoot-header-image" src="${docroot}/static/img/spiderfoot-header-dark.png" /></a>
+      <a class="navbar-brand brand-logo light" href="${docroot}/"><img class="spiderfoot-header-image" src="${docroot}/static/img/logo-light.jpg" /></a>
+      <a class="navbar-brand brand-logo dark" href="${docroot}/"><img class="spiderfoot-header-image" src="${docroot}/static/img/logo-dark.jpg" /></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -58,18 +59,18 @@
     class="active"
 % endif
 class="nav-item"
-><a id="nav-link-newscan" href="${docroot}/newscan"><i class="glyphicon glyphicon-screenshot"></i>&nbsp;New Scan</a></li>
+><a id="nav-link-newscan" href="${docroot}/newscan"><i class="glyphicon glyphicon-screenshot"></i>&nbsp;<span data-translate="new_scan">New Scan</span></a></li>
         <li 
 % if pageid == "SCANLIST": 
     class="active"
 % endif
 class="nav-item"
-><a id="nav-link-scans" href="${docroot}/"><i class="glyphicon glyphicon-list"></i>&nbsp;Scans</a></li>
+><a id="nav-link-scans" href="${docroot}/"><i class="glyphicon glyphicon-list"></i>&nbsp;<span data-translate="scans">Scans</span></a></li>
         <li
 % if pageid == "SETTINGS":
     class="active"
 %endif
-class="nav-item"><a id="nav-link-settings" href="${docroot}/opts" class="nav-link"><i class="glyphicon glyphicon-wrench"></i>&nbsp;Settings</a></li>
+class="nav-item"><a id="nav-link-settings" href="${docroot}/opts" class="nav-link"><i class="glyphicon glyphicon-wrench"></i>&nbsp;<span data-translate="settings">Settings</span></a></li>
  
       </ul>
 
@@ -78,15 +79,18 @@ class="nav-item"><a id="nav-link-settings" href="${docroot}/opts" class="nav-lin
       
       <ul class="nav navbar-nav navbar-right">
         <li>
+          <button id="lang-switcher" class="btn btn-default navbar-btn" style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding: 4px 12px; font-size: 12px; font-weight: bold;">فارسی</button>
+        </li>
+        <li>
         <!-- Theme toggler -->
-        <span id="toggler-text">Dark Mode</span>
+        <span id="toggler-text" data-translate="dark_mode">Dark Mode</span>
         <label id="switcher4" class="switch">
           <input id="theme-toggler" class="theme-toggler" type="checkbox">
           <span class="slider round"></span>
         </label>
       </li>
 
-        <li class="nav-item"><a href="#aboutmodal" data-toggle="modal" data-target="#aboutmodal"><i class="glyphicon glyphicon-info-sign"></i>&nbsp;About</a></li>
+        <li class="nav-item"><a href="#aboutmodal" data-toggle="modal" data-target="#aboutmodal"><i class="glyphicon glyphicon-info-sign"></i>&nbsp;<span data-translate="about">About</span></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -97,23 +101,17 @@ class="nav-item"><a id="nav-link-settings" href="${docroot}/opts" class="nav-lin
     <div class="modal-content">
 
     <div class="modal-header">
-      <h3 class="modal-title">SpiderFoot ${version}</h3>
+      <h3 class="modal-title" data-translate="about_title">Advanced Analytical Junction</h3>
     </div>
 
     <div class="modal-body">
-    <p>SpiderFoot is an open source, GPL-licensed footprinting tool, created by <a href='https://twitter.com/binarypool' target=_new>Steve Micallef</a>. It is designed to be easy to use, fast and extensible.</p>
-    <p>If you have any bugs to report, or requests for enhancements, please contact the support mailing list at <a href=mailto:support@spiderfoot.net>support@spiderfoot.net</a>.
-    <p>You are running version <b>${version}</b>.</p>
-    <p> Visit the project website at <a href='https://www.spiderfoot.net/r.php?u=aHR0cHM6Ly93d3cuc3BpZGVyZm9vdC5uZXQv&s=os_int' target=_new>https://www.spiderfoot.net/</a>.</p>
-    <p> View the documentation at <a href='https://www.spiderfoot.net/documentation/' target=_new>https://www.spiderfoot.net/documentation/</a>.</p>
-    <p> Check out the Github repo at <a href='https://github.com/smicallef/spiderfoot' target=_new>https://github.com/smicallef/spiderfoot</a>.</p>
-    <p> Latest updates @ Twitter <a href='https://twitter.com/spiderfoot' target=_new>https://twitter.com/spiderfoot</a>.</p>
-    <p> Join the community in our <a href='https://discord.gg/vyvztrG' target=_new>Discord Server</a>.</p>
-    <p> Want something cloud-based with more capabilities? <a href='https://www.spiderfoot.net/r.php?u=aHR0cHM6Ly93d3cuc3BpZGVyZm9vdC5uZXQvaHgvCg==&s=os_int' target=_new>Check out SpiderFoot HX</a>.</p>
+    <p data-translate="about_body_1">Advanced Analytical Junction is a professional open-source intelligence and footprinting tool designed to be easy to use, fast, and extensible.</p>
+    <p data-translate="about_body_2">For support, bug reports, or feature requests, contact your internal system administrator.</p>
+    <p><span data-translate="about_version">You are running version</span> <b>${version}</b>.</p>
     </div>
 
     <div class="modal-footer">
-      <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary" data-dismiss="modal" data-translate="about_close">Close</button>
     </div>
 
     </div>

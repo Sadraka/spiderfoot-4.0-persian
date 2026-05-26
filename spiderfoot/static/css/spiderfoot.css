@@ -201,3 +201,65 @@ input:checked + .slider:before {
 .download-button {
   padding: 6px 12px !important;
 }
+
+/* RTL OVERRIDES FOR PERSIAN LANGUAGE */
+html[dir="rtl"] body {
+  direction: rtl;
+  text-align: right;
+  font-family: Tahoma, "Vazir", "Segoe UI", sans-serif;
+}
+html[dir="rtl"] .brand-logo {
+  float: right;
+  padding-left: 20px;
+  padding-right: 0;
+}
+html[dir="rtl"] .navbar-nav {
+  float: right !important;
+  margin: 0;
+}
+html[dir="rtl"] .navbar-nav > li {
+  float: right !important;
+}
+html[dir="rtl"] .navbar-right {
+  float: left !important;
+}
+html[dir="rtl"] .pull-right {
+  float: left !important;
+}
+html[dir="rtl"] .pull-left {
+  float: right !important;
+}
+html[dir="rtl"] th, html[dir="rtl"] td {
+  text-align: right !important;
+}
+html[dir="rtl"] .alertify-notifier {
+  left: 10px !important;
+  right: auto !important;
+}
+html[dir="rtl"] .text-right {
+  text-align: left !important;
+}
+html[dir="rtl"] .text-left {
+  text-align: right !important;
+}
+html[dir="rtl"] .input-group-addon:first-child {
+  border-left: 0;
+  border-right: 1px solid #ccc;
+  border-radius: 0 4px 4px 0;
+}
+html[dir="rtl"] .input-group .form-control:last-child {
+  border-radius: 4px 0 0 4px;
+}
+html[dir="rtl"] .col-md-1, html[dir="rtl"] .col-md-2, html[dir="rtl"] .col-md-3, html[dir="rtl"] .col-md-4, html[dir="rtl"] .col-md-5, html[dir="rtl"] .col-md-6, html[dir="rtl"] .col-md-7, html[dir="rtl"] .col-md-8, html[dir="rtl"] .col-md-9, html[dir="rtl"] .col-md-10, html[dir="rtl"] .col-md-11, html[dir="rtl"] .col-md-12 {
+  float: right !important;
+}
+html[dir="rtl"] .col-sm-1, html[dir="rtl"] .col-sm-2, html[dir="rtl"] .col-sm-3, html[dir="rtl"] .col-sm-4, html[dir="rtl"] .col-sm-5, html[dir="rtl"] .col-sm-6, html[dir="rtl"] .col-sm-7, html[dir="rtl"] .col-sm-8, html[dir="rtl"] .col-sm-9, html[dir="rtl"] .col-sm-10, html[dir="rtl"] .col-sm-11, html[dir="rtl"] .col-sm-12 {
+  float: right !important;
+}
+html[dir="rtl"] .modal-footer {
+  text-align: left !important;
+}
+html[dir="rtl"] .close {
+  float: left !important;
+}
+

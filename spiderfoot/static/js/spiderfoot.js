@@ -1,12 +1,8 @@
 //-------------------------------------------------------------------------------
 // Name:         spiderfoot.js
-// Purpose:      All the javascript code for the spiderfoot aspects of the UI.
+// Purpose:      All the javascript code for Advanced Analytical Junction UI.
 //
-// Author:      Steve Micallef <steve@binarypool.com>
-//
-// Created:     03/10/2012
-// Copyright:   (c) Steve Micallef 2012
-// Licence:     GPL
+// Copyright:   (c) 2026 Advanced Analytical Junction. All rights reserved.
 //-------------------------------------------------------------------------------
 
 // Toggler for theme

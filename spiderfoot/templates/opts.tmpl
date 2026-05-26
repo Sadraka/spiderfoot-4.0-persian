@@ -1,6 +1,6 @@
 <%include file="HEADER.tmpl"/>
     <script type='text/javascript' src='${docroot}/static/js/spiderfoot.opts.js'></script>
-    <h2>Settings</h2>
+    <h2 data-translate="settings_title">Settings</h2>
 % if updated:
 <div class="alert alert-success">
  <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -13,10 +13,10 @@
     <input type=hidden id='allopts' name='allopts' value=''>
     <input type=hidden id='token' name='token' value="${token}">
     <input type="file" name='configFile' id="configFile" class='hidden' onChange='$("#savesettingsform").submit()' />
-    <button id="btn-save-changes" class='btn btn-primary' type="submit">Save Changes</button>
+    <button id="btn-save-changes" class='btn btn-primary' type="submit" data-translate="save_changes">Save Changes</button>
     <button id="btn-import-config" class='btn btn-info'>Import API Keys</button>
     <button id="btn-opt-export" class='btn btn-info'>Export API Keys</button>
-    <button id="btn-reset-settings" class='btn btn-danger'>Reset to Factory Default</button>
+    <button id="btn-reset-settings" class='btn btn-danger' data-translate="reset_defaults">Reset to Factory Default</button>
 <br><br>
 </div>
 

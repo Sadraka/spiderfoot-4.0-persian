@@ -357,7 +357,7 @@ class SpiderFootWebUi:
                 row[4]
             ])
 
-        cherrypy.response.headers['Content-Disposition'] = f"attachment; filename=SpiderFoot-{id}.log.csv"
+        cherrypy.response.headers['Content-Disposition'] = f"attachment; filename=AdvancedAnalyticalJunction-{id}.log.csv"
         cherrypy.response.headers['Content-Type'] = "application/csv"
         cherrypy.response.headers['Pragma'] = "no-cache"
         return fileobj.getvalue().encode('utf-8')
@@ -387,7 +387,7 @@ class SpiderFootWebUi:
                 datafield = str(row[1]).replace("<SFURL>", "").replace("</SFURL>", "")
                 rows.append([lastseen, str(row[4]), str(row[3]), str(row[2]), row[13], datafield])
 
-            fname = "SpiderFoot.xlsx"
+            fname = "AdvancedAnalyticalJunction.xlsx"
             cherrypy.response.headers['Content-Disposition'] = f"attachment; filename={fname}"
             cherrypy.response.headers['Content-Type'] = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
             cherrypy.response.headers['Pragma'] = "no-cache"
@@ -405,7 +405,7 @@ class SpiderFootWebUi:
                 datafield = str(row[1]).replace("<SFURL>", "").replace("</SFURL>", "")
                 parser.writerow([lastseen, str(row[4]), str(row[3]), str(row[2]), row[13], datafield])
 
-            fname = "SpiderFoot.csv"
+            fname = "AdvancedAnalyticalJunction.csv"
             cherrypy.response.headers['Content-Disposition'] = f"attachment; filename={fname}"
             cherrypy.response.headers['Content-Type'] = "application/csv"
             cherrypy.response.headers['Pragma'] = "no-cache"
@@ -452,9 +452,9 @@ class SpiderFootWebUi:
                             str(row[2]), row[13], datafield])
 
             if len(ids.split(',')) > 1 or scan_name == "":
-                fname = "SpiderFoot.xlsx"
+                fname = "AdvancedAnalyticalJunction.xlsx"
             else:
-                fname = scan_name + "-SpiderFoot.xlsx"
+                fname = scan_name + "-AdvancedAnalyticalJunction.xlsx"
 
             cherrypy.response.headers['Content-Disposition'] = f"attachment; filename={fname}"
             cherrypy.response.headers['Content-Type'] = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
@@ -475,9 +475,9 @@ class SpiderFootWebUi:
                                 str(row[2]), row[13], datafield])
 
             if len(ids.split(',')) > 1 or scan_name == "":
-                fname = "SpiderFoot.csv"
+                fname = "AdvancedAnalyticalJunction.csv"
             else:
-                fname = scan_name + "-SpiderFoot.csv"
+                fname = scan_name + "-AdvancedAnalyticalJunction.csv"
 
             cherrypy.response.headers['Content-Disposition'] = f"attachment; filename={fname}"
             cherrypy.response.headers['Content-Type'] = "application/csv"
@@ -513,7 +513,7 @@ class SpiderFootWebUi:
                     continue
                 datafield = str(row[1]).replace("<SFURL>", "").replace("</SFURL>", "")
                 rows.append([row[0], str(row[10]), str(row[3]), str(row[2]), row[11], datafield])
-            cherrypy.response.headers['Content-Disposition'] = "attachment; filename=SpiderFoot.xlsx"
+            cherrypy.response.headers['Content-Disposition'] = "attachment; filename=AdvancedAnalyticalJunction.xlsx"
             cherrypy.response.headers['Content-Type'] = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
             cherrypy.response.headers['Pragma'] = "no-cache"
             return self.buildExcel(rows, ["Updated", "Type", "Module", "Source",
@@ -528,7 +528,7 @@ class SpiderFootWebUi:
                     continue
                 datafield = str(row[1]).replace("<SFURL>", "").replace("</SFURL>", "")
                 parser.writerow([row[0], str(row[10]), str(row[3]), str(row[2]), row[11], datafield])
-            cherrypy.response.headers['Content-Disposition'] = "attachment; filename=SpiderFoot.csv"
+            cherrypy.response.headers['Content-Disposition'] = "attachment; filename=AdvancedAnalyticalJunction.csv"
             cherrypy.response.headers['Content-Type'] = "application/csv"
             cherrypy.response.headers['Pragma'] = "no-cache"
             return fileobj.getvalue().encode('utf-8')
@@ -581,9 +581,9 @@ class SpiderFootWebUi:
                 })
 
         if len(ids.split(',')) > 1 or scan_name == "":
-            fname = "SpiderFoot.json"
+            fname = "AdvancedAnalyticalJunction.json"
         else:
-            fname = scan_name + "-SpiderFoot.json"
+            fname = scan_name + "-AdvancedAnalyticalJunction.json"
 
         cherrypy.response.headers['Content-Disposition'] = f"attachment; filename={fname}"
         cherrypy.response.headers['Content-Type'] = "application/json; charset=utf-8"
@@ -619,14 +619,14 @@ class SpiderFootWebUi:
             return SpiderFootHelpers.buildGraphJson([root], data)
 
         if not scan_name:
-            fname = "SpiderFoot.gexf"
+            fname = "AdvancedAnalyticalJunction.gexf"
         else:
-            fname = scan_name + "SpiderFoot.gexf"
+            fname = scan_name + "AdvancedAnalyticalJunction.gexf"
 
         cherrypy.response.headers['Content-Disposition'] = f"attachment; filename={fname}"
         cherrypy.response.headers['Content-Type'] = "application/gexf"
         cherrypy.response.headers['Pragma'] = "no-cache"
-        return SpiderFootHelpers.buildGraphGexf([root], "SpiderFoot Export", data)
+        return SpiderFootHelpers.buildGraphGexf([root], "Advanced Analytical Junction Export", data)
 
     @cherrypy.expose
     def scanvizmulti(self: 'SpiderFootWebUi', ids: str, gexf: str = "1") -> str:
