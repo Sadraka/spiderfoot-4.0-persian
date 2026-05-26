@@ -515,7 +515,7 @@
                         return false; 
                     }, 
                     format: function(s) { 
-                        return s.toLowerCase().replace(/high/,3).replace(/medium/,2).replace(/low/,1).replace(/info/,0); 
+                        return s.toLowerCase().replace(/high|بالا/,3).replace(/medium|متوسط/,2).replace(/low|پایین/,1).replace(/info|اطلاعات/,0); 
                     }, 
                     type: 'numeric' 
                 });

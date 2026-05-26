@@ -275,13 +275,13 @@ function showlisttable(types, filter, data) {
     table += '<button type="button" class="btn btn-default next"><span class="glyphicon glyphicon-forward"></span></button>';
     table += '<button type="button" class="btn btn-default last"><span class="glyphicon glyphicon-step-forward"></span></button>';
     table += '</div>';
-    table += '<select class="form-control input-sm pagesize" title="Select page size">';
+    table += '<select class="form-control input-sm pagesize" title="' + t("select_page_size", "Select page size") + '">';
     table += '<option selected="selected" value="10">10</option>';
     table += '<option value="20">20</option>';
     table += '<option value="30">30</option>';
-    table += '<option value="all">All Rows</option>';
+    table += '<option value="all">' + t("all_rows", "All Rows") + '</option>';
     table += '</select>';
-    table += '<select class="form-control input-sm pagenum" title="Select page number"></select>';
+    table += '<select class="form-control input-sm pagenum" title="' + t("select_page_number", "Select page number") + '"></select>';
     table += '<span class="pagedisplay pull-right"></span>';
     table += '</th></tr></tfoot>';
     table += "</table>";
@@ -293,7 +293,7 @@ function showlisttable(types, filter, data) {
     $("#scanlist").tablesorter().tablesorterPager({
       container: $(".ts-pager"),
       cssGoto: ".pagenum",
-      output: 'Scans {startRow} - {endRow} / {filteredRows} ({totalRows})'
+      output: t("scans_pager_output", 'Scans {startRow} - {endRow} / {filteredRows} ({totalRows})')
     });
     $("[class^=tooltip]").remove();
 
