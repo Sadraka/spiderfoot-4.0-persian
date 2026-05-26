@@ -107,14 +107,22 @@
 
     <table class='table table-bordered table-striped'>
     <tbody>
-    <tr><td data-translate="summary">Summary</td><td>${summary}<br/><br/>${description}</td></tr>
+    <tr><td data-translate="summary">Summary</td><td><span data-translate="module_${mod}_descr">${summary}</span><br/><br/><span data-translate="module_${mod}_datasource_descr">${description}</span></td></tr>
 
     % if categories:
-    <tr><td data-translate="categories">Categories:</td><td>${', '.join(categories)}</td></tr>
+    <tr><td data-translate="categories">Categories:</td><td>
+        % for i, cat in enumerate(categories):
+            <span data-translate="category_${cat.replace(' ', '_').replace(',', '').lower()}">${cat}</span>${'' if i == len(categories)-1 else ', '}
+        % endfor
+    </td></tr>
     % endif
 
     % if labels:
-    <tr><td data-translate="tags">Tags:</td><td>${', '.join(labels)}</td></tr>
+    <tr><td data-translate="tags">Tags:</td><td>
+        % for i, label in enumerate(labels):
+            <span data-translate="tag_${label.replace(' ', '_').replace(',', '').lower()}">${label}</span>${'' if i == len(labels)-1 else ', '}
+        % endfor
+    </td></tr>
     % endif
 
     % if website:

@@ -8,6 +8,7 @@ spiderfoot.crt
 spiderfoot.key
 translate_opts.py
 translate_modules.py
+translate_datasource_descrs.py
 /venv
 spiderfoot/static/node_modules/*
 
