@@ -15,7 +15,6 @@
   "browse": "Browse",
   "graph": "Graph",
   "scan_settings": "Scan Settings",
-  
   "new_scan_title": "New Scan",
   "scan_name": "Scan Name",
   "scan_target": "Scan Target",
@@ -27,7 +26,6 @@
   "select_all": "Select All",
   "deselect_all": "Deselect All",
   "run_scan": "Run Scan",
-  
   "scans_title": "Scans",
   "refresh": "Refresh",
   "name": "Name",
@@ -36,11 +34,9 @@
   "finished": "Finished",
   "status": "Status",
   "action": "Action",
-  
   "settings_title": "Settings",
   "save_changes": "Save Changes",
   "reset_defaults": "Reset Defaults",
-  
   "scan_info": "Scan Info",
   "visualize": "Visualize",
   "rerun_scan": "Rerun Scan",
@@ -51,7 +47,6 @@
   "export_csv": "Export CSV",
   "export_xlsx": "Export XLSX",
   "export_gexf": "Export GEXF",
-  
   "summary": "Summary",
   "browse_by": "Browse By",
   "data_type": "Data Type",
@@ -59,7 +54,6 @@
   "logs": "Logs",
   "correlation_rules": "Correlation Rules",
   "correlation_rules_triggered": "Correlation Rules Triggered",
-  
   "filter": "Filter",
   "clear": "Clear",
   "unique": "Unique",
@@ -68,7 +62,6 @@
   "rule": "Rule",
   "risk": "Risk",
   "events": "Events",
-  
   "created": "Created",
   "starting": "Starting",
   "initializing": "Initializing",
@@ -78,7 +71,6 @@
   "aborted": "Aborted",
   "failed": "Failed",
   "error-failed": "Error/Failed",
-  
   "error": "Error",
   "warning": "Warning",
   "info": "Info",
@@ -90,7 +82,6 @@
   "of": "of",
   "entries": "entries",
   "global": "Global",
-  
   "global_settings": "Global Settings",
   "value": "Value",
   "option": "Option",
@@ -98,12 +89,10 @@
   "export_api_keys": "Export API Keys",
   "true_val": "True",
   "false_val": "False",
-  
   "all": "All",
   "footprint": "Footprint",
   "investigate": "Investigate",
   "passive": "Passive",
-  
   "usecase_all_title": "All",
   "usecase_all_desc": "All modules will be enabled (slow) but every possible piece of information about the target will be obtained and analysed.",
   "usecase_footprint_title": "Footprint",
@@ -112,7 +101,6 @@
   "usecase_investigate_desc": "Some basic footprinting will be performed in addition to querying of blacklists and other sources that may have information about your target's maliciousness.",
   "usecase_passive_title": "Passive",
   "usecase_passive_desc": "As much information will be gathered without touching the target or their affiliates, therefore only modules that do not touch the target will be enabled.",
-  
   "_debug": "Enable debugging?",
   "_maxthreads": "Max number of modules to run concurrently",
   "_useragent": "User-Agent string to use for HTTP requests",
@@ -385,4 +373,5 @@
   "module_sfp_portscan_descr": "Scan for open TCP ports.",
   "need_select_record": "You need to select at least one record.",
   "error_set_fp": "There was an error setting false positives because: ",
-  "error_bug_report": "<br/>If you believe this to be an error, please log out and log back in, and if the problem repeats, report this as a bug."
+  "error_bug_report": "<br/>If you believe this to be an error, please log out and log back in, and if the problem repeats, report this as a bug , "
+}
