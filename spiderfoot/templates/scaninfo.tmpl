@@ -25,7 +25,7 @@
     </div>
     <div class='btn-group pull-right'>
         <div id='btn-search' class='input-group pull-right'>
-          <input class='form-control' id='searchvalue' type='text' placeholder='Search...' data-toggle='popover' data-html='true' data-animation='true' data-title='Usage' data-content="Supply a regular expression encapsulated in '/', e.g. <i>/searchregex/</i> or a simple wildcard search, e.g. <i>*string*</i> or an exact value, e.g. <i>string</i>.<br /><br /><b>Note</b> that the current scope is what's searched.">
+          <input class='form-control' id='searchvalue' type='text' placeholder='Search...' data-toggle='popover' data-html='true' data-animation='true' data-title='Usage' data-content="Supply a regular expression encapsulated in '/', e.g. <i>/searchregex/</i> or a simple wildcard search, e.g. <i>*string*</i> or an exact value, e.g. <i>string</i>.<br /><br /><b>Note</b> that the current scope is what's searched." data-translate="search">
             <div class='input-group-btn' style='width: 0px'> <!-- Chrome fix -->
               <button class='btn btn-primary' id='searchbutton' type='button' onClick="$('#btn-search').popover('toggle');searchDirector('${id}')">
                 <i class='glyphicon glyphicon-search glyphicon glyphicon-white'></i>
@@ -34,34 +34,34 @@
         </div>
     </div>
         <div class="btn-group pull-right" role="group">
-            <button id='btn-refresh' rel="tooltip" title="Refresh" class="btn btn-success btn-default" onClick='refresh()'><i class='glyphicon glyphicon-refresh glyphicon glyphicon-white'></i></button>
-            <button id='btn-download-logs' rel="tooltip" data-title="Download Scan Logs" class="btn btn-default download-button" onClick='downloadLogs("${id}")'><i class='glyphicon glyphicon-download-alt glyphicon glyphicon-white'></i></button>
-            <a id='btn-export' rel="tooltip" data-title="Export Data" class="btn btn-default dropdown-toggle download-button" data-toggle="dropdown"><i class='glyphicon glyphicon-download-alt glyphicon glyphicon-white'></i></a>
+            <button id='btn-refresh' rel="tooltip" title="Refresh" class="btn btn-success btn-default" onClick='refresh()' data-translate="refresh"><i class='glyphicon glyphicon-refresh glyphicon glyphicon-white'></i></button>
+            <button id='btn-download-logs' rel="tooltip" data-title="Download Scan Logs" class="btn btn-default download-button" onClick='downloadLogs("${id}")' data-translate="download_scan_logs"><i class='glyphicon glyphicon-download-alt glyphicon glyphicon-white'></i></button>
+            <a id='btn-export' rel="tooltip" data-title="Export Data" class="btn btn-default dropdown-toggle download-button" data-toggle="dropdown" data-translate="export_data"><i class='glyphicon glyphicon-download-alt glyphicon glyphicon-white'></i></a>
             <ul class="dropdown-menu">
               <li><a class='link' onClick='exportEventData("${id}", currentType, "csv")'>CSV</a></li>
               <li><a class='link' onClick='exportEventData("${id}", currentType, "excel")'>Excel</a></li>
             </ul>
         </div> 
         <div id='customtabview' role="group" class="btn-group pull-right">
-         <a id='btn-fullview' rel="tooltip" data-title="Full Data View" class="btn btn-default active" onClick='browseUpdate("full")'><i class='glyphicon glyphicon-th glyphicon glyphicon-white'></i></a>
-         <a id='btn-uniqueview' rel="tooltip" data-title="Unique Data View" class="btn btn-default" onClick='browseUpdate("unique")'><i class='glyphicon glyphicon-align-justify glyphicon glyphicon-white'></i></a>
-         <a id='btn-vizview' rel="tooltip" data-title="Visualize" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><i class='glyphicon glyphicon-picture glyphicon glyphicon-white'></i></a>
-         <ul class="dropdown-menu">
-            <li><a class='link' onClick='browseUpdate("viz-bubble-data")'>Bubble (Data Element)</a></li>
-            <li><a class='link' onClick='browseUpdate("viz-bubble-source")'>Bubble (Source Data Element)</a></li>
-            <li><a class='link' onClick='browseUpdate("viz-dendro")'>Discovery Path</a></li>
-         </ul>
+          <a id='btn-fullview' rel="tooltip" data-title="Full Data View" class="btn btn-default active" onClick='browseUpdate("full")' data-translate="full_data_view"><i class='glyphicon glyphicon-th glyphicon glyphicon-white'></i></a>
+          <a id='btn-uniqueview' rel="tooltip" data-title="Unique Data View" class="btn btn-default" onClick='browseUpdate("unique")' data-translate="unique_data_view"><i class='glyphicon glyphicon-align-justify glyphicon glyphicon-white'></i></a>
+          <a id='btn-vizview' rel="tooltip" data-title="Visualize" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-translate="visualize"><i class='glyphicon glyphicon-picture glyphicon glyphicon-white'></i></a>
+          <ul class="dropdown-menu">
+             <li><a class='link' onClick='browseUpdate("viz-bubble-data")' data-translate="bubble_data">Bubble (Data Element)</a></li>
+             <li><a class='link' onClick='browseUpdate("viz-bubble-source")' data-translate="bubble_source">Bubble (Source Data Element)</a></li>
+             <li><a class='link' onClick='browseUpdate("viz-dendro")' data-translate="discovery_path">Discovery Path</a></li>
+          </ul>
         </div>
         <div id='customvizview' class="btn-group pull-right">
-         <a id='btn-random' rel="tooltip" data-title="Random Layout" class="btn btn-default active" onClick='vizUpdate("random")'><b>R</b></a>
-         <a id='btn-forceatlas' rel="tooltip" data-title="Force Layout" class="btn btn-default" onClick='vizUpdate("force")'><b>F</b></a>
-         <a id='btn-saveimage' rel="tooltip" data-title="Save Image" class="btn btn-default dropdown-toggle" onClick='vizUpdate("download")'><i class='glyphicon glyphicon-picture glyphicon glyphicon-white'></i></a>
+          <a id='btn-random' rel="tooltip" data-title="Random Layout" class="btn btn-default active" onClick='vizUpdate("random")' data-translate="random_layout"><b>R</b></a>
+          <a id='btn-forceatlas' rel="tooltip" data-title="Force Layout" class="btn btn-default" onClick='vizUpdate("force")' data-translate="force_layout"><b>F</b></a>
+          <a id='btn-saveimage' rel="tooltip" data-title="Save Image" class="btn btn-default dropdown-toggle" onClick='vizUpdate("download")' data-translate="save_image"><i class='glyphicon glyphicon-picture glyphicon glyphicon-white'></i></a>
         </div>
         <div id='modifyactions' role="group" class="btn-group pull-right">
-            <a id='btn-setfp' rel="tooltip" data-title="Set/Unset False Positive flag" class="btn-warning btn btn-default dropdown-toggle" data-toggle="dropdown"><i class='glyphicon glyphicon-ban-circle glyphicon glyphicon-white'></i></a>
+            <a id='btn-setfp' rel="tooltip" data-title="Set/Unset False Positive flag" class="btn-warning btn btn-default dropdown-toggle" data-toggle="dropdown" data-translate="set_unset_fp"><i class='glyphicon glyphicon-ban-circle glyphicon glyphicon-white'></i></a>
             <ul class="dropdown-menu">
-                <li><a href='#' class='link' onClick='setFp(1)'>Set False Positive flag</a></li>
-                <li><a href='#' class='link' onClick='setFp(0)'>Unset False Positive flag</a></li>
+                <li><a href='#' class='link' onClick='setFp(1)' data-translate="set_fp">Set False Positive flag</a></li>
+                <li><a href='#' class='link' onClick='setFp(0)' data-translate="unset_fp">Unset False Positive flag</a></li>
             </ul>
         </div>
   </div>
@@ -109,7 +109,7 @@
         function setFp(flag) {
             sel = getSelected();
             if (sel.length == 0) {
-                alertify.error("You need to select at least one record.");
+                alertify.error(t("need_select_record", "You need to select at least one record."));
                 return false;
             }
             data = JSON.stringify(sel);
@@ -125,7 +125,7 @@
                     return;
                 }
                 if (ret[0] == "ERROR") {
-                    alertify.error("There was an error setting false positives because: " + ret[1] + "<br/>If you believe this to be an error, please log out and log back in, and if the problem repeats, report this as a bug.");
+                    alertify.error(t("error_set_fp", "There was an error setting false positives because: ") + ret[1] + t("error_bug_report", "<br/>If you believe this to be an error, please log out and log back in, and if the problem repeats, report this as a bug."));
                 }
             });
         }
@@ -204,7 +204,8 @@
                                     // for debug
                                     table += "</pre></td><td><pre class='table-border-bg-inherit'>";
                                     table += sf.replace_sfurltag(data[i][2]);
-                                    table += "</pre></td><td><pre class='table-border-bg-inherit'>" + data[i][3];
+                                    var modLabel = (window.translations && window.translations["module_" + data[i][3] + "_name"]) ? window.translations["module_" + data[i][3] + "_name"] : data[i][3];
+                                    table += "</pre></td><td><pre class='table-border-bg-inherit'>" + modLabel;
                                     table += "</pre></td><td><pre class='table-border-bg-inherit'>" + data[i][0];
                                     table += "</pre></td>";
                                     table += "</tr>";
@@ -450,7 +451,8 @@
                     table += sf.replace_sfurltag(data[i][1]);
                     table += "</pre></td><td><pre class='table-border-bg-inherit'>";
                     table += sf.replace_sfurltag(data[i][2]);
-                    table += "</pre></td><td><pre class='table-border-bg-inherit'>" + data[i][3];
+                    var modLabel = (window.translations && window.translations["module_" + data[i][3] + "_name"]) ? window.translations["module_" + data[i][3] + "_name"] : data[i][3];
+                    table += "</pre></td><td><pre class='table-border-bg-inherit'>" + modLabel;
                     table += "</pre></td><td><pre class='table-border-bg-inherit'>" + data[i][0];
                     table += "</pre></td>";
                     table += "</tr>";
@@ -678,7 +680,8 @@
                                 table += sf.replace_sfurltag(data[i][1]);
                                 table += "</pre></td><td><pre class='table-border-bg-inherit'>";
                                 table += sf.replace_sfurltag(data[i][2]);
-                                table += "</pre></td><td><pre class='table-border-bg-inherit'>" + data[i][3];
+                                var modLabel = (window.translations && window.translations["module_" + data[i][3] + "_name"]) ? window.translations["module_" + data[i][3] + "_name"] : data[i][3];
+                                table += "</pre></td><td><pre class='table-border-bg-inherit'>" + modLabel;
                                 table += "</pre></td><td><pre class='table-border-bg-inherit'>" + data[i][0];
                                 table += "</pre></td>";
                                 table += "</tr>";
@@ -855,14 +858,16 @@
             refresh = function() { viewScanConfig(instanceId); }
             sf.fetchData('${docroot}/scanopts', {'id': instanceId}, function(data) {
                 var statusLabel = data['meta'][5].toLowerCase();
+                var startedText = data['meta'][3] === "Not yet" ? t("not_yet", "Not yet") : data['meta'][3];
+                var completedText = data['meta'][4] === "Not yet" ? t("not_yet", "Not yet") : data['meta'][4];
                 table = "<div id='scansummary-content'>";
                 table += "<h4 data-translate='meta_information'>Meta Information</h4>";
                 table += "<table class='table table-bordered table-striped'>";
                 table += "<tr><td data-translate='name_colon'>Name:</td><td>" + data['meta'][0] + "</td></tr>";
                 table += "<tr><td data-translate='internal_id_colon'>Internal ID:</td><td>${id}</td></tr>";
                 table += "<tr><td data-translate='target_colon'>Target:</td><td>" + data['meta'][1] + "</td></tr>";
-                table += "<tr><td data-translate='started_colon'>Started:</td><td>" + data['meta'][3] + "</td></tr>";
-                table += "<tr><td data-translate='completed_colon'>Completed:</td><td>" + data['meta'][4] + "</td></tr>";
+                table += "<tr><td data-translate='started_colon'>Started:</td><td>" + startedText + "</td></tr>";
+                table += "<tr><td data-translate='completed_colon'>Completed:</td><td>" + completedText + "</td></tr>";
                 table += "<tr><td data-translate='status_colon'>Status:</td><td><span data-translate='" + statusLabel + "'>" + data['meta'][5] + "</span></td></tr>";
                 table += "</table>";
                 table += "<h4 data-translate='global_settings'>Global Settings</h4>";

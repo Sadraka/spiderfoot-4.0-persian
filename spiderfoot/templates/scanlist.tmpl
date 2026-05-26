@@ -4,30 +4,30 @@
 % if newscan:
 <div class="alert alert-success">
  <button type="button" class="close" data-dismiss="alert">&times;</button>
- <h4>Success!</h4>
- Scan '${newscan}' has successfully been initiated. Reload this page for up-to-date status on the scan.
+ <h4 data-translate="success">Success!</h4>
+ <span data-translate="new_scan_initiated_msg_prefix">Scan '</span>${newscan}<span data-translate="new_scan_initiated_msg_suffix">' has successfully been initiated. Reload this page for up-to-date status on the scan.</span>
 </div>
 % endif
 % if rerunscans:
 <div class="alert alert-success">
  <button type="button" class="close" data-dismiss="alert">&times;</button>
- <h4>Success!</h4>
- Scans have successfully been re-initiated as separate instances. Reload this page for up-to-date status on the scans.
+ <h4 data-translate="success">Success!</h4>
+ <span data-translate="scans_reinitiated_msg">Scans have successfully been re-initiated as separate instances. Reload this page for up-to-date status on the scans.</span>
 </div>
 % endif
 % if stoppedscan and len(errors) == 0:
 <div class="alert alert-warning">
  <button type="button" class="close" data-dismiss="alert">&times;</button>
- <h4>Scan aborted.</h4>
- Please allow a minute or two for the scan to cleanly shut itself down.
+ <h4 data-translate="scan_aborted_title">Scan aborted.</h4>
+ <span data-translate="scan_aborted_msg">Please allow a minute or two for the scan to cleanly shut itself down.</span>
 </div>
 % endif
 
 % if stoppedscan and len(errors) > 0:
 <div class="alert alert-warning">
  <button type="button" class="close" data-dismiss="alert">&times;</button>
- <h4>Error</h4>
- Some or all of the scans could not be aborted:<br>
+ <h4 data-translate="error">Error</h4>
+ <span data-translate="scans_could_not_abort_msg">Some or all of the scans could not be aborted:</span><br>
 <ul>
     % for err in errors:
         <li>${err}</li>

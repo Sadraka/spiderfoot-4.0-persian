@@ -134,7 +134,7 @@ function sf_viz_vbar(targetId, gdata) {
         .attr("y", 6)
         .attr("dy", "-50px")
         .style("text-anchor", "end")
-        .text("Percentage of Unique Elements");
+        .text(t("pct_unique_elements", "Percentage of Unique Elements"));
 
     svg.selectAll(".bar")
         .data(data)
@@ -155,9 +155,9 @@ function sf_viz_vbar(targetId, gdata) {
 
     function buildPopupMessage(data) {
         message = "<table>";
-        message += "<tr><td><b>Type:</b></td><td>" + data.name + "</td></tr>";
-        message += "<tr><td><b>Unique Elements:</b></td><td>" + data.counter + "</td></tr>";
-        message += "<tr><td><b>Total Elements:</b></td><td>" + data.total+ "</td></tr>";
+        message += "<tr><td><b>" + t("type", "Type") + ":</b></td><td>" + data.name + "</td></tr>";
+        message += "<tr><td><b>" + t("unique_elements", "Unique Elements") + ":</b></td><td>" + data.counter + "</td></tr>";
+        message += "<tr><td><b>" + t("total_elements", "Total Elements") + ":</b></td><td>" + data.total+ "</td></tr>";
         message += "</table>";
         return message;
     }
@@ -256,9 +256,9 @@ function sf_viz_dendrogram(targetId, data) {
         }
         data[1] = data[1].replace("<", "&lt;").replace(">", "&gt;");
         message = "<table>";
-        message += "<tr><td><b>Type:</b></td><td>" + data[10] + "</td></tr>";
-        message += "<tr><td><b>Source Module:</b></td><td>" + data[3] + "</td></tr>";
-        message += "<tr><td><b>Data:</b></td><td><pre>" + sf.remove_sfurltag(data[1])
+        message += "<tr><td><b>" + t("type", "Type") + ":</b></td><td>" + data[10] + "</td></tr>";
+        message += "<tr><td><b>" + t("source_module", "Source Module") + ":</b></td><td>" + data[3] + "</td></tr>";
+        message += "<tr><td><b>" + t("data", "Data") + ":</b></td><td><pre>" + sf.remove_sfurltag(data[1]);
         message += "</pre></td></tr>";
         message += "</table>";
         return message;
@@ -319,7 +319,7 @@ function sf_viz_bubble(targetId, plotData) {
                 }
             }   
         } catch (err) {
-            alert("Error encountered parsing supplied words.")
+            alert(t("error_parsing_words", "Error encountered parsing supplied words."));
         }
     }
 

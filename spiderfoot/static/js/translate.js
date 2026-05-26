@@ -1,3 +1,6 @@
+// Global translation helper
+window.t = (key, defaultText) => (window.translations && window.translations[key]) ? window.translations[key] : defaultText;
+
 // Determine language
 let lang = localStorage.getItem("lang") || "fa";
 

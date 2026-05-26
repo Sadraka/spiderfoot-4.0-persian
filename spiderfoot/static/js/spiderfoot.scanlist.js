@@ -44,49 +44,55 @@ function getSelected() {
 }
 
 function stopScan(id) {
-    alertify.confirm("Are you sure you wish to stop this scan?",
+    alertify.confirm(t("are_you_sure_stop", "Are you sure you wish to stop this scan?"),
     function(){
         sf.stopScan(id, reload);
-    }).set({title:"Stop scan?"});
+    }).set({title: t("stop_scan_title", "Stop scan?")});
 }
 
 function stopSelected() {
     ids = getSelected();
     if (!ids) {
-        alertify.message("Could not stop scans. No scans selected.");
+        alertify.message(t("could_not_stop", "Could not stop scans. No scans selected."));
         return;
     }
 
-    alertify.confirm("Are you sure you wish to stop these " + ids.length + " scans?<br/><br/>" + ids.join("<br/>"),
+    var msg = t("are_you_sure_stop_multi", "Are you sure you wish to stop these {count} scans?<br/><br/>{list}")
+        .replace("{count}", ids.length)
+        .replace("{list}", ids.join("<br/>"));
+    alertify.confirm(msg,
     function(){
         sf.stopScan(ids.join(','), reload);
-    }).set({title:"Stop scans?"});
+    }).set({title: t("stop_scans_title", "Stop scans?")});
 }
 
 function deleteScan(id) {
-    alertify.confirm("Are you sure you wish to delete this scan?",
+    alertify.confirm(t("are_you_sure_delete", "Are you sure you wish to delete this scan?"),
     function(){
         sf.deleteScan(id, reload);
-    }).set({title:"Delete scan?"});
+    }).set({title: t("delete_scan_title", "Delete scan?")});
 }
 
 function deleteSelected() {
     ids = getSelected();
     if (!ids) {
-        alertify.message("Could not delete scans. No scans selected.");
+        alertify.message(t("could_not_delete", "Could not delete scans. No scans selected."));
         return;
     }
 
-    alertify.confirm("Are you sure you wish to delete these " + ids.length + " scans?<br/><br/>" + ids.join("<br/>"),
+    var msg = t("are_you_sure_delete_multi", "Are you sure you wish to delete these {count} scans?<br/><br/>{list}")
+        .replace("{count}", ids.length)
+        .replace("{list}", ids.join("<br/>"));
+    alertify.confirm(msg,
     function(){
         sf.deleteScan(ids.join(','), reload);
-    }).set({title:"Delete scans?"});
+    }).set({title: t("delete_scans_title", "Delete scans?")});
 }
 
 function rerunSelected() {
     ids = getSelected();
     if (!ids) {
-        alertify.message("Could not re-run scan. No scans selected.");
+        alertify.message(t("could_not_rerun", "Could not re-run scan. No scans selected."));
         return;
     }
 
@@ -140,8 +146,8 @@ function showlist(types, filter) {
         if (data.length == 0) {
             $("#loader").fadeOut(500);
             welcome = "<div class='alert alert-info'>";
-            welcome += "<h4>No scan history</h4><br>";
-            welcome += "There is currently no history of previously run scans. Please click 'New Scan' to initiate a new scan."
+            welcome += "<h4>" + t("no_scan_history", "No scan history") + "</h4><br>";
+            welcome += t("no_scan_history_help", "There is currently no history of previously run scans. Please click 'New Scan' to initiate a new scan.");
             welcome += "</div>";
             $("#scancontent").append(welcome);
             return;
@@ -157,7 +163,7 @@ function showlisttable(types, filter, data) {
     }
     var buttons = "<div class='btn-toolbar'>";
     buttons += "<div class='btn-group'>";
-    buttons += "<button id='btn-filter' class='btn btn-default'><i class='glyphicon glyphicon-filter'></i>&nbsp;<span data-translate='filter'>Filter</span>: " + (translations && translations[filter.toLowerCase()] ? translations[filter.toLowerCase()] : filter) + "</button>";
+    buttons += "<button id='btn-filter' class='btn btn-default'><i class='glyphicon glyphicon-filter'></i>&nbsp;<span data-translate='filter'>Filter</span>: " + t(filter.toLowerCase(), filter) + "</button>";
     buttons += "<button class='btn dropdown-toggle btn-default' data-toggle='dropdown'><span class='caret'></span></button>";
     buttons += "<ul class='dropdown-menu'>";
     buttons += "<li><a href='javascript:filter(\"all\")' data-translate='clear'>None</a></li>";
@@ -167,12 +173,12 @@ function showlisttable(types, filter, data) {
     buttons += "</div>";
 
     buttons += "<div class='btn-group pull-right'>";
-    buttons += "<button rel='tooltip' data-title='Delete Selected' id='btn-delete' class='btn btn-default btn-danger'><i class='glyphicon glyphicon-trash glyphicon-white'></i></button>";
+    buttons += "<button rel='tooltip' data-title='" + t("delete_selected", "Delete Selected") + "' id='btn-delete' class='btn btn-default btn-danger'><i class='glyphicon glyphicon-trash glyphicon-white'></i></button>";
     buttons += "</div>";
 
     buttons += "<div class='btn-group pull-right'>";
-    buttons += "<button rel='tooltip' data-title='Refresh' id='btn-refresh' class='btn btn-default btn-success'><i class='glyphicon glyphicon-refresh glyphicon-white'></i></a>";
-    buttons += "<button rel='tooltip' data-toggle='dropdown' data-title='Export Selected' id='btn-export' class='btn btn-default btn-success dropdown-toggle download-button'><i class='glyphicon glyphicon-download-alt glyphicon-white'></i></button>";
+    buttons += "<button rel='tooltip' data-title='" + t("refresh", "Refresh") + "' id='btn-refresh' class='btn btn-default btn-success'><i class='glyphicon glyphicon-refresh glyphicon-white'></i></a>";
+    buttons += "<button rel='tooltip' data-toggle='dropdown' data-title='" + t("export_selected", "Export Selected") + "' id='btn-export' class='btn btn-default btn-success dropdown-toggle download-button'><i class='glyphicon glyphicon-download-alt glyphicon-white'></i></button>";
     buttons += "<ul class='dropdown-menu'>";
     buttons += "<li><a href='javascript:exportSelected(\"csv\")'>CSV</a></li>";
     buttons += "<li><a href='javascript:exportSelected(\"excel\")'>Excel</a></li>";
@@ -182,8 +188,8 @@ function showlisttable(types, filter, data) {
     buttons += "</div>";
 
     buttons += "<div class='btn-group pull-right'>";
-    buttons += "<button rel='tooltip' data-title='Re-run Selected' id='btn-rerun' class='btn btn-default'><i class='glyphicon glyphicon-repeat glyphicon-white'></i></button>";
-    buttons += "<button rel='tooltip' data-title='Stop Selected' id='btn-stop' class='btn btn-default'>";
+    buttons += "<button rel='tooltip' data-title='" + t("rerun_selected", "Re-run Selected") + "' id='btn-rerun' class='btn btn-default'><i class='glyphicon glyphicon-repeat glyphicon-white'></i></button>";
+    buttons += "<button rel='tooltip' data-title='" + t("stop_selected", "Stop Selected") + "' id='btn-stop' class='btn btn-default'>";
     buttons += "<i class='glyphicon glyphicon-stop glyphicon-white'></i></button>";
     buttons += "</div>";
 
@@ -226,12 +232,12 @@ function showlisttable(types, filter, data) {
         table += "</td>";
         table += "<td class='text-center'>";
         if (data[i][6] == "RUNNING" || data[i][6] == "STARTING" || data[i][6] == "STARTED" || data[i][6] == "INITIALIZING") {
-            table += "<a rel='tooltip' title='Stop Scan' href='javascript:stopScan(\"" + data[i][0] + "\");'><i class='glyphicon glyphicon-stop text-muted'></i></a>";
+            table += "<a rel='tooltip' title='" + t("stop_scan", "Stop Scan") + "' href='javascript:stopScan(\"" + data[i][0] + "\");'><i class='glyphicon glyphicon-stop text-muted'></i></a>";
         } else {
-            table += "<a rel='tooltip' title='Delete Scan' href='javascript:deleteScan(\"" + data[i][0] + "\");'><i class='glyphicon glyphicon-trash text-muted'></i></a>";
-            table += "&nbsp;&nbsp;<a rel='tooltip' title='Re-run Scan' href=" + docroot + "/rerunscan?id=" + data[i][0] + "><i class='glyphicon glyphicon-repeat text-muted'></i></a>";
+            table += "<a rel='tooltip' title='" + t("delete_scan", "Delete Scan") + "' href='javascript:deleteScan(\"" + data[i][0] + "\");'><i class='glyphicon glyphicon-trash text-muted'></i></a>";
+            table += "&nbsp;&nbsp;<a rel='tooltip' title='" + t("rerun_scan", "Re-run Scan") + "' href=" + docroot + "/rerunscan?id=" + data[i][0] + "><i class='glyphicon glyphicon-repeat text-muted'></i></a>";
         }
-        table += "&nbsp;&nbsp;<a rel='tooltip' title='Clone Scan' href=" + docroot + "/clonescan?id=" + data[i][0] + "><i class='glyphicon glyphicon-plus-sign text-muted'></i></a>";
+        table += "&nbsp;&nbsp;<a rel='tooltip' title='" + t("clone_scan", "Clone Scan") + "' href=" + docroot + "/clonescan?id=" + data[i][0] + "><i class='glyphicon glyphicon-plus-sign text-muted'></i></a>";
         table += "</td></tr>";
     }
 

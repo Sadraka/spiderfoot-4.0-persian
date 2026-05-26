@@ -67,12 +67,12 @@
                     <% apikeylist = dict((k, v) for k, v in modules[item]['opts'].items() if k.find("api_key") >= 0) %>
                     <%
                     if len(apikeylist) > 0:
-                        keyicon = "&nbsp;&nbsp;<i class=\"glyphicon glyphicon-lock\" rel='tooltip' title='Needs API key'></i>"
+                        keyicon = "&nbsp;&nbsp;<i class=\"glyphicon glyphicon-lock\" rel='tooltip' title='Needs API key' data-translate='needs_api_key'></i>"
                     %>
                 % endif
 
                 % if item != "sfp__stor_db" and item != "sfp__stor_stdout":
-                    <tr><td><input type=checkbox id="module_${item}" checked></td><td>${modules[item]['name']}${keyicon}</td><td>${modules[item]['descr']}</td></tr>
+                    <tr><td><input type=checkbox id="module_${item}" checked></td><td><span data-translate="module_${item}_name">${modules[item]['name']}</span>${keyicon}</td><td data-translate="module_${item}_descr">${modules[item]['descr']}</td></tr>
                 % endif
             % endfor
         </table>
