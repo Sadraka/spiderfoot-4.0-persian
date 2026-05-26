@@ -464,3 +464,18 @@ html[dir="rtl"] .dropdown-menu {
 html[dir="rtl"] .btn-toolbar .btn-group:first-child {
   float: right !important;
 }
+
+/* RTL: Alertify Modal & Notifier overrides */
+html[dir="rtl"] .alertify,
+html[dir="rtl"] .ajs-modal {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .alertify .ajs-footer {
+  text-align: left;
+}
+
+html[dir="rtl"] .alertify .ajs-dialog {
+  text-align: right;
+}

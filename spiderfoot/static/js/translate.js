@@ -98,8 +98,20 @@ window.translatePage = () => {
             if (typeof window.updateTogglerText === "function") {
                 window.updateTogglerText();
             }
+
+            // Translate Alertify buttons
+            if (typeof alertify !== 'undefined' && alertify.defaults && alertify.defaults.glossary) {
+                alertify.defaults.glossary.ok = translations["ok"] || (currentLang === "fa" ? "تایید" : "OK");
+                alertify.defaults.glossary.cancel = translations["cancel"] || (currentLang === "fa" ? "لغو" : "Cancel");
+            }
+            
+            // Show translated page
+            document.documentElement.style.visibility = "visible";
         })
-        .catch(err => console.error("Error loading translations:", err));
+        .catch(err => {
+            console.error("Error loading translations:", err);
+            document.documentElement.style.visibility = "visible";
+        });
 };
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -2,6 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <script>
+        var currentLang = localStorage.getItem("lang") || "fa";
+        if (currentLang === "fa") {
+            document.documentElement.style.visibility = "hidden";
+            // Dynamically load Alertify RTL CSS
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = '${docroot}/static/css/alertify.rtl.min.css';
+            document.head.appendChild(link);
+        }
+    </script>
     <title data-translate="project_name">Advanced Analytical Junction</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">

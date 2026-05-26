@@ -374,5 +374,7 @@
   "module_sfp_portscan_descr": "Scan for open TCP ports.",
   "need_select_record": "You need to select at least one record.",
   "error_set_fp": "There was an error setting false positives because: ",
-  "error_bug_report": "<br/>If you believe this to be an error, please log out and log back in, and if the problem repeats, report this as a bug , "
+  "error_bug_report": "<br/>If you believe this to be an error, please log out and log back in, and if the problem repeats, report this as a bug , ",
+  "ok": "OK",
+  "cancel": "Cancel"
 }
