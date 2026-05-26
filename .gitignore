@@ -6,7 +6,8 @@
 passwd
 spiderfoot.crt
 spiderfoot.key
-
+translate_opts.py
+translate_modules.py
 /venv
 spiderfoot/static/node_modules/*
 

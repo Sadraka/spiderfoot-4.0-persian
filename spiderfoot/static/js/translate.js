@@ -94,6 +94,11 @@ window.translatePage = () => {
             if (switcher) {
                 switcher.textContent = currentLang === "fa" ? "English" : "فارسی";
             }
+
+            // Update Theme Toggler Text
+            if (typeof window.updateTogglerText === "function") {
+                window.updateTogglerText();
+            }
         })
         .catch(err => console.error("Error loading translations:", err));
 };
