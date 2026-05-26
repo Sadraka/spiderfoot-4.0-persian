@@ -273,10 +273,6 @@ html[dir="rtl"] td {
   text-align: right !important;
 }
 
-html[dir="rtl"] .alertify-notifier {
-  left: 10px !important;
-  right: auto !important;
-}
 
 html[dir="rtl"] .text-right {
   text-align: left !important;
@@ -503,19 +499,83 @@ html[dir="rtl"] .breadcrumb > li + li::before {
   float: right;
 }
 
-/* RTL: Alertify Modal & Notifier overrides */
+/* RTL: Alertify Modal & Dialog overrides */
 html[dir="rtl"] .alertify,
 html[dir="rtl"] .ajs-modal {
   direction: rtl;
   text-align: right;
 }
 
+html[dir="rtl"] .alertify .ajs-commands {
+  left: 4px !important;
+  right: auto !important;
+  margin: -14px 0 0 24px !important;
+}
+
+html[dir="rtl"] .alertify .ajs-commands button {
+  margin-right: 10px !important;
+  margin-left: 0 !important;
+}
+
 html[dir="rtl"] .alertify .ajs-footer {
-  text-align: left;
+  margin-right: -24px !important;
+  margin-left: -24px !important;
+  text-align: left !important;
+}
+
+html[dir="rtl"] .alertify .ajs-footer .ajs-buttons.ajs-primary {
+  text-align: left !important;
+}
+
+html[dir="rtl"] .alertify .ajs-footer .ajs-buttons.ajs-auxiliary {
+  float: right !important;
+  text-align: right !important;
 }
 
 html[dir="rtl"] .alertify .ajs-dialog {
-  text-align: right;
+  text-align: right !important;
+}
+
+html[dir="rtl"] .alertify .ajs-handle {
+  left: 0 !important;
+  right: auto !important;
+  -webkit-transform: scaleX(-1) !important;
+  transform: scaleX(-1) !important;
+  cursor: sw-resize !important;
+}
+
+html[dir="rtl"] .alertify.ajs-maximized .ajs-commands {
+  margin: 14px 0 0 24px !important;
+}
+
+/* RTL: Alertify Notifier position and slide transitions overrides for BOTH right and left configurations */
+html[dir="rtl"] .alertify-notifier {
+  direction: ltr !important; /* Force LTR on the 0-width container so child elements overflow to the right */
+  left: 10px !important;
+  right: auto !important;
+}
+
+/* Force messages to slide from the left and sit at left: 0 regardless of whether JS uses bottom-right or bottom-left */
+html[dir="rtl"] .alertify-notifier .ajs-message {
+  direction: rtl !important; /* Restore RTL text alignment and direction inside the notification box */
+  text-align: right !important;
+  left: -320px !important;
+  right: auto !important;
+  -webkit-transition-property: left, opacity, max-height, padding, margin !important;
+  transition-property: left, opacity, max-height, padding, margin !important;
+}
+
+html[dir="rtl"] .alertify-notifier .ajs-message.ajs-visible {
+  left: 0 !important;
+  right: auto !important;
+}
+
+/* Position notification close button on the left in RTL */
+html[dir="rtl"] .alertify-notifier .ajs-message .ajs-close {
+  left: 0 !important;
+  right: auto !important;
+  border-top-left-radius: 2px !important;
+  border-top-right-radius: 0 !important;
 }
 
 /* RTL: D3 charts - SVG must always use LTR coordinate system */

@@ -6,11 +6,6 @@
         var currentLang = localStorage.getItem("lang") || "fa";
         if (currentLang === "fa") {
             document.documentElement.style.visibility = "hidden";
-            // Dynamically load Alertify RTL CSS
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = '${docroot}/static/css/alertify.rtl.min.css';
-            document.head.appendChild(link);
         }
     </script>
     <title data-translate="project_name">Advanced Analytical Junction</title>
@@ -23,7 +18,7 @@
     <script type='text/javascript' src='${docroot}/static/js/spiderfoot.js'></script>
     <script type='text/javascript' src='${docroot}/static/js/viz.js'></script>
 
-    <link href="${docroot}/static/css/spiderfoot.css" rel="stylesheet">
+    <link href="${docroot}/static/css/spiderfoot.css?v=2" rel="stylesheet">
     <link href="${docroot}/static/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="${docroot}/static/node_modules/tablesorter/dist/css/jquery.tablesorter.pager.min.css" rel="stylesheet">
     <link href="${docroot}/static/node_modules/alertifyjs/build/css/alertify.min.css" rel="stylesheet">
