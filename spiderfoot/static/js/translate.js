@@ -25,7 +25,8 @@ window.translatePage = () => {
         .then(res => res.json())
         .then(translations => {
             window.translations = translations;
-            
+
+            // Translate all elements with data-translate attribute
             // Translate all elements with data-translate attribute
             document.querySelectorAll("[data-translate]").forEach(el => {
                 const key = el.getAttribute("data-translate");
@@ -45,6 +46,11 @@ window.translatePage = () => {
                         el.placeholder = translations[key];
                     } else if (el.tagName === "OPTION") {
                         el.textContent = translations[key];
+                    } else if (el.getAttribute("data-toggle") === "popover") {
+                        // --- تغییر مهم اینجاست ---
+                        // اگر المان یک پاپ‌اور هاور است، نباید متن ترجمه را داخل ساختار متنی خودش (innerHTML) بریزد.
+                        // فقط اتریبیوت‌ها آپدیت می‌شوند که بالاتر انجام شد.
+                        return;
                     } else {
                         // Keep any icons inside the element if they exist
                         const icon = el.querySelector("i, span.glyphicon");
@@ -53,7 +59,7 @@ window.translatePage = () => {
                             const iconClone = icon.cloneNode(true);
                             el.innerHTML = "";
                             el.appendChild(iconClone);
-                            
+
                             const textSpan = document.createElement("span");
                             if (translations[key].indexOf("<") >= 0 || translations[key].indexOf("&") >= 0) {
                                 textSpan.innerHTML = " " + translations[key];
@@ -71,7 +77,6 @@ window.translatePage = () => {
                     }
                 }
             });
-            
             // Translate opt descriptions
             document.querySelectorAll("[data-opt-key]").forEach(el => {
                 const key = el.getAttribute("data-opt-key");
@@ -95,7 +100,7 @@ window.translatePage = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     window.translatePage();
-    
+
     // Bind click event to lang-switcher button
     const switcher = document.getElementById("lang-switcher");
     if (switcher) {
@@ -104,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.setItem("lang", nextLang);
             lang = nextLang;
             window.translatePage();
-            
+
             // If the table rendering or UI update functions exist, call them to reload page layout
             if (typeof reload === "function") {
                 reload();

@@ -66,8 +66,8 @@
                 % if len(keylist) > 0:
                     <% apikeylist = dict((k, v) for k, v in modules[item]['opts'].items() if k.find("api_key") >= 0) %>
                     <%
-                    if len(apikeylist) > 0:
-                        keyicon = "&nbsp;&nbsp;<i class=\"glyphicon glyphicon-lock\" rel='tooltip' title='Needs API key' data-translate='needs_api_key'></i>"
+                        if len(apikeylist) > 0:
+                            keyicon = "&nbsp;&nbsp;<i class=\"glyphicon glyphicon-lock\" data-toggle=\"popover\" data-trigger=\"hover\" data-placement=\"top\" data-translate=\"needs_api_key\" title=\"توجه\" data-content=\"این ماژول برای کارکرد کامل به کلید API نیاز دارد.\"></i>"
                     %>
                 % endif
 
