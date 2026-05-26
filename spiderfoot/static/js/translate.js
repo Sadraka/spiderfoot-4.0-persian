@@ -58,15 +58,14 @@ window.translatePage = () => {
                             // Preserve icon tag structure
                             const iconClone = icon.cloneNode(true);
                             el.innerHTML = "";
-                            el.appendChild(iconClone);
-
                             const textSpan = document.createElement("span");
                             if (translations[key].indexOf("<") >= 0 || translations[key].indexOf("&") >= 0) {
-                                textSpan.innerHTML = " " + translations[key];
+                                textSpan.innerHTML = translations[key] + " ";
                             } else {
-                                textSpan.textContent = " " + translations[key];
+                                textSpan.textContent = translations[key] + " ";
                             }
                             el.appendChild(textSpan);
+                            el.appendChild(iconClone);
                         } else {
                             if (translations[key].indexOf("<") >= 0 || translations[key].indexOf("&") >= 0) {
                                 el.innerHTML = translations[key];

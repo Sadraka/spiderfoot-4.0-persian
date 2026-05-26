@@ -32,7 +32,7 @@
             if len(apikeylist) > 0: 
                 keyicon = "&nbsp;&nbsp;<i class=\"glyphicon glyphicon-lock\"></i>"
         %>
-        <li id='tab_${mod}'><a href='#' onclick='switchTab("${mod}");' >${opts['__modules__'][mod]['name']}${keyicon}</a></li>
+        <li id='tab_${mod}'><a href='#' onclick='switchTab("${mod}");' data-translate="module_${mod}_name">${opts['__modules__'][mod]['name']}${keyicon}</a></li>
     % endif
 % endfor
 </ul>
@@ -103,18 +103,18 @@
         apiKeyInstructions = data_source.get('apiKeyInstructions') or ''
     %>
     <div id='optsect_${mod}' class="tab-pane" style="display: none">
-    <h4>${opts['__modules__'][mod]['name']} (${mod})</h4>
+    <h4><span data-translate="module_${mod}_name">${opts['__modules__'][mod]['name']}</span> (${mod})</h4>
 
     <table class='table table-bordered table-striped'>
     <tbody>
     <tr><td data-translate="summary">Summary</td><td>${summary}<br/><br/>${description}</td></tr>
 
     % if categories:
-    <tr><td data-translate="categories">Categories:</td><td>${', '.join(categories)}</td><tr>
+    <tr><td data-translate="categories">Categories:</td><td>${', '.join(categories)}</td></tr>
     % endif
 
     % if labels:
-    <tr><td data-translate="tags">Tags:</td><td>${', '.join(labels)}</td><tr>
+    <tr><td data-translate="tags">Tags:</td><td>${', '.join(labels)}</td></tr>
     % endif
 
     % if website:
