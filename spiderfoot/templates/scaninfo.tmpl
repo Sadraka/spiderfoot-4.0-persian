@@ -121,11 +121,11 @@
                     return;
                 }
                 if (ret[0] == "WARNING") {
-                    alertify.error(ret[1]);
+                    alertify.error(window.translateError(ret[1]));
                     return;
                 }
                 if (ret[0] == "ERROR") {
-                    alertify.error(t("error_set_fp", "There was an error setting false positives because: ") + ret[1] + t("error_bug_report", "<br/>If you believe this to be an error, please log out and log back in, and if the problem repeats, report this as a bug."));
+                    alertify.error(t("error_set_fp", "There was an error setting false positives because: ") + window.translateError(ret[1]) + t("error_bug_report", "<br/>If you believe this to be an error, please log out and log back in, and if the problem repeats, report this as a bug."));
                 }
             });
         }
@@ -904,10 +904,18 @@
             });
         }
 
-        if ("${status}" == "CREATED" || "${status}" == "RUNNING" || "${status}" == "STARTING" || "${status}" == "STARTED" || "${status}" == "UNKNOWN" || "${status}" == "INITIALIZING") {
-            scanSummaryView("${id}");
+        const initScanInfo = () => {
+            if ("${status}" == "CREATED" || "${status}" == "RUNNING" || "${status}" == "STARTING" || "${status}" == "STARTED" || "${status}" == "UNKNOWN" || "${status}" == "INITIALIZING") {
+                scanSummaryView("${id}");
+            } else {
+                browseEventList("${id}");
+            }
+        };
+
+        if (window.translationPromise) {
+            window.translationPromise.then(initScanInfo);
         } else {
-            browseEventList("${id}");
+            $(document).ready(initScanInfo);
         }
 
         var refreshSummaryInterval;

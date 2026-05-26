@@ -376,5 +376,17 @@
   "error_set_fp": "There was an error setting false positives because: ",
   "error_bug_report": "<br/>If you believe this to be an error, please log out and log back in, and if the problem repeats, report this as a bug , ",
   "ok": "OK",
-  "cancel": "Cancel"
+  "cancel": "Cancel",
+  "error_scan_id_not_found": "Scan ID not found.",
+  "error_invalid_export_filetype": "Invalid export filetype.",
+  "error_invalid_scan_id": "Invalid scan ID.",
+  "error_something_went_wrong_internally": "Something went wrong internally.",
+  "error_invalid_target_type": "Invalid target type. Could not recognize it as a target SpiderFoot supports.",
+  "error_failed_reset_settings": "Failed to reset settings",
+  "error_scan_name_not_specified": "Invalid request: scan name was not specified.",
+  "error_scan_target_not_specified": "Invalid request: scan target was not specified.",
+  "error_no_modules_specified": "Invalid request: no modules specified for scan.",
+  "error_invalid_scan_id_dynamic": "Invalid scan ID: {id}",
+  "error_scan_failed_dynamic": "Scan failed: {detail}",
+  "error_invalid_token": "Invalid token"
 }

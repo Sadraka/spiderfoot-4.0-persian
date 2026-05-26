@@ -1,6 +1,44 @@
 // Global translation helper
 window.t = (key, defaultText) => (window.translations && window.translations[key]) ? window.translations[key] : defaultText;
 
+// Translate backend error messages
+window.translateError = (msg) => {
+    if (!msg) return msg;
+    if (!window.translations) return msg;
+
+    const errorsMap = {
+        "Scan ID not found.": "error_scan_id_not_found",
+        "Invalid export filetype.": "error_invalid_export_filetype",
+        "Invalid scan ID.": "error_invalid_scan_id",
+        "Something went wrong internally.": "error_something_went_wrong_internally",
+        "Invalid target type. Could not recognize it as a target SpiderFoot supports.": "error_invalid_target_type",
+        "Failed to reset settings": "error_failed_reset_settings",
+        "Invalid request: scan name was not specified.": "error_scan_name_not_specified",
+        "Invalid request: scan target was not specified.": "error_scan_target_not_specified",
+        "Invalid request: no modules specified for scan.": "error_no_modules_specified"
+    };
+
+    const key = errorsMap[msg.trim()];
+    if (key && window.translations[key]) {
+        return window.translations[key];
+    }
+
+    // Dynamic matches
+    if (msg.indexOf("Invalid scan ID:") >= 0) {
+        const id = msg.split(":")[1] || "";
+        return (window.translations["error_invalid_scan_id_dynamic"] || "شناسه اسکن نامعتبر است: {id}").replace("{id}", id);
+    }
+    if (msg.indexOf("failed:") >= 0) {
+        const detail = msg.split("failed:")[1] || "";
+        return (window.translations["error_scan_failed_dynamic"] || "اسکن با خطا مواجه شد: {detail}").replace("{detail}", detail);
+    }
+    if (msg.indexOf("Invalid token") >= 0) {
+        return window.translations["error_invalid_token"] || "توکن نامعتبر است";
+    }
+
+    return msg;
+};
+
 // Determine language
 let lang = localStorage.getItem("lang") || "fa";
 
@@ -21,7 +59,7 @@ window.translatePage = () => {
     let currentLang = localStorage.getItem("lang") || "fa";
     applyLangStyles(currentLang);
 
-    fetch(`/static/js/translations_${currentLang}.json`)
+    window.translationPromise = fetch(`/static/js/translations_${currentLang}.json`)
         .then(res => res.json())
         .then(translations => {
             window.translations = translations;
@@ -87,6 +125,12 @@ window.translatePage = () => {
                     }
                 }
             });
+
+            // Translate main error page message if it exists
+            const errorEl = document.getElementById("error-message");
+            if (errorEl) {
+                errorEl.textContent = window.translateError(errorEl.textContent);
+            }
 
             // Update Lang Switcher Text
             const switcher = document.getElementById("lang-switcher");

@@ -1,6 +1,78 @@
-/**
- * alertifyjs 1.13.1 http://alertifyjs.com
- * AlertifyJS is a javascript framework for developing pretty browser dialogs and notifications.
- * Copyright 2019 Mohammad Younes <Mohammad@alertifyjs.com> (http://alertifyjs.com) 
- * Licensed under GPL 3 <https://opensource.org/licenses/gpl-3.0>*/
-.alertify .ajs-dimmer{position:fixed;z-index:1981;top:0;left:0;bottom:0;right:0;padding:0;margin:0;background-color:#252525;opacity:.5}.alertify .ajs-modal{position:fixed;top:0;left:0;right:0;bottom:0;padding:0;overflow-y:auto;z-index:1981}.alertify .ajs-dialog{position:relative;margin:5% auto;min-height:110px;max-width:500px;padding:24px 24px 0 24px;outline:0;background-color:#fff}.alertify .ajs-dialog.ajs-capture:before{content:'';position:absolute;top:0;left:0;bottom:0;right:0;display:block;z-index:1}.alertify .ajs-reset{position:absolute!important;display:inline!important;width:0!important;height:0!important;opacity:0!important}.alertify .ajs-commands{position:absolute;left:4px;margin:-14px 0 0 24px;z-index:2}.alertify .ajs-commands button{display:none;width:10px;height:10px;margin-right:10px;padding:10px;border:0;background-color:transparent;background-repeat:no-repeat;background-position:center;cursor:pointer}.alertify .ajs-commands button.ajs-close{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAwNy8xMy8xNOrZqugAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzbovLKMAAAAh0lEQVQYlY2QsQ0EIQwEB9cBAR1CJUaI/gigDnwR6NBL/7/xWLNrZ2b8EwGotVpr7eOitWa1VjugiNB7R1UPrKrWe0dEAHBbXUqxMQbeewDmnHjvyTm7C3zDwAUd9c63YQdUVdu6EAJzzquz7HXvTiklt+H9DQFYaxFjvDqllFyMkbXWvfpXHjJrWFgdBq/hAAAAAElFTkSuQmCC)}.alertify .ajs-commands button.ajs-maximize{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAwNy8xMy8xNOrZqugAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzbovLKMAAAAOUlEQVQYlWP8//8/AzGAhYGBgaG4uBiv6t7eXkYmooxjYGAgWiELsvHYFMCcRX2rSXcjoSBiJDbAAeD+EGu+8BZcAAAAAElFTkSuQmCC)}.alertify .ajs-header{margin:-24px;margin-bottom:0;padding:16px 24px;background-color:#fff}.alertify .ajs-body{min-height:56px}.alertify .ajs-body .ajs-content{padding:16px 16px 16px 24px}.alertify .ajs-footer{padding:4px;margin-right:-24px;margin-left:-24px;min-height:43px;background-color:#fff}.alertify .ajs-footer .ajs-buttons.ajs-primary{text-align:left}.alertify .ajs-footer .ajs-buttons.ajs-primary .ajs-button{margin:4px}.alertify .ajs-footer .ajs-buttons.ajs-auxiliary{float:right;clear:none;text-align:right}.alertify .ajs-footer .ajs-buttons.ajs-auxiliary .ajs-button{margin:4px}.alertify .ajs-footer .ajs-buttons .ajs-button{min-width:88px;min-height:35px}.alertify .ajs-handle{position:absolute;display:none;width:10px;height:10px;left:0;bottom:0;z-index:1;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAwNy8xMS8xNEDQYmMAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzbovLKMAAAAQ0lEQVQYlaXNMQoAIAxD0dT7H657l0KX3iJuUlBUNOsPPCGJm7VDp6ryeMxMuDsAQH7owW3pyn3RS26iKxERMLN3ugOaAkaL3sWVigAAAABJRU5ErkJggg==);-webkit-transform:scaleX(-1);tran
+.alertify .ajs-commands {
+  left: 4px;
+  right: auto;
+  margin: -14px 0 0 24px;
+}
+
+.alertify .ajs-commands button {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+.alertify .ajs-footer {
+  margin-right: -24px;
+  margin-left: -24px;
+}
+
+.alertify .ajs-footer .ajs-buttons.ajs-primary {
+  text-align: left;
+}
+
+.alertify .ajs-footer .ajs-buttons.ajs-auxiliary {
+  float: right;
+  text-align: right;
+}
+
+.alertify .ajs-handle {
+  left: 0;
+  right: auto;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  cursor: sw-resize;
+}
+
+.alertify.ajs-maximized .ajs-commands {
+  margin: 14px 0 0 24px;
+}
+
+/* Notifier & Toast Overrides */
+.alertify-notifier .ajs-message .ajs-close {
+  left: 0;
+  right: auto;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 0;
+}
+
+.alertify-notifier.ajs-right {
+  left: 10px;
+  right: auto;
+}
+
+.alertify-notifier.ajs-right .ajs-message {
+  left: -320px;
+  right: auto;
+  -webkit-transition-property: left, opacity, max-height, padding, margin;
+  transition-property: left, opacity, max-height, padding, margin;
+}
+
+.alertify-notifier.ajs-right .ajs-message.ajs-visible {
+  left: 0;
+  right: auto;
+}
+
+.alertify-notifier.ajs-left {
+  right: 10px;
+  left: auto;
+}
+
+.alertify-notifier.ajs-left .ajs-message {
+  right: -300px;
+  left: auto;
+  -webkit-transition-property: right, opacity, max-height, padding, margin;
+  transition-property: right, opacity, max-height, padding, margin;
+}
+
+.alertify-notifier.ajs-left .ajs-message.ajs-visible {
+  right: 0;
+  left: auto;
+}

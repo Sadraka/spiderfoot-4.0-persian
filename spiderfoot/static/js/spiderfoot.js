@@ -100,7 +100,7 @@ sf.deleteScan = function(scan_id, callback) {
         callback();
     });
     req.fail(function (hr, textStatus, errorThrown) {
-        alertify.error('<i class="glyphicon glyphicon-minus-sign"></i> <b>' + t("error", "Error") + '</b><br/></br>' + hr.responseText);
+        alertify.error('<i class="glyphicon glyphicon-minus-sign"></i> <b>' + t("error", "Error") + '</b><br/></br>' + window.translateError(hr.responseText));
         sf.log("Error deleting scans: " + scan_id + ": " + hr.responseText);
     });
 };
@@ -116,7 +116,7 @@ sf.stopScan = function(scan_id, callback) {
         callback();
     });
     req.fail(function (hr, textStatus, errorThrown) {
-        alertify.error('<i class="glyphicon glyphicon-minus-sign"></i> <b>' + t("error", "Error") + '</b><br/><br/>' + hr.responseText);
+        alertify.error('<i class="glyphicon glyphicon-minus-sign"></i> <b>' + t("error", "Error") + '</b><br/><br/>' + window.translateError(hr.responseText));
         sf.log("Error stopping scans: " + scan_id + ": " + hr.responseText);
     });
 };
@@ -132,7 +132,7 @@ sf.fetchData = function (url, postData, postFunc) {
 
   req.done(postFunc);
   req.fail(function (hr, status) {
-      alertify.error('<i class="glyphicon glyphicon-minus-sign"></i> <b>' + t("error", "Error") + '</b><br/>' + status);
+      alertify.error('<i class="glyphicon glyphicon-minus-sign"></i> <b>' + t("error", "Error") + '</b><br/>' + window.translateError(status));
   });
 };
 
