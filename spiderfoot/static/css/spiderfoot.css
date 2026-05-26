@@ -1,12 +1,16 @@
 body {
-  padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+  padding-top: 60px;
+  /* 60px to make the container go all the way to the bottom of the topbar */
 }
 
 .navbar-brand {
-  image-rendering: -o-crisp-edges; /* Opera */
-  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
   image-rendering: crisp-edges;
-  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
   margin-top: -10px;
 }
 
@@ -130,19 +134,20 @@ input[type="checkbox"] {
 
 /* THEME TOGGLER PROPERTIES */
 
-#toggler-text{
+#toggler-text {
   padding-left: 15px;
 }
+
 .switch {
   position: relative;
   display: inline-block;
   width: 42px;
   height: 21px;
   margin-top: 1.3rem;
-  
+
 }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -172,15 +177,15 @@ input[type="checkbox"] {
   transition: .4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #059CD7;
 }
 
-input:focus + .slider {
+input:focus+.slider {
   box-shadow: 0 0 1px #059CD7;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   -webkit-transform: translateX(20px);
   -ms-transform: translateX(20px);
   transform: translateX(20px);
@@ -208,62 +213,237 @@ html[dir="rtl"] body {
   text-align: right;
   font-family: Tahoma, "Vazir", "Segoe UI", sans-serif;
 }
-html[dir="rtl"] td, html[dir="rtl"] th, html[dir="rtl"] p, html[dir="rtl"] div, html[dir="rtl"] span, html[dir="rtl"] label {
+
+html[dir="rtl"] td,
+html[dir="rtl"] th,
+html[dir="rtl"] p,
+html[dir="rtl"] div,
+html[dir="rtl"] span,
+html[dir="rtl"] label {
   unicode-bidi: plaintext;
   text-align: start;
 }
+
 html[dir="rtl"] .brand-logo {
   float: right;
   padding-left: 20px;
   padding-right: 0;
 }
+
 html[dir="rtl"] .navbar-nav {
   float: right !important;
   margin: 0;
 }
-html[dir="rtl"] .navbar-nav > li {
+
+html[dir="rtl"] .navbar-nav>li {
   float: right !important;
 }
+
 html[dir="rtl"] .navbar-right {
   float: left !important;
 }
+
 html[dir="rtl"] .pull-right {
   float: left !important;
 }
+
 html[dir="rtl"] .pull-left {
   float: right !important;
 }
-html[dir="rtl"] th, html[dir="rtl"] td {
+
+html[dir="rtl"] th,
+html[dir="rtl"] td {
   text-align: right !important;
 }
+
 html[dir="rtl"] .alertify-notifier {
   left: 10px !important;
   right: auto !important;
 }
+
 html[dir="rtl"] .text-right {
   text-align: left !important;
 }
+
 html[dir="rtl"] .text-left {
   text-align: right !important;
 }
+
 html[dir="rtl"] .input-group-addon:first-child {
   border-left: 0;
   border-right: 1px solid #ccc;
   border-radius: 0 4px 4px 0;
 }
+
 html[dir="rtl"] .input-group .form-control:last-child {
   border-radius: 4px 0 0 4px;
 }
-html[dir="rtl"] .col-md-1, html[dir="rtl"] .col-md-2, html[dir="rtl"] .col-md-3, html[dir="rtl"] .col-md-4, html[dir="rtl"] .col-md-5, html[dir="rtl"] .col-md-6, html[dir="rtl"] .col-md-7, html[dir="rtl"] .col-md-8, html[dir="rtl"] .col-md-9, html[dir="rtl"] .col-md-10, html[dir="rtl"] .col-md-11, html[dir="rtl"] .col-md-12 {
+
+html[dir="rtl"] .col-md-1,
+html[dir="rtl"] .col-md-2,
+html[dir="rtl"] .col-md-3,
+html[dir="rtl"] .col-md-4,
+html[dir="rtl"] .col-md-5,
+html[dir="rtl"] .col-md-6,
+html[dir="rtl"] .col-md-7,
+html[dir="rtl"] .col-md-8,
+html[dir="rtl"] .col-md-9,
+html[dir="rtl"] .col-md-10,
+html[dir="rtl"] .col-md-11,
+html[dir="rtl"] .col-md-12 {
   float: right !important;
 }
-html[dir="rtl"] .col-sm-1, html[dir="rtl"] .col-sm-2, html[dir="rtl"] .col-sm-3, html[dir="rtl"] .col-sm-4, html[dir="rtl"] .col-sm-5, html[dir="rtl"] .col-sm-6, html[dir="rtl"] .col-sm-7, html[dir="rtl"] .col-sm-8, html[dir="rtl"] .col-sm-9, html[dir="rtl"] .col-sm-10, html[dir="rtl"] .col-sm-11, html[dir="rtl"] .col-sm-12 {
+
+html[dir="rtl"] .col-sm-1,
+html[dir="rtl"] .col-sm-2,
+html[dir="rtl"] .col-sm-3,
+html[dir="rtl"] .col-sm-4,
+html[dir="rtl"] .col-sm-5,
+html[dir="rtl"] .col-sm-6,
+html[dir="rtl"] .col-sm-7,
+html[dir="rtl"] .col-sm-8,
+html[dir="rtl"] .col-sm-9,
+html[dir="rtl"] .col-sm-10,
+html[dir="rtl"] .col-sm-11,
+html[dir="rtl"] .col-sm-12 {
   float: right !important;
 }
+
 html[dir="rtl"] .modal-footer {
   text-align: left !important;
 }
+
 html[dir="rtl"] .close {
   float: left !important;
 }
 
+/* RTL overrides for form controls */
+html[dir="rtl"] .form-control {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .input-group .form-control {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] label {
+  display: block;
+  text-align: right;
+  margin-bottom: 5px;
+}
+
+/* RTL overrides for nav tabs */
+html[dir="rtl"] .nav-tabs {
+  padding-right: 0;
+  direction: rtl;
+}
+
+html[dir="rtl"] .nav-tabs > li {
+  float: right !important;
+}
+
+/* RTL overrides for scan tables (use case, modules, data types) */
+html[dir="rtl"] #usetable td,
+html[dir="rtl"] #moduletable td,
+html[dir="rtl"] #typetable td {
+  text-align: right !important;
+  direction: rtl;
+}
+
+html[dir="rtl"] #usetable input[type="radio"],
+html[dir="rtl"] #moduletable input[type="checkbox"],
+html[dir="rtl"] #typetable input[type="checkbox"] {
+  float: right;
+  margin-left: 8px;
+  margin-right: 0;
+}
+
+/* RTL overrides for select/deselect buttons */
+html[dir="rtl"] #selectors {
+  float: left !important;
+}
+
+/* RTL overrides for control group and form layout */
+html[dir="rtl"] .control-group {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .controls {
+  text-align: right;
+}
+
+/* RTL: help panel padding fix */
+html[dir="rtl"] .col-sm-9 {
+  padding-left: 0 !important;
+  padding-right: 10px !important;
+}
+
+/* RTL: scan target help panel text alignment */
+html[dir="rtl"] .panel-body {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .panel-body .col-sm-6,
+html[dir="rtl"] .panel-body .col-sm-12 {
+  direction: rtl;
+  text-align: right !important;
+  unicode-bidi: plaintext;
+}
+
+/* RTL: scans list page - toolbar and buttons */
+html[dir="rtl"] .btn-toolbar {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .btn-group.pull-right {
+  float: left !important;
+}
+
+html[dir="rtl"] #scancontent .alert {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] #scancontent .alert h4,
+html[dir="rtl"] #scancontent .alert span {
+  text-align: right;
+}
+
+/* RTL: scanlist table */
+html[dir="rtl"] #scanlist th,
+html[dir="rtl"] #scanlist td {
+  text-align: right !important;
+  direction: rtl;
+}
+
+html[dir="rtl"] #scanlist th.text-center,
+html[dir="rtl"] #scanlist td.text-center {
+  text-align: center !important;
+}
+
+/* RTL: pager footer in scanlist */
+html[dir="rtl"] .ts-pager {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .ts-pager .pagedisplay {
+  float: left !important;
+}
+
+/* RTL: dropdown menus */
+html[dir="rtl"] .dropdown-menu {
+  right: 0;
+  left: auto;
+  text-align: right;
+}
+
+/* RTL: btn-group inside toolbar - first group stays right, action groups go left */
+html[dir="rtl"] .btn-toolbar .btn-group:first-child {
+  float: right !important;
+}

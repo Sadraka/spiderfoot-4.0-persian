@@ -142,18 +142,35 @@ function reload() {
 function showlist(types, filter) {
     globalTypes = types;
     globalFilter = filter;
-    sf.fetchData(docroot + '/scanlist', null, function(data) {
+
+    var lang = localStorage.getItem("lang") || "fa";
+    var translationsUrl = (typeof docroot !== "undefined" ? docroot : "") + "/static/js/translations_" + lang + ".json";
+
+    var doRender = function(data) {
         if (data.length == 0) {
             $("#loader").fadeOut(500);
-            welcome = "<div class='alert alert-info'>";
+            var welcome = "<div class='alert alert-info'>";
             welcome += "<h4>" + t("no_scan_history", "No scan history") + "</h4><br>";
             welcome += t("no_scan_history_help", "There is currently no history of previously run scans. Please click 'New Scan' to initiate a new scan.");
             welcome += "</div>";
             $("#scancontent").append(welcome);
             return;
         }
+        showlisttable(types, filter, data);
+    };
 
-        showlisttable(types, filter, data)
+    sf.fetchData(docroot + '/scanlist', null, function(data) {
+        if (!window.translations) {
+            fetch(translationsUrl)
+                .then(function(res) { return res.json(); })
+                .then(function(tr) {
+                    window.translations = tr;
+                    doRender(data);
+                })
+                .catch(function() { doRender(data); });
+        } else {
+            doRender(data);
+        }
     });
 }
 
@@ -161,15 +178,18 @@ function showlisttable(types, filter, data) {
     if (filter == null) {
         filter = "None";
     }
+    // Map filter label to correct translation key
+    var filterKeyMap = { "none": "none", "running": "running", "finished": "completed", "failed/aborted": "aborted" };
+    var filterKey = filterKeyMap[filter.toLowerCase()] || filter.toLowerCase();
     var buttons = "<div class='btn-toolbar'>";
     buttons += "<div class='btn-group'>";
-    buttons += "<button id='btn-filter' class='btn btn-default'><i class='glyphicon glyphicon-filter'></i>&nbsp;<span data-translate='filter'>Filter</span>: " + t(filter.toLowerCase(), filter) + "</button>";
+    buttons += "<button id='btn-filter' class='btn btn-default'><i class='glyphicon glyphicon-filter'></i>&nbsp;<span data-translate='filter'>" + t("filter", "Filter") + "</span>: " + t(filterKey, filter) + "</button>";
     buttons += "<button class='btn dropdown-toggle btn-default' data-toggle='dropdown'><span class='caret'></span></button>";
     buttons += "<ul class='dropdown-menu'>";
-    buttons += "<li><a href='javascript:filter(\"all\")' data-translate='clear'>None</a></li>";
-    buttons += "<li><a href='javascript:filter(\"running\")' data-translate='running'>Running</a></li>";
-    buttons += "<li><a href='javascript:filter(\"finished\")' data-translate='completed'>Finished</a></li>";
-    buttons += "<li><a href='javascript:filter(\"failed\")' data-translate='aborted'>Failed/Aborted</a></li></ul>";
+    buttons += "<li><a href='javascript:filter(\"all\")'>" + t("none", "All") + "</a></li>";
+    buttons += "<li><a href='javascript:filter(\"running\")'>" + t("running", "Running") + "</a></li>";
+    buttons += "<li><a href='javascript:filter(\"finished\")'>" + t("completed", "Finished") + "</a></li>";
+    buttons += "<li><a href='javascript:filter(\"failed\")'>"+  t("aborted", "Failed/Aborted") + "</a></li></ul>";
     buttons += "</div>";
 
     buttons += "<div class='btn-group pull-right'>";
@@ -195,7 +215,7 @@ function showlisttable(types, filter, data) {
 
     buttons += "</div>";
     var table = "<table id='scanlist' class='table table-bordered table-striped'>";
-    table += "<thead><tr><th class='sorter-false text-center'><input id='checkall' type='checkbox'></th> <th data-translate='name'>Name</th> <th data-translate='target'>Target</th> <th data-translate='started'>Started</th> <th data-translate='finished'>Finished</th> <th class='text-center' data-translate='status'>Status</th> <th class='text-center' data-translate='total'>Elements</th><th class='text-center' data-translate='correlation_rules'>Correlations</th><th class='sorter-false text-center' data-translate='action'>Action</th> </tr></thead><tbody>";
+    table += "<thead><tr><th class='sorter-false text-center'><input id='checkall' type='checkbox'></th> <th>" + t("name", "Name") + "</th> <th>" + t("target", "Target") + "</th> <th>" + t("started", "Started") + "</th> <th>" + t("finished", "Finished") + "</th> <th class='text-center'>" + t("status", "Status") + "</th> <th class='text-center'>" + t("total", "Elements") + "</th><th class='text-center'>" + t("correlation_rules", "Correlations") + "</th><th class='sorter-false text-center'>" + t("action", "Action") + "</th> </tr></thead><tbody>";
     filtered = 0;
     for (var i = 0; i < data.length; i++) {
         if (types != null && $.inArray(data[i][6], types)) {
