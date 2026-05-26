@@ -1,0 +1,1177 @@
+[
+  {
+    "id": "sfp_abstractapi",
+    "name": "AbstractAPI",
+    "descr": "Look up domain, phone and IP address information from AbstractAPI."
+  },
+  {
+    "id": "sfp_abusech",
+    "name": "abuse.ch",
+    "descr": "Check if a host/domain, IP address or netblock is malicious according to Abuse.ch."
+  },
+  {
+    "id": "sfp_abuseipdb",
+    "name": "AbuseIPDB",
+    "descr": "Check if an IP address is malicious according to AbuseIPDB.com blacklist."
+  },
+  {
+    "id": "sfp_abusix",
+    "name": "Abusix Mail Intelligence",
+    "descr": "Check if a netblock or IP address is in the Abusix Mail Intelligence blacklist."
+  },
+  {
+    "id": "sfp_accounts",
+    "name": "Account Finder",
+    "descr": "Look for possible associated accounts on nearly 200 websites like Ebay, Slashdot, reddit, etc."
+  },
+  {
+    "id": "sfp_adblock",
+    "name": "AdBlock Check",
+    "descr": "Check if linked pages would be blocked by AdBlock Plus."
+  },
+  {
+    "id": "sfp_adguard_dns",
+    "name": "AdGuard DNS",
+    "descr": "Check if a host would be blocked by AdGuard DNS."
+  },
+  {
+    "id": "sfp_ahmia",
+    "name": "Ahmia",
+    "descr": "Search Tor 'Ahmia' search engine for mentions of the target."
+  },
+  {
+    "id": "sfp_alienvault",
+    "name": "AlienVault OTX",
+    "descr": "Obtain information from AlienVault Open Threat Exchange (OTX)"
+  },
+  {
+    "id": "sfp_alienvaultiprep",
+    "name": "AlienVault IP Reputation",
+    "descr": "Check if an IP or netblock is malicious according to the AlienVault IP Reputation database."
+  },
+  {
+    "id": "sfp_apple_itunes",
+    "name": "Apple iTunes",
+    "descr": "Search Apple iTunes for mobile apps."
+  },
+  {
+    "id": "sfp_archiveorg",
+    "name": "Archive.org",
+    "descr": "Identifies historic versions of interesting files/pages from the Wayback Machine."
+  },
+  {
+    "id": "sfp_arin",
+    "name": "ARIN",
+    "descr": "Queries ARIN registry for contact information."
+  },
+  {
+    "id": "sfp_azureblobstorage",
+    "name": "Azure Blob Finder",
+    "descr": "Search for potential Azure blobs associated with the target and attempt to list their contents."
+  },
+  {
+    "id": "sfp_badpackets",
+    "name": "Bad Packets",
+    "descr": "Obtain information about any malicious activities involving IP addresses found"
+  },
+  {
+    "id": "sfp_base64",
+    "name": "Base64 Decoder",
+    "descr": "Identify Base64-encoded strings in URLs, often revealing interesting hidden information."
+  },
+  {
+    "id": "sfp_bgpview",
+    "name": "BGPView",
+    "descr": "Obtain network information from BGPView API."
+  },
+  {
+    "id": "sfp_binaryedge",
+    "name": "BinaryEdge",
+    "descr": "Obtain information from BinaryEdge.io Internet scanning systems, including breaches, vulnerabilities, torrents and passive DNS."
+  },
+  {
+    "id": "sfp_bingsearch",
+    "name": "Bing",
+    "descr": "Obtain information from bing to identify sub-domains and links."
+  },
+  {
+    "id": "sfp_bingsharedip",
+    "name": "Bing (Shared IPs)",
+    "descr": "Search Bing for hosts sharing the same IP."
+  },
+  {
+    "id": "sfp_binstring",
+    "name": "Binary String Extractor",
+    "descr": "Attempt to identify strings in binary content."
+  },
+  {
+    "id": "sfp_bitcoin",
+    "name": "Bitcoin Finder",
+    "descr": "Identify bitcoin addresses in scraped webpages."
+  },
+  {
+    "id": "sfp_bitcoinabuse",
+    "name": "BitcoinAbuse",
+    "descr": "Check Bitcoin addresses against the bitcoinabuse.com database of suspect/malicious addresses."
+  },
+  {
+    "id": "sfp_bitcoinwhoswho",
+    "name": "Bitcoin Who's Who",
+    "descr": "Check for Bitcoin addresses against the Bitcoin Who's Who database of suspect/malicious addresses."
+  },
+  {
+    "id": "sfp_blockchain",
+    "name": "Blockchain",
+    "descr": "Queries blockchain.info to find the balance of identified bitcoin wallet addresses."
+  },
+  {
+    "id": "sfp_blocklistde",
+    "name": "blocklist.de",
+    "descr": "Check if a netblock or IP is malicious according to blocklist.de."
+  },
+  {
+    "id": "sfp_botscout",
+    "name": "BotScout",
+    "descr": "Searches BotScout.com's database of spam-bot IP addresses and e-mail addresses."
+  },
+  {
+    "id": "sfp_botvrij",
+    "name": "botvrij.eu",
+    "descr": "Check if a domain is malicious according to botvrij.eu."
+  },
+  {
+    "id": "sfp_builtwith",
+    "name": "BuiltWith",
+    "descr": "Query BuiltWith.com's Domain API for information about your target's web technology stack, e-mail addresses and more."
+  },
+  {
+    "id": "sfp_c99",
+    "name": "C99",
+    "descr": "Queries the C99 API which offers various data (geo location, proxy detection, phone lookup, etc)."
+  },
+  {
+    "id": "sfp_callername",
+    "name": "CallerName",
+    "descr": "Lookup US phone number location and reputation information."
+  },
+  {
+    "id": "sfp_censys",
+    "name": "Censys",
+    "descr": "Obtain host information from Censys.io."
+  },
+  {
+    "id": "sfp_certspotter",
+    "name": "CertSpotter",
+    "descr": "Gather information about SSL certificates from SSLMate CertSpotter API."
+  },
+  {
+    "id": "sfp_cinsscore",
+    "name": "CINS Army List",
+    "descr": "Check if a netblock or IP address is malicious according to Collective Intelligence Network Security (CINS) Army list."
+  },
+  {
+    "id": "sfp_circllu",
+    "name": "CIRCL.LU",
+    "descr": "Obtain information from CIRCL.LU's Passive DNS and Passive SSL databases."
+  },
+  {
+    "id": "sfp_citadel",
+    "name": "Leak-Lookup",
+    "descr": "Searches Leak-Lookup.com's database of breaches."
+  },
+  {
+    "id": "sfp_cleanbrowsing",
+    "name": "CleanBrowsing.org",
+    "descr": "Check if a host would be blocked by CleanBrowsing.org DNS content filters."
+  },
+  {
+    "id": "sfp_cleantalk",
+    "name": "CleanTalk Spam List",
+    "descr": "Check if a netblock or IP address is on CleanTalk.org's spam IP list."
+  },
+  {
+    "id": "sfp_clearbit",
+    "name": "Clearbit",
+    "descr": "Check for names, addresses, domains and more based on lookups of e-mail addresses on clearbit.com."
+  },
+  {
+    "id": "sfp_cloudflaredns",
+    "name": "CloudFlare DNS",
+    "descr": "Check if a host would be blocked by CloudFlare DNS."
+  },
+  {
+    "id": "sfp_coinblocker",
+    "name": "CoinBlocker Lists",
+    "descr": "Check if a domain appears on CoinBlocker lists."
+  },
+  {
+    "id": "sfp_commoncrawl",
+    "name": "CommonCrawl",
+    "descr": "Searches for URLs found through CommonCrawl.org."
+  },
+  {
+    "id": "sfp_comodo",
+    "name": "Comodo Secure DNS",
+    "descr": "Check if a host would be blocked by Comodo Secure DNS."
+  },
+  {
+    "id": "sfp_company",
+    "name": "Company Name Extractor",
+    "descr": "Identify company names in any obtained data."
+  },
+  {
+    "id": "sfp_cookie",
+    "name": "Cookie Extractor",
+    "descr": "Extract Cookies from HTTP headers."
+  },
+  {
+    "id": "sfp_countryname",
+    "name": "Country Name Extractor",
+    "descr": "Identify country names in any obtained data."
+  },
+  {
+    "id": "sfp_creditcard",
+    "name": "Credit Card Number Extractor",
+    "descr": "Identify Credit Card Numbers in any data"
+  },
+  {
+    "id": "sfp_crobat_api",
+    "name": "Crobat API",
+    "descr": "Search Crobat API for subdomains."
+  },
+  {
+    "id": "sfp_crossref",
+    "name": "Cross-Referencer",
+    "descr": "Identify whether other domains are associated ('Affiliates') of the target by looking for links back to the target site(s)."
+  },
+  {
+    "id": "sfp_crt",
+    "name": "Certificate Transparency",
+    "descr": "Gather hostnames from historical certificates in crt.sh."
+  },
+  {
+    "id": "sfp_crxcavator",
+    "name": "CRXcavator",
+    "descr": "Search CRXcavator for Chrome extensions."
+  },
+  {
+    "id": "sfp_customfeed",
+    "name": "Custom Threat Feed",
+    "descr": "Check if a host/domain, netblock, ASN or IP is malicious according to your custom feed."
+  },
+  {
+    "id": "sfp_cybercrimetracker",
+    "name": "CyberCrime-Tracker.net",
+    "descr": "Check if a host/domain or IP address is malicious according to CyberCrime-Tracker.net."
+  },
+  {
+    "id": "sfp_darksearch",
+    "name": "Darksearch",
+    "descr": "Search the Darksearch.io Tor search engine for mentions of the target domain."
+  },
+  {
+    "id": "sfp_debounce",
+    "name": "Debounce",
+    "descr": "Check whether an email is disposable"
+  },
+  {
+    "id": "sfp_dehashed",
+    "name": "Dehashed",
+    "descr": "Gather breach data from Dehashed API."
+  },
+  {
+    "id": "sfp_digitaloceanspace",
+    "name": "Digital Ocean Space Finder",
+    "descr": "Search for potential Digital Ocean Spaces associated with the target and attempt to list their contents."
+  },
+  {
+    "id": "sfp_dnsbrute",
+    "name": "DNS Brute-forcer",
+    "descr": "Attempts to identify hostnames through brute-forcing common names and iterations."
+  },
+  {
+    "id": "sfp_dnscommonsrv",
+    "name": "DNS Common SRV",
+    "descr": "Attempts to identify hostnames through brute-forcing common DNS SRV records."
+  },
+  {
+    "id": "sfp_dnsdb",
+    "name": "DNSDB",
+    "descr": "Query FarSight's DNSDB for historical and passive DNS data."
+  },
+  {
+    "id": "sfp_dnsdumpster",
+    "name": "DNSDumpster",
+    "descr": "Passive subdomain enumeration using HackerTarget's DNSDumpster"
+  },
+  {
+    "id": "sfp_dnsgrep",
+    "name": "DNSGrep",
+    "descr": "Obtain Passive DNS information from Rapid7 Sonar Project using DNSGrep API."
+  },
+  {
+    "id": "sfp_dnsneighbor",
+    "name": "DNS Look-aside",
+    "descr": "Attempt to reverse-resolve the IP addresses next to your target to see if they are related."
+  },
+  {
+    "id": "sfp_dnsraw",
+    "name": "DNS Raw Records",
+    "descr": "Retrieves raw DNS records such as MX, TXT and others."
+  },
+  {
+    "id": "sfp_dnsresolve",
+    "name": "DNS Resolver",
+    "descr": "Resolves hosts and IP addresses identified, also extracted from raw content."
+  },
+  {
+    "id": "sfp_dnszonexfer",
+    "name": "DNS Zone Transfer",
+    "descr": "Attempts to perform a full DNS zone transfer."
+  },
+  {
+    "id": "sfp_dns_for_family",
+    "name": "DNS for Family",
+    "descr": "Check if a host would be blocked by DNS for Family."
+  },
+  {
+    "id": "sfp_dronebl",
+    "name": "DroneBL",
+    "descr": "Query the DroneBL database for open relays, open proxies, vulnerable servers, etc."
+  },
+  {
+    "id": "sfp_duckduckgo",
+    "name": "DuckDuckGo",
+    "descr": "Query DuckDuckGo's API for descriptive information about your target."
+  },
+  {
+    "id": "sfp_email",
+    "name": "E-Mail Address Extractor",
+    "descr": "Identify e-mail addresses in any obtained data."
+  },
+  {
+    "id": "sfp_emailcrawlr",
+    "name": "EmailCrawlr",
+    "descr": "Search EmailCrawlr for email addresses and phone numbers associated with a domain."
+  },
+  {
+    "id": "sfp_emailformat",
+    "name": "EmailFormat",
+    "descr": "Look up e-mail addresses on email-format.com."
+  },
+  {
+    "id": "sfp_emailrep",
+    "name": "EmailRep",
+    "descr": "Search EmailRep.io for email address reputation."
+  },
+  {
+    "id": "sfp_emergingthreats",
+    "name": "Emerging Threats",
+    "descr": "Check if a netblock or IP address is malicious according to EmergingThreats.net."
+  },
+  {
+    "id": "sfp_errors",
+    "name": "Error String Extractor",
+    "descr": "Identify common error messages in content like SQL errors, etc."
+  },
+  {
+    "id": "sfp_ethereum",
+    "name": "Ethereum Address Extractor",
+    "descr": "Identify ethereum addresses in scraped webpages."
+  },
+  {
+    "id": "sfp_etherscan",
+    "name": "Etherscan",
+    "descr": "Queries etherscan.io to find the balance of identified ethereum wallet addresses."
+  },
+  {
+    "id": "sfp_filemeta",
+    "name": "File Metadata Extractor",
+    "descr": "Extracts meta data from documents and images."
+  },
+  {
+    "id": "sfp_flickr",
+    "name": "Flickr",
+    "descr": "Search Flickr for domains, URLs and emails related to the specified domain."
+  },
+  {
+    "id": "sfp_focsec",
+    "name": "Focsec",
+    "descr": "Look up IP address information from Focsec."
+  },
+  {
+    "id": "sfp_fortinet",
+    "name": "FortiGuard Antispam",
+    "descr": "Check if an IP address is malicious according to FortiGuard Antispam."
+  },
+  {
+    "id": "sfp_fraudguard",
+    "name": "Fraudguard",
+    "descr": "Obtain threat information from Fraudguard.io"
+  },
+  {
+    "id": "sfp_fsecure_riddler",
+    "name": "F-Secure Riddler.io",
+    "descr": "Obtain network information from F-Secure Riddler.io API."
+  },
+  {
+    "id": "sfp_fullcontact",
+    "name": "FullContact",
+    "descr": "Gather domain and e-mail information from FullContact.com API."
+  },
+  {
+    "id": "sfp_fullhunt",
+    "name": "FullHunt",
+    "descr": "Identify domain attack surface using FullHunt API."
+  },
+  {
+    "id": "sfp_github",
+    "name": "Github",
+    "descr": "Identify associated public code repositories on Github."
+  },
+  {
+    "id": "sfp_gleif",
+    "name": "GLEIF",
+    "descr": "Look up company information from Global Legal Entity Identifier Foundation (GLEIF)."
+  },
+  {
+    "id": "sfp_googlemaps",
+    "name": "Google Maps",
+    "descr": "Identifies potential physical addresses and latitude/longitude coordinates."
+  },
+  {
+    "id": "sfp_googleobjectstorage",
+    "name": "Google Object Storage Finder",
+    "descr": "Search for potential Google Object Storage buckets associated with the target and attempt to list their contents."
+  },
+  {
+    "id": "sfp_googlesafebrowsing",
+    "name": "Google SafeBrowsing",
+    "descr": "Check if the URL is included on any of the Safe Browsing lists."
+  },
+  {
+    "id": "sfp_googlesearch",
+    "name": "Google",
+    "descr": "Obtain information from the Google Custom Search API to identify sub-domains and links."
+  },
+  {
+    "id": "sfp_gravatar",
+    "name": "Gravatar",
+    "descr": "Retrieve user information from Gravatar API."
+  },
+  {
+    "id": "sfp_grayhatwarfare",
+    "name": "Grayhat Warfare",
+    "descr": "Find bucket names matching the keyword extracted from a domain from Grayhat API."
+  },
+  {
+    "id": "sfp_greensnow",
+    "name": "Greensnow",
+    "descr": "Check if a netblock or IP address is malicious according to greensnow.co."
+  },
+  {
+    "id": "sfp_grep_app",
+    "name": "grep.app",
+    "descr": "Search grep.app API for links and emails related to the specified domain."
+  },
+  {
+    "id": "sfp_greynoise",
+    "name": "GreyNoise",
+    "descr": "Obtain IP enrichment data from GreyNoise"
+  },
+  {
+    "id": "sfp_h1nobbdde",
+    "name": "HackerOne (Unofficial)",
+    "descr": "Check external vulnerability scanning/reporting service h1.nobbd.de to see if the target is listed."
+  },
+  {
+    "id": "sfp_hackertarget",
+    "name": "HackerTarget",
+    "descr": "Search HackerTarget.com for hosts sharing the same IP."
+  },
+  {
+    "id": "sfp_hashes",
+    "name": "Hash Extractor",
+    "descr": "Identify MD5 and SHA hashes in web content, files and more."
+  },
+  {
+    "id": "sfp_haveibeenpwned",
+    "name": "HaveIBeenPwned",
+    "descr": "Check HaveIBeenPwned.com for hacked e-mail addresses identified in breaches."
+  },
+  {
+    "id": "sfp_honeypot",
+    "name": "Project Honey Pot",
+    "descr": "Query the Project Honey Pot database for IP addresses."
+  },
+  {
+    "id": "sfp_hosting",
+    "name": "Hosting Provider Identifier",
+    "descr": "Find out if any IP addresses identified fall within known 3rd party hosting ranges, e.g. Amazon, Azure, etc."
+  },
+  {
+    "id": "sfp_hostio",
+    "name": "Host.io",
+    "descr": "Obtain information about domain names from host.io."
+  },
+  {
+    "id": "sfp_hunter",
+    "name": "Hunter.io",
+    "descr": "Check for e-mail addresses and names on hunter.io."
+  },
+  {
+    "id": "sfp_hybrid_analysis",
+    "name": "Hybrid Analysis",
+    "descr": "Search Hybrid Analysis for domains and URLs related to the target."
+  },
+  {
+    "id": "sfp_iban",
+    "name": "IBAN Number Extractor",
+    "descr": "Identify International Bank Account Numbers (IBANs) in any data."
+  },
+  {
+    "id": "sfp_iknowwhatyoudownload",
+    "name": "Iknowwhatyoudownload.com",
+    "descr": "Check iknowwhatyoudownload.com for IP addresses that have been using torrents."
+  },
+  {
+    "id": "sfp_instagram",
+    "name": "Instagram",
+    "descr": "Gather information from Instagram profiles."
+  },
+  {
+    "id": "sfp_intelx",
+    "name": "IntelligenceX",
+    "descr": "Obtain information from IntelligenceX about identified IP addresses, domains, e-mail addresses and phone numbers."
+  },
+  {
+    "id": "sfp_intfiles",
+    "name": "Interesting File Finder",
+    "descr": "Identifies potential files of interest, e.g. office documents, zip files."
+  },
+  {
+    "id": "sfp_ipapico",
+    "name": "ipapi.co",
+    "descr": "Queries ipapi.co to identify geolocation of IP Addresses using ipapi.co API"
+  },
+  {
+    "id": "sfp_ipapicom",
+    "name": "ipapi.com",
+    "descr": "Queries ipapi.com to identify geolocation of IP Addresses using ipapi.com API"
+  },
+  {
+    "id": "sfp_ipinfo",
+    "name": "IPInfo.io",
+    "descr": "Identifies the physical location of IP addresses identified using ipinfo.io."
+  },
+  {
+    "id": "sfp_ipqualityscore",
+    "name": "IPQualityScore",
+    "descr": "Determine if target is malicious using IPQualityScore API"
+  },
+  {
+    "id": "sfp_ipregistry",
+    "name": "ipregistry",
+    "descr": "Query the ipregistry.co database for reputation and geo-location."
+  },
+  {
+    "id": "sfp_ipstack",
+    "name": "ipstack",
+    "descr": "Identifies the physical location of IP addresses identified using ipstack.com."
+  },
+  {
+    "id": "sfp_isc",
+    "name": "Internet Storm Center",
+    "descr": "Check if an IP address is malicious according to SANS ISC."
+  },
+  {
+    "id": "sfp_jsonwhoiscom",
+    "name": "JsonWHOIS.com",
+    "descr": "Search JsonWHOIS.com for WHOIS records associated with a domain."
+  },
+  {
+    "id": "sfp_junkfiles",
+    "name": "Junk File Finder",
+    "descr": "Looks for old/temporary and other similar files."
+  },
+  {
+    "id": "sfp_keybase",
+    "name": "Keybase",
+    "descr": "Obtain additional information about domain names and identified usernames."
+  },
+  {
+    "id": "sfp_koodous",
+    "name": "Koodous",
+    "descr": "Search Koodous for mobile apps."
+  },
+  {
+    "id": "sfp_leakix",
+    "name": "LeakIX",
+    "descr": "Search LeakIX for host data leaks, open ports, software and geoip."
+  },
+  {
+    "id": "sfp_maltiverse",
+    "name": "Maltiverse",
+    "descr": "Obtain information about any malicious activities involving IP addresses"
+  },
+  {
+    "id": "sfp_malwarepatrol",
+    "name": "MalwarePatrol",
+    "descr": "Searches malwarepatrol.net's database of malicious URLs/IPs."
+  },
+  {
+    "id": "sfp_metadefender",
+    "name": "MetaDefender",
+    "descr": "Search MetaDefender API for IP address and domain IP reputation."
+  },
+  {
+    "id": "sfp_mnemonic",
+    "name": "Mnemonic PassiveDNS",
+    "descr": "Obtain Passive DNS information from PassiveDNS.mnemonic.no."
+  },
+  {
+    "id": "sfp_multiproxy",
+    "name": "multiproxy.org Open Proxies",
+    "descr": "Check if an IP address is an open proxy according to multiproxy.org open proxy list."
+  },
+  {
+    "id": "sfp_myspace",
+    "name": "MySpace",
+    "descr": "Gather username and location from MySpace.com profiles."
+  },
+  {
+    "id": "sfp_nameapi",
+    "name": "NameAPI",
+    "descr": "Check whether an email is disposable"
+  },
+  {
+    "id": "sfp_names",
+    "name": "Human Name Extractor",
+    "descr": "Attempt to identify human names in fetched content."
+  },
+  {
+    "id": "sfp_networksdb",
+    "name": "NetworksDB",
+    "descr": "Search NetworksDB.io API for IP address and domain information."
+  },
+  {
+    "id": "sfp_neutrinoapi",
+    "name": "NeutrinoAPI",
+    "descr": "Search NeutrinoAPI for phone location information, IP address information, and host reputation."
+  },
+  {
+    "id": "sfp_numverify",
+    "name": "numverify",
+    "descr": "Lookup phone number location and carrier information from numverify.com."
+  },
+  {
+    "id": "sfp_onioncity",
+    "name": "Onion.link",
+    "descr": "Search Tor 'Onion City' search engine for mentions of the target domain using Google Custom Search."
+  },
+  {
+    "id": "sfp_onionsearchengine",
+    "name": "Onionsearchengine.com",
+    "descr": "Search Tor onionsearchengine.com for mentions of the target domain."
+  },
+  {
+    "id": "sfp_onyphe",
+    "name": "Onyphe",
+    "descr": "Check Onyphe data (threat list, geo-location, pastries, vulnerabilities)  about a given IP."
+  },
+  {
+    "id": "sfp_openbugbounty",
+    "name": "Open Bug Bounty",
+    "descr": "Check external vulnerability scanning/reporting service openbugbounty.org to see if the target is listed."
+  },
+  {
+    "id": "sfp_opencorporates",
+    "name": "OpenCorporates",
+    "descr": "Look up company information from OpenCorporates."
+  },
+  {
+    "id": "sfp_opendns",
+    "name": "OpenDNS",
+    "descr": "Check if a host would be blocked by OpenDNS."
+  },
+  {
+    "id": "sfp_opennic",
+    "name": "OpenNIC DNS",
+    "descr": "Resolves host names in the OpenNIC alternative DNS system."
+  },
+  {
+    "id": "sfp_openphish",
+    "name": "OpenPhish",
+    "descr": "Check if a host/domain is malicious according to OpenPhish.com."
+  },
+  {
+    "id": "sfp_openstreetmap",
+    "name": "OpenStreetMap",
+    "descr": "Retrieves latitude/longitude coordinates for physical addresses from OpenStreetMap API."
+  },
+  {
+    "id": "sfp_open_passive_dns_database",
+    "name": "Open Passive DNS Database",
+    "descr": "Obtain passive DNS information from pdns.daloo.de Open passive DNS database."
+  },
+  {
+    "id": "sfp_pageinfo",
+    "name": "Page Information",
+    "descr": "Obtain information about web pages (do they take passwords, do they contain forms, etc.)"
+  },
+  {
+    "id": "sfp_pastebin",
+    "name": "PasteBin",
+    "descr": "PasteBin search (via Google Search API) to identify related content."
+  },
+  {
+    "id": "sfp_pgp",
+    "name": "PGP Key Servers",
+    "descr": "Look up e-mail addresses in PGP public key servers."
+  },
+  {
+    "id": "sfp_phishstats",
+    "name": "PhishStats",
+    "descr": "Check if a netblock or IP address is malicious according to PhishStats."
+  },
+  {
+    "id": "sfp_phishtank",
+    "name": "PhishTank",
+    "descr": "Check if a host/domain is malicious according to PhishTank."
+  },
+  {
+    "id": "sfp_phone",
+    "name": "Phone Number Extractor",
+    "descr": "Identify phone numbers in scraped webpages."
+  },
+  {
+    "id": "sfp_portscan_tcp",
+    "name": "Port Scanner - TCP",
+    "descr": "Scans for commonly open TCP ports on Internet-facing systems."
+  },
+  {
+    "id": "sfp_projectdiscovery",
+    "name": "ProjectDiscovery Chaos",
+    "descr": "Search for hosts/subdomains using chaos.projectdiscovery.io"
+  },
+  {
+    "id": "sfp_psbdmp",
+    "name": "Psbdmp",
+    "descr": "Check psbdmp.cc (PasteBin Dump) for potentially hacked e-mails and domains."
+  },
+  {
+    "id": "sfp_pulsedive",
+    "name": "Pulsedive",
+    "descr": "Obtain information from Pulsedive's API."
+  },
+  {
+    "id": "sfp_punkspider",
+    "name": "PunkSpider",
+    "descr": "Check the QOMPLX punkspider.io service to see if the target is listed as vulnerable."
+  },
+  {
+    "id": "sfp_quad9",
+    "name": "Quad9",
+    "descr": "Check if a host would be blocked by Quad9 DNS."
+  },
+  {
+    "id": "sfp_recondev",
+    "name": "Recon.dev",
+    "descr": "Search Recon.dev for subdomains."
+  },
+  {
+    "id": "sfp_reversewhois",
+    "name": "ReverseWhois",
+    "descr": "Reverse Whois lookups using reversewhois.io."
+  },
+  {
+    "id": "sfp_ripe",
+    "name": "RIPE",
+    "descr": "Queries the RIPE registry (includes ARIN data) to identify netblocks and other info."
+  },
+  {
+    "id": "sfp_riskiq",
+    "name": "RiskIQ",
+    "descr": "Obtain information from RiskIQ's (formerly PassiveTotal) Passive DNS and Passive SSL databases."
+  },
+  {
+    "id": "sfp_robtex",
+    "name": "Robtex",
+    "descr": "Search Robtex.com for hosts sharing the same IP."
+  },
+  {
+    "id": "sfp_s3bucket",
+    "name": "Amazon S3 Bucket Finder",
+    "descr": "Search for potential Amazon S3 buckets associated with the target and attempt to list their contents."
+  },
+  {
+    "id": "sfp_scylla",
+    "name": "Scylla",
+    "descr": "Gather breach data from Scylla API."
+  },
+  {
+    "id": "sfp_searchcode",
+    "name": "searchcode",
+    "descr": "Search searchcode for code repositories mentioning the target domain."
+  },
+  {
+    "id": "sfp_securitytrails",
+    "name": "SecurityTrails",
+    "descr": "Obtain Passive DNS and other information from SecurityTrails"
+  },
+  {
+    "id": "sfp_seon",
+    "name": "Seon",
+    "descr": "Queries seon.io to gather intelligence about IP Addresses, email addresses, and phone numbers"
+  },
+  {
+    "id": "sfp_shodan",
+    "name": "SHODAN",
+    "descr": "Obtain information from SHODAN about identified IP addresses."
+  },
+  {
+    "id": "sfp_similar",
+    "name": "Similar Domain Finder",
+    "descr": "Search various sources to identify similar looking domain names, for instance squatted domains."
+  },
+  {
+    "id": "sfp_skymem",
+    "name": "Skymem",
+    "descr": "Look up e-mail addresses on Skymem."
+  },
+  {
+    "id": "sfp_slideshare",
+    "name": "SlideShare",
+    "descr": "Gather name and location from SlideShare profiles."
+  },
+  {
+    "id": "sfp_snov",
+    "name": "Snov",
+    "descr": "Gather available email IDs from identified domains"
+  },
+  {
+    "id": "sfp_social",
+    "name": "Social Network Identifier",
+    "descr": "Identify presence on social media networks such as LinkedIn, Twitter and others."
+  },
+  {
+    "id": "sfp_sociallinks",
+    "name": "Social Links",
+    "descr": "Queries SocialLinks.io to gather intelligence from social media platforms and dark web."
+  },
+  {
+    "id": "sfp_socialprofiles",
+    "name": "Social Media Profile Finder",
+    "descr": "Tries to discover the social media profiles for human names identified."
+  },
+  {
+    "id": "sfp_sorbs",
+    "name": "SORBS",
+    "descr": "Query the SORBS database for open relays, open proxies, vulnerable servers, etc."
+  },
+  {
+    "id": "sfp_spamcop",
+    "name": "SpamCop",
+    "descr": "Check if a netblock or IP address is in the SpamCop database."
+  },
+  {
+    "id": "sfp_spamhaus",
+    "name": "Spamhaus Zen",
+    "descr": "Check if a netblock or IP address is in the Spamhaus Zen database."
+  },
+  {
+    "id": "sfp_spider",
+    "name": "Web Spider",
+    "descr": "Spidering of web-pages to extract content for searching."
+  },
+  {
+    "id": "sfp_spur",
+    "name": "spur.us",
+    "descr": "Obtain information about any malicious activities involving IP addresses found"
+  },
+  {
+    "id": "sfp_spyonweb",
+    "name": "SpyOnWeb",
+    "descr": "Search SpyOnWeb for hosts sharing the same IP address, Google Analytics code, or Google Adsense code."
+  },
+  {
+    "id": "sfp_spyse",
+    "name": "Spyse",
+    "descr": "Search Spyse.com Internet assets registry for information about domains, IP addresses, host info, potential vulnerabilities, passive DNS, etc."
+  },
+  {
+    "id": "sfp_sslcert",
+    "name": "SSL Certificate Analyzer",
+    "descr": "Gather information about SSL certificates used by the target's HTTPS sites."
+  },
+  {
+    "id": "sfp_stackoverflow",
+    "name": "StackOverflow",
+    "descr": "Search StackOverflow for any mentions of a target domain. Returns potentially related information."
+  },
+  {
+    "id": "sfp_stevenblack_hosts",
+    "name": "Steven Black Hosts",
+    "descr": "Check if a domain is malicious (malware or adware) according to Steven Black Hosts list."
+  },
+  {
+    "id": "sfp_strangeheaders",
+    "name": "Strange Header Identifier",
+    "descr": "Obtain non-standard HTTP headers returned by web servers."
+  },
+  {
+    "id": "sfp_subdomain_takeover",
+    "name": "Subdomain Takeover Checker",
+    "descr": "Check if affiliated subdomains are vulnerable to takeover."
+  },
+  {
+    "id": "sfp_sublist3r",
+    "name": "Sublist3r PassiveDNS",
+    "descr": "Passive subdomain enumeration using Sublist3r's API"
+  },
+  {
+    "id": "sfp_surbl",
+    "name": "SURBL",
+    "descr": "Check if a netblock, IP address or domain is in the SURBL blacklist."
+  },
+  {
+    "id": "sfp_talosintel",
+    "name": "Talos Intelligence",
+    "descr": "Check if a netblock or IP address is malicious according to TalosIntelligence."
+  },
+  {
+    "id": "sfp_textmagic",
+    "name": "TextMagic",
+    "descr": "Obtain phone number type from TextMagic API"
+  },
+  {
+    "id": "sfp_threatcrowd",
+    "name": "ThreatCrowd",
+    "descr": "Obtain information from ThreatCrowd about identified IP addresses, domains and e-mail addresses."
+  },
+  {
+    "id": "sfp_threatfox",
+    "name": "ThreatFox",
+    "descr": "Check if an IP address is malicious according to ThreatFox."
+  },
+  {
+    "id": "sfp_threatminer",
+    "name": "ThreatMiner",
+    "descr": "Obtain information from ThreatMiner's database for passive DNS and threat intelligence."
+  },
+  {
+    "id": "sfp_tldsearch",
+    "name": "TLD Searcher",
+    "descr": "Search all Internet TLDs for domains with the same name as the target (this can be very slow.)"
+  },
+  {
+    "id": "sfp_tool_cmseek",
+    "name": "Tool - CMSeeK",
+    "descr": "Identify what Content Management System (CMS) might be used."
+  },
+  {
+    "id": "sfp_tool_dnstwist",
+    "name": "Tool - DNSTwist",
+    "descr": "Identify bit-squatting, typo and other similar domains to the target using a local DNSTwist installation."
+  },
+  {
+    "id": "sfp_tool_nbtscan",
+    "name": "Tool - nbtscan",
+    "descr": "Scans for open NETBIOS nameservers on your target's network."
+  },
+  {
+    "id": "sfp_tool_nmap",
+    "name": "Tool - Nmap",
+    "descr": "Identify what Operating System might be used."
+  },
+  {
+    "id": "sfp_tool_nuclei",
+    "name": "Tool - Nuclei",
+    "descr": "Fast and customisable vulnerability scanner."
+  },
+  {
+    "id": "sfp_tool_onesixtyone",
+    "name": "Tool - onesixtyone",
+    "descr": "Fast scanner to find publicly exposed SNMP services."
+  },
+  {
+    "id": "sfp_tool_retirejs",
+    "name": "Tool - Retire.js",
+    "descr": "Scanner detecting the use of JavaScript libraries with known vulnerabilities"
+  },
+  {
+    "id": "sfp_tool_snallygaster",
+    "name": "Tool - snallygaster",
+    "descr": "Finds file leaks and other security problems on HTTP servers."
+  },
+  {
+    "id": "sfp_tool_testsslsh",
+    "name": "Tool - testssl.sh",
+    "descr": "Identify various TLS/SSL weaknesses, including Heartbleed, CRIME and ROBOT."
+  },
+  {
+    "id": "sfp_tool_trufflehog",
+    "name": "Tool - TruffleHog",
+    "descr": "Searches through git repositories for high entropy strings and secrets, digging deep into commit history."
+  },
+  {
+    "id": "sfp_tool_wafw00f",
+    "name": "Tool - WAFW00F",
+    "descr": "Identify what web application firewall (WAF) is in use on the specified website."
+  },
+  {
+    "id": "sfp_tool_wappalyzer",
+    "name": "Tool - Wappalyzer",
+    "descr": "Wappalyzer indentifies technologies on websites."
+  },
+  {
+    "id": "sfp_tool_whatweb",
+    "name": "Tool - WhatWeb",
+    "descr": "Identify what software is in use on the specified website."
+  },
+  {
+    "id": "sfp_torch",
+    "name": "TORCH",
+    "descr": "Search Tor 'TORCH' search engine for mentions of the target domain."
+  },
+  {
+    "id": "sfp_torexits",
+    "name": "TOR Exit Nodes",
+    "descr": "Check if an IP adddress or netblock appears on the Tor Metrics exit node list."
+  },
+  {
+    "id": "sfp_trashpanda",
+    "name": "Trashpanda",
+    "descr": "Queries Trashpanda to gather intelligence about mentions of target in pastesites"
+  },
+  {
+    "id": "sfp_trumail",
+    "name": "Trumail",
+    "descr": "Check whether an email is disposable"
+  },
+  {
+    "id": "sfp_twilio",
+    "name": "Twilio",
+    "descr": "Obtain information from Twilio about phone numbers. Ensure you have the Caller Name add-on installed in Twilio."
+  },
+  {
+    "id": "sfp_twitter",
+    "name": "Twitter",
+    "descr": "Gather name and location from Twitter profiles."
+  },
+  {
+    "id": "sfp_uceprotect",
+    "name": "UCEPROTECT",
+    "descr": "Check if a netblock or IP address is in the UCEPROTECT database."
+  },
+  {
+    "id": "sfp_urlscan",
+    "name": "URLScan.io",
+    "descr": "Search URLScan.io cache for domain information."
+  },
+  {
+    "id": "sfp_venmo",
+    "name": "Venmo",
+    "descr": "Gather user information from Venmo API."
+  },
+  {
+    "id": "sfp_viewdns",
+    "name": "ViewDNS.info",
+    "descr": "Identify co-hosted websites and perform reverse Whois lookups using ViewDNS.info."
+  },
+  {
+    "id": "sfp_virustotal",
+    "name": "VirusTotal",
+    "descr": "Obtain information from VirusTotal about identified IP addresses."
+  },
+  {
+    "id": "sfp_voipbl",
+    "name": "VoIP Blacklist (VoIPBL)",
+    "descr": "Check if an IP address or netblock is malicious according to VoIP Blacklist (VoIPBL)."
+  },
+  {
+    "id": "sfp_vxvault",
+    "name": "VXVault.net",
+    "descr": "Check if a domain or IP address is malicious according to VXVault.net."
+  },
+  {
+    "id": "sfp_webanalytics",
+    "name": "Web Analytics Extractor",
+    "descr": "Identify web analytics IDs in scraped webpages and DNS TXT records."
+  },
+  {
+    "id": "sfp_webframework",
+    "name": "Web Framework Identifier",
+    "descr": "Identify the usage of popular web frameworks like jQuery, YUI and others."
+  },
+  {
+    "id": "sfp_webserver",
+    "name": "Web Server Identifier",
+    "descr": "Obtain web server banners to identify versions of web servers being used."
+  },
+  {
+    "id": "sfp_whatcms",
+    "name": "WhatCMS",
+    "descr": "Check web technology using WhatCMS.org API."
+  },
+  {
+    "id": "sfp_whois",
+    "name": "Whois",
+    "descr": "Perform a WHOIS look-up on domain names and owned netblocks."
+  },
+  {
+    "id": "sfp_whoisology",
+    "name": "Whoisology",
+    "descr": "Reverse Whois lookups using Whoisology.com."
+  },
+  {
+    "id": "sfp_whoxy",
+    "name": "Whoxy",
+    "descr": "Reverse Whois lookups using Whoxy.com."
+  },
+  {
+    "id": "sfp_wigle",
+    "name": "WiGLE",
+    "descr": "Query WiGLE to identify nearby WiFi access points."
+  },
+  {
+    "id": "sfp_wikileaks",
+    "name": "Wikileaks",
+    "descr": "Search Wikileaks for mentions of domain names and e-mail addresses."
+  },
+  {
+    "id": "sfp_wikipediaedits",
+    "name": "Wikipedia Edits",
+    "descr": "Identify edits to Wikipedia articles made from a given IP address or username."
+  },
+  {
+    "id": "sfp_xforce",
+    "name": "XForce Exchange",
+    "descr": "Obtain IP reputation and passive DNS information from IBM X-Force Exchange."
+  },
+  {
+    "id": "sfp_yandexdns",
+    "name": "Yandex DNS",
+    "descr": "Check if a host would be blocked by Yandex DNS."
+  },
+  {
+    "id": "sfp_zetalytics",
+    "name": "Zetalytics",
+    "descr": "Query the Zetalytics database for hosts on your target domain(s)."
+  },
+  {
+    "id": "sfp_zoneh",
+    "name": "Zone-H Defacement Check",
+    "descr": "Check if a hostname/domain appears on the zone-h.org 'special defacements' RSS feed."
+  },
+  {
+    "id": "sfp__stor_db",
+    "name": "Storage",
+    "descr": "Stores scan results into the back-end SpiderFoot database. You will need this."
+  },
+  {
+    "id": "sfp__stor_stdout",
+    "name": "Command-line output",
+    "descr": "Dumps output to standard out. Used for when a SpiderFoot scan is run via the command-line."
+  }
+]
