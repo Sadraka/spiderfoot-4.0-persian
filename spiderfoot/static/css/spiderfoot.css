@@ -208,6 +208,10 @@ html[dir="rtl"] body {
   text-align: right;
   font-family: Tahoma, "Vazir", "Segoe UI", sans-serif;
 }
+html[dir="rtl"] td, html[dir="rtl"] th, html[dir="rtl"] p, html[dir="rtl"] div, html[dir="rtl"] span, html[dir="rtl"] label {
+  unicode-bidi: plaintext;
+  text-align: start;
+}
 html[dir="rtl"] .brand-logo {
   float: right;
   padding-left: 20px;

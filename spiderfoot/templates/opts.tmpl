@@ -14,23 +14,23 @@
     <input type=hidden id='token' name='token' value="${token}">
     <input type="file" name='configFile' id="configFile" class='hidden' onChange='$("#savesettingsform").submit()' />
     <button id="btn-save-changes" class='btn btn-primary' type="submit" data-translate="save_changes">Save Changes</button>
-    <button id="btn-import-config" class='btn btn-info'>Import API Keys</button>
-    <button id="btn-opt-export" class='btn btn-info'>Export API Keys</button>
+    <button id="btn-import-config" class='btn btn-info' data-translate="import_api_keys">Import API Keys</button>
+    <button id="btn-opt-export" class='btn btn-info' data-translate="export_api_keys">Export API Keys</button>
     <button id="btn-reset-settings" class='btn btn-danger' data-translate="reset_defaults">Reset to Factory Default</button>
 <br><br>
 </div>
 
 <div class="tabbable tabs-left">
 <ul class="nav nav-pills nav-stacked col-md-3">
-<li id='tab_global' class="active"><a href="#">Global</a></li>
+<li id='tab_global' class="active"><a href="#" data-translate="global">Global</a></li>
 % for mod in sorted(opts['__modules__'].keys()):
     <% keylist = dict((k, v) for k, v in opts['__modules__'][mod]['opts'].items() if not k.startswith('_')) %>
     % if len(keylist) > 0:
         <% keyicon = "" %>
         <% apikeylist = dict((k, v) for k, v in opts['__modules__'][mod]['opts'].items() if k.find("api_key") >= 0) %>
         <% 
-        if len(apikeylist) > 0: 
-            keyicon = "&nbsp;&nbsp;<i class=\"glyphicon glyphicon-lock\"></i>"
+            if len(apikeylist) > 0: 
+                keyicon = "&nbsp;&nbsp;<i class=\"glyphicon glyphicon-lock\"></i>"
         %>
         <li id='tab_${mod}'><a href='#' onclick='switchTab("${mod}");' >${opts['__modules__'][mod]['name']}${keyicon}</a></li>
     % endif
@@ -41,12 +41,12 @@
 <div class="tab-content col-md-9">
 
 <div id='optsect_global' class="tab-pane active">
-<h4>Global Settings</h4>
+<h4 data-translate="global_settings">Global Settings</h4>
 <table class='table table-bordered table-striped'>
-<thead><tr> <th>Option</th> <th>Value</th></tr></thead><tbody>
+<thead><tr> <th data-translate="option">Option</th> <th data-translate="value">Value</th></tr></thead><tbody>
 % for opt in sorted(opts.keys()):
     % if not opt.startswith("__"):
-    <tr><td>${opts['__globaloptdescs__'][opt]}</td><td style='vertical-align: middle'>
+    <tr><td data-opt-key="${opt}">${opts['__globaloptdescs__'][opt]}</td><td style='vertical-align: middle'>
         % if type(opts[opt]) is int:
         <div class='form-group'>
             <input id='${opt}' class='form-control' type=text value="${opts[opt]}">
@@ -67,8 +67,8 @@
                 seltrue = ""
         %>
             <select id='${opt}' class='form-control'>
-                <option value=1 ${seltrue}>True</option>
-                <option value=0 ${selfalse}>False</option>
+                <option value=1 ${seltrue} data-translate="true_val">True</option>
+                <option value=0 ${selfalse} data-translate="false_val">False</option>
             </select>
         % endif
         % if type(opts[opt]) is list and type(opts[opt][0]) is str:
@@ -107,32 +107,32 @@
 
     <table class='table table-bordered table-striped'>
     <tbody>
-    <tr><td>Summary</td><td>${summary}<br/><br/>${description}</td></tr>
+    <tr><td data-translate="summary">Summary</td><td>${summary}<br/><br/>${description}</td></tr>
 
     % if categories:
-    <tr><td>Categories:</td><td>${', '.join(categories)}</td><tr>
+    <tr><td data-translate="categories">Categories:</td><td>${', '.join(categories)}</td><tr>
     % endif
 
     % if labels:
-    <tr><td>Tags:</td><td>${', '.join(labels)}</td><tr>
+    <tr><td data-translate="tags">Tags:</td><td>${', '.join(labels)}</td><tr>
     % endif
 
     % if website:
-    <tr><td>Website:</td><td><a href="${website}" target=_new>${website}</a></td></tr>
+    <tr><td data-translate="website">Website:</td><td><a href="${website}" target=_new>${website}</a></td></tr>
     % endif
 
     </tbody>
     </table>
 
-    <h4>Settings</h4>
+    <h4 data-translate="settings">Settings</h4>
     <table class='table table-bordered table-striped'>
-    <thead><tr><th>Option</th> <th>Value</th></tr></thead>
+    <thead><tr><th data-translate="option">Option</th> <th data-translate="value">Value</th></tr></thead>
     <tbody>
 
     % for opt in sorted(modopts.keys()):
         % if not opt.startswith("_"):
             <tr>
-              <td>${optdescs.get(opt) or "No description available."}
+              <td data-opt-key="${mod}:${opt}">${optdescs.get(opt) or "No description available."}
                 % if "api_key" in opt:
                     % if apiKeyInstructions:
                         <%
@@ -168,8 +168,8 @@
                     seltrue = ""
             %>
                 <select id='${mod}:${opt}' class='form-control'>
-                    <option value=1 ${seltrue}>True</option>
-                    <option value=0 ${selfalse}>False</option>
+                    <option value=1 ${seltrue} data-translate="true_val">True</option>
+                    <option value=0 ${selfalse} data-translate="false_val">False</option>
                 </select>
             % endif
             % if type(modopts[opt]) is list and type(modopts[opt][0]) is str:

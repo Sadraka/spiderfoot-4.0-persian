@@ -157,13 +157,13 @@ function showlisttable(types, filter, data) {
     }
     var buttons = "<div class='btn-toolbar'>";
     buttons += "<div class='btn-group'>";
-    buttons += "<button id='btn-filter' class='btn btn-default'><i class='glyphicon glyphicon-filter'></i>&nbsp;Filter: " + filter + "</button>";
+    buttons += "<button id='btn-filter' class='btn btn-default'><i class='glyphicon glyphicon-filter'></i>&nbsp;<span data-translate='filter'>Filter</span>: " + (translations && translations[filter.toLowerCase()] ? translations[filter.toLowerCase()] : filter) + "</button>";
     buttons += "<button class='btn dropdown-toggle btn-default' data-toggle='dropdown'><span class='caret'></span></button>";
     buttons += "<ul class='dropdown-menu'>";
-    buttons += "<li><a href='javascript:filter(\"all\")'>None</a></li>";
-    buttons += "<li><a href='javascript:filter(\"running\")'>Running</a></li>";
-    buttons += "<li><a href='javascript:filter(\"finished\")'>Finished</a></li>";
-    buttons += "<li><a href='javascript:filter(\"failed\")'>Failed/Aborted</a></li></ul>";
+    buttons += "<li><a href='javascript:filter(\"all\")' data-translate='clear'>None</a></li>";
+    buttons += "<li><a href='javascript:filter(\"running\")' data-translate='running'>Running</a></li>";
+    buttons += "<li><a href='javascript:filter(\"finished\")' data-translate='completed'>Finished</a></li>";
+    buttons += "<li><a href='javascript:filter(\"failed\")' data-translate='aborted'>Failed/Aborted</a></li></ul>";
     buttons += "</div>";
 
     buttons += "<div class='btn-group pull-right'>";
@@ -189,7 +189,7 @@ function showlisttable(types, filter, data) {
 
     buttons += "</div>";
     var table = "<table id='scanlist' class='table table-bordered table-striped'>";
-    table += "<thead><tr><th class='sorter-false text-center'><input id='checkall' type='checkbox'></th> <th>Name</th> <th>Target</th> <th>Started</th> <th >Finished</th> <th class='text-center'>Status</th> <th class='text-center'>Elements</th><th class='text-center'>Correlations</th><th class='sorter-false text-center'>Action</th> </tr></thead><tbody>";
+    table += "<thead><tr><th class='sorter-false text-center'><input id='checkall' type='checkbox'></th> <th data-translate='name'>Name</th> <th data-translate='target'>Target</th> <th data-translate='started'>Started</th> <th data-translate='finished'>Finished</th> <th class='text-center' data-translate='status'>Status</th> <th class='text-center' data-translate='total'>Elements</th><th class='text-center' data-translate='correlation_rules'>Correlations</th><th class='sorter-false text-center' data-translate='action'>Action</th> </tr></thead><tbody>";
     filtered = 0;
     for (var i = 0; i < data.length; i++) {
         if (types != null && $.inArray(data[i][6], types)) {
@@ -200,7 +200,7 @@ function showlisttable(types, filter, data) {
         table += "<td><a href=" + docroot + "/scaninfo?id=" + data[i][0] + ">" + data[i][1] + "</a></td>";
         table += "<td>" + data[i][2] + "</td>";
         table += "<td>" + data[i][3] + "</td>";
-        table += "<td>" + data[i][5] + "</td>";
+        table += "<td>" + (translations && translations[data[i][5].toLowerCase()] ? translations[data[i][5].toLowerCase()] : data[i][5]) + "</td>";
 
         var statusy = "";
 
@@ -215,7 +215,8 @@ function showlisttable(types, filter, data) {
         } else {
             statusy = "alert-info";
         }
-        table += "<td class='text-center'><span class='badge " + statusy + "'>" + data[i][6] + "</span></td>";
+        var statusLabel = data[i][6].toLowerCase();
+        table += "<td class='text-center'><span class='badge " + statusy + "' data-translate='" + statusLabel + "'>" + data[i][6] + "</span></td>";
         table += "<td class='text-center'>" + data[i][7] + "</td>";
         table += "<td class='text-center'>";
         table += "<span class='badge alert-danger'>" + data[i][8]['HIGH'] + "</span>";
@@ -289,6 +290,10 @@ function showlisttable(types, filter, data) {
         $("#btn-stop").click(function() { stopSelected(); });
         $("#checkall").click(function() { switchSelectAll(); });
     });
+
+    if (typeof window.translatePage === "function") {
+        window.translatePage();
+    }
 }
 
 showlist();

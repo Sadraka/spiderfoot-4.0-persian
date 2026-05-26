@@ -175,28 +175,29 @@
             sf.search(instanceId, query, typeName, function(data) {
                             lastSearchType = typeName;
                             lastSearchQuery = query;
-                            var crumbs = " <ul class='breadcrumb' id='breadcrumbs'> <li><a class='link' onClick='browseEventList(\"" + instanceId + "\");'>Browse</a>";
+                            var crumbs = " <ul class='breadcrumb' id='breadcrumbs'> <li><a class='link' onClick='browseEventList(\"" + instanceId + "\");' data-translate='browse'>Browse</a>";
                             crumbs += " <span class='divider'></span></li>";
                             if (typeName != null) {
                                 crumbs += " <li><a class='link' onClick=";
                                 crumbs += "'browseEventData(\"" + instanceId + "\",\"" + currentTypeName + "\",\"" + typeName + "\",\"full\");'>";
-                                crumbs += unescape(currentTypeName) + "</a><span class='divider'></span></li>";
+                                var dispName = (window.translations && window.translations[typeName]) ? window.translations[typeName] : unescape(currentTypeName);
+                                crumbs += dispName + "</a><span class='divider'></span></li>";
                             }
-                            crumbs += "<li>Search results";
-                            crumbs += " (" + data.length + " records)</li></ul>";
+                            crumbs += "<li><span data-translate='search_results'>Search results</span>";
+                            crumbs += " (" + data.length + " <span data-translate='records'>records</span>)</li></ul>";
 
                             if (data.length == 0) {
-                                var table = "<div id='scansummary-content'>&nbsp;&nbsp;No results found. Try broadening your search criteria.</div>";
+                                var table = "<div id='scansummary-content' class='alert alert-warning' data-translate='no_results_found'>No results found. Try broadening your search criteria.</div>";
                             } else {
                                 var table = "<table id='scansummary-content' class='table table-bordered table-striped small tablesorter'><thead><tr>";
                                 if (typeName == null) {
-                                    table += "<th class='sorter-false'>Data Element Type</th>";
+                                    table += "<th class='sorter-false' data-translate='data_element_type'>Data Element Type</th>";
                                 }
-                                table += "<th>Data Element</th><th>Source Data Element</th><th>Source Module</th><th>Identified</th></tr></thead><tbody>";
+                                table += "<th data-translate='data_element'>Data Element</th><th data-translate='source_data_element'>Source Data Element</th><th data-translate='source_module'>Source Module</th><th data-translate='identified'>Identified</th></tr></thead><tbody>";
                                 for (var i = 0; i < data.length; i++) {
                                     table += "<tr>";
                                     if (typeName == null) {
-                                        table += "<td><pre class='table-border-bg-inherit'>" + data[i][8] + "</pre></td>";
+                                        table += "<td><pre class='table-border-bg-inherit'>" + (window.translations && window.translations[data[i][8]] ? window.translations[data[i][8]] : data[i][8]) + "</pre></td>";
                                     }
                                     table += "<td><pre class='table-border-bg-inherit'>";
                                     table += sf.replace_sfurltag(data[i][1]);
@@ -213,6 +214,9 @@
                             $("#loader").fadeOut(500);
                             $("#mainbody").append(crumbs + table);
                             $("#scansummary-content").tablesorter();
+                            if (typeof window.translatePage === 'function') {
+                                window.translatePage();
+                            }
             });
         }
 
@@ -243,7 +247,8 @@
                 container: 'graph-container'
             }, function(s) { 
                 if (s.renderers[0].nodesOnScreen.length == 0) {
-                    $("#graph-container").append("<div class='alert alert-danger'>Insufficient data to produce a graph.</div>");
+                    $("#graph-container").append("<div class='alert alert-danger' data-translate='insufficient_data'>Insufficient data to produce a graph.</div>");
+                    if (typeof window.translatePage === 'function') window.translatePage();
                     $("#loader").hide();
                     return;
                 }
@@ -286,33 +291,33 @@
             grid += "<div class='row'>";
             grid += "<div class='col-sm-7'>";
             grid += "<div class='panel panel-default'>";
-            grid += "<div class='panel-heading'><i class='glyphicon glyphicon-eye-open'></i>&nbsp;&nbsp;Scan Status</div><div class='panel-body' style='padding: 5px'>";
+            grid += "<div class='panel-heading'><i class='glyphicon glyphicon-eye-open'></i>&nbsp;&nbsp;<span data-translate='scan_status'>Scan Status</span></div><div class='panel-body' style='padding: 5px'>";
             grid += "<div class='btn-toolbar text-center'>";
-            grid += "<div class='btn-group' style='float: unset; padding: 5px'><button class='btn disabled btn-md btn-secondary' style='cursor: default;'>Total</span></button>";
+            grid += "<div class='btn-group' style='float: unset; padding: 5px'><button class='btn disabled btn-md btn-secondary' style='cursor: default;' data-translate='total'>Total</button>";
             grid += "<button class='btn disabled btn-md btn-default' id='tcounter' style='cursor: default;'>?</button></div>";
-            grid += "<div class='btn-group' style='float: unset; padding: 5px'><button class='btn disabled btn-md btn-secondary' style='cursor: default;'>Unique</button>";
+            grid += "<div class='btn-group' style='float: unset; padding: 5px'><button class='btn disabled btn-md btn-secondary' style='cursor: default;' data-translate='unique'>Unique</button>";
             grid += "<button class='btn disabled btn-md btn-default' id='ucounter' style='cursor: default;'>?</button></div>";
-            grid += "<div class='btn-group' style='float: unset; padding: 5px'><button class='btn disabled btn-md btn-secondary' style='cursor: default;'>Status</button>";
+            grid += "<div class='btn-group' style='float: unset; padding: 5px'><button class='btn disabled btn-md btn-secondary' style='cursor: default;' data-translate='status'>Status</button>";
             grid += "<button class='btn disabled btn-md btn-default' id='status' style='cursor: default;'>?</button></div>";
-            grid += "<div class='btn-group' style='float: unset; padding: 5px'><button class='btn disabled btn-md btn-secondary' style='cursor: default;'>Errors</button>";
+            grid += "<div class='btn-group' style='float: unset; padding: 5px'><button class='btn disabled btn-md btn-secondary' style='cursor: default;' data-translate='errors'>Errors</button>";
             grid += "<button class='btn disabled btn-md btn-default' id='errors' style='cursor: default;'>?</button></div>";
             grid += "</div></div></div></div>";
             grid += "<div class='col-sm-5'>";
             grid += "<div class='panel panel-default'>";
-            grid += "<div class='panel-heading'><i class='glyphicon glyphicon-exclamation-sign'></i>&nbsp;&nbsp;Correlations</div><div class='panel-body' style='padding: 5px'>";
+            grid += "<div class='panel-heading'><i class='glyphicon glyphicon-exclamation-sign'></i>&nbsp;&nbsp;<span data-translate='correlation_rules'>Correlations</span></div><div class='panel-body' style='padding: 5px'>";
             grid += "<div class='btn-toolbar text-center'>";
-            grid += "<div class='btn-group' style='float: unset; padding: 5px'><button class='btn disabled btn-md btn-danger' style='cursor: default;'>High</span></button>";
+            grid += "<div class='btn-group' style='float: unset; padding: 5px'><button class='btn disabled btn-md btn-danger' style='cursor: default;' data-translate='high'>High</button>";
             grid += "<button class='btn disabled btn-md btn-default' id='corr-high' style='cursor: default;'>?</button></div>";
-            grid += "<div class='btn-group' style='float: unset; padding: 5px'><button class='btn disabled btn-md btn-warning' style='cursor: default;'>Medium</button>";
+            grid += "<div class='btn-group' style='float: unset; padding: 5px'><button class='btn disabled btn-md btn-warning' style='cursor: default;' data-translate='medium'>Medium</button>";
             grid += "<button class='btn disabled btn-md btn-default' id='corr-medium' style='cursor: default;'>?</button></div>";
-            grid += "<div class='btn-group' style='float: unset; padding: 5px'><button class='btn disabled btn-md btn-primary' style='cursor: default;'>Low</button>";
+            grid += "<div class='btn-group' style='float: unset; padding: 5px'><button class='btn disabled btn-md btn-primary' style='cursor: default;' data-translate='low'>Low</button>";
             grid += "<button class='btn disabled btn-md btn-default' id='corr-low' style='cursor: default;'>?</button></div>";
-            grid += "<div class='btn-group' style='float: unset; padding: 5px'><button class='btn disabled btn-md btn-success' style='cursor: default;'>Info</button>";
+            grid += "<div class='btn-group' style='float: unset; padding: 5px'><button class='btn disabled btn-md btn-success' style='cursor: default;' data-translate='info_val'>Info</button>";
             grid += "<button class='btn disabled btn-md btn-default' id='corr-info' style='cursor: default;'>?</button></div>";
             grid += "</div></div></div></div></div>";
             grid += "<div class='row'><div class='col-sm-12'>";
             grid += "<div class='panel panel-default'>";
-            grid += "<div class='panel-heading'><i class='glyphicon glyphicon-stats'></i>&nbsp;&nbsp;Data Types</div><div class='panel-body'>";
+            grid += "<div class='panel-heading'><i class='glyphicon glyphicon-stats'></i>&nbsp;&nbsp;<span data-translate='data_types'>Data Types</span></div><div class='panel-body'>";
             grid += "<div id='vbarsummary'></div>";
             grid += "</div></div></div></div>";
 
@@ -380,7 +385,8 @@
 
                         $('#ucounter').html(uniqueCount);
                         $('#tcounter').html(totalCount);
-                        $('#scanstatusbadge').html(scanStatus);
+                        var statusText = (window.translations && window.translations[scanStatus.toLowerCase()]) ? window.translations[scanStatus.toLowerCase()] : scanStatus;
+                        $('#scanstatusbadge').html(statusText);
 
                         var statusy = "";
                         if (scanStatus == "FINISHED") {
@@ -395,14 +401,22 @@
                             statusy = "alert-info";
                         }
                         $('#scanstatusbadge').removeClass(["alert-info", "alert-warning", "alert-danger"]).addClass(statusy);
-                        $('#status').html(scanStatus);
+                        $('#status').html(statusText);
                         $("#vbarsummary").empty();
                         if (scanSummary.length == 0) {
-                          $("#vbarsummary").append("<div id='scansummary-content' class='alert alert-warning'><h4>No data.</h4>If the scan is still running this section will update shortly.</div>");
+                          $("#vbarsummary").append("<div id='scansummary-content' class='alert alert-warning'><h4 data-translate='no_data'>No data.</h4><span data-translate='scan_running_update'>If the scan is still running this section will update shortly.</span></div>");
                         } else {
+                          for (var j = 0; j < scanSummary.length; j++) {
+                              if (window.translations && window.translations[scanSummary[j].id]) {
+                                  scanSummary[j].name = window.translations[scanSummary[j].id];
+                              }
+                          }
                           sf_viz_vbar("#vbarsummary", scanSummary);
                         }
                         $("#loader").fadeOut(500);
+                        if (typeof window.translatePage === 'function') {
+                            window.translatePage();
+                        }
                     });
                 }
             );
@@ -424,10 +438,10 @@
             sf.fetchData('${docroot}/scaneventresults', { 'id': instanceId, 'correlationId': correlationId }, function(data) {
                 var table = "<table id='corrcontent_'" + correlationId + "' class='table table-bordered table-striped small'>";
                 table += "<thead><tr>";
-                table += "<th>Data Element</th></th>";
-                table += "<th>Source Data Element</th>";
-                table += "<th>Source Module</th>";
-                table += "<th>Identified</th>";
+                table += "<th data-translate='data_element'>Data Element</th></th>";
+                table += "<th data-translate='source_data_element'>Source Data Element</th>";
+                table += "<th data-translate='source_module'>Source Module</th>";
+                table += "<th data-translate='identified'>Identified</th>";
                 table += "</tr></thead><tbody>";
 
                 for (var i = 0; i < data.length; i++) {
@@ -444,6 +458,7 @@
                 table += "</tbody></table>"
                 $("#corrwell_td_" + correlationId).prepend(table);
                 $("#corrwell_tr_" + correlationId).removeClass("hidden");
+                if (typeof window.translatePage === 'function') window.translatePage();
             });
         }
 
@@ -458,14 +473,15 @@
             refresh = function() { browseCorrelations(instanceId); }
             sf.fetchData('${docroot}/scancorrelations', {'id': instanceId}, function(data) {
                 if (data.length == 0) {
-                    table = "<div id='scansummary-content' class='alert alert-warning'><h4>No correlations.</h4>If the scan is still running please reload once it has completed.</div>";
+                    table = "<div id='scansummary-content' class='alert alert-warning'><h4 data-translate='no_correlations'>No correlations.</h4><span data-translate='no_correlations_help'>If the scan is still running please reload once it has completed.</span></div>";
                     $("#loader").fadeOut(500);
                     $("#mainbody").append(table);
                     sf.updateTooltips();
+                    if (typeof window.translatePage === 'function') window.translatePage();
                     return;
                 }
                 var table = "<table id='scansummary-content' class='table table-bordered table-striped table-condensed tablesorter small'>";
-                table += "<thead><tr><th>Correlation</th><th>Risk</th><th>Data Elements</th></tr></thead><tbody>";
+                table += "<thead><tr><th data-translate='correlation'>Correlation</th><th data-translate='risk'>Risk</th><th data-translate='data_elements'>Data Elements</th></tr></thead><tbody>";
                 for (var i = 0; i < data.length; i++) {
                     table += "<tr>";
                     table += "<td><a style='cursor: pointer' onClick='toggleCorrelation(\"" + instanceId + "\",\"" + data[i][0] + "\")'>" + data[i][1] + "</a>&nbsp;&nbsp;";
@@ -483,7 +499,8 @@
                     if (data[i][3] == "INFO") {
                         statusy = "alert-success";
                     }
-                    table += "<td><span class='badge " + statusy + "'>" + data[i][3] + "</span></td>";
+                    var riskText = (window.translations && window.translations[data[i][3].toLowerCase()]) ? window.translations[data[i][3].toLowerCase()] : data[i][3];
+                    table += "<td><span class='badge " + statusy + "'>" + riskText + "</span></td>";
                     table += "<td>" + data[i][7] + "</td>";
                     table += "</tr><tr class='hidden' id='corrwell_tr_" + data[i][0] + "'><td colspan=3 id='corrwell_td_" + data[i][0] + "'></td></tr>";
                 }
@@ -502,6 +519,7 @@
                 });
                 $("#scansummary-content").tablesorter({ headers: { 1: { sorter: 'criticality' } } });
                 sf.updateTooltips();
+                if (typeof window.translatePage === 'function') window.translatePage();
             });
         }
 
@@ -518,7 +536,7 @@
             refresh = function() { viewScanLog(instanceId); }
             sf.fetchData('${docroot}/scanlog', {'id': instanceId}, function(data) {
                             var table = "<table id='scanlogs-content' class='table table-bordered table-striped table-condensed small tablesorter' style='table-layout: fixed'>";
-                            table += "<thead><tr><th>Time</th><th>Component</th><th>Type</th><th>Event</th></tr></thead><tbody>";
+                            table += "<thead><tr><th data-translate='time'>Time</th><th data-translate='component'>Component</th><th data-translate='type'>Type</th><th data-translate='event'>Event</th></tr></thead><tbody>";
                             for (var i = 0; i < data.length; i++) {
                                 if (data[i][2] == "ERROR") {
                                   table += "<tr class='danger'>";
@@ -535,6 +553,7 @@
                             $("#loader").fadeOut(500);
                             $("#mainbody").append(table);
                             $("#scanlogs-content").tablesorter({widgets: ["filter"], widgetOptions : { filter_searchDelay : 300, filter_hideFilters : false }});
+                            if (typeof window.translatePage === 'function') window.translatePage();
             });
         }
 
@@ -556,11 +575,12 @@
             refresh = function() { browseEventList(instanceId); }
             sf.fetchData('${docroot}/scansummary', {'id': instanceId, 'by': 'type'}, function(data) {
                             var table = "<table id='scansummary-content' class='table table-bordered table-striped tablesorter'>";
-                            table += "<thead><tr> <th>Type</th><th>Unique Data Elements</th> <th>Total Data Elements</th><th>Last Data Element</th></tr></thead><tbody>";
+                            table += "<thead><tr> <th data-translate='type'>Type</th><th data-translate='unique_data_elements'>Unique Data Elements</th> <th data-translate='total_data_elements'>Total Data Elements</th><th data-translate='last_data_element'>Last Data Element</th></tr></thead><tbody>";
                             for (var i = 0; i < data.length; i++) {
                                 table += "<tr><td><a class='link' onClick='";
                                 table += "browseEventData(\"${id}\", \"" + escape(data[i][1]) + "\", \"" + data[i][0] + "\", \"full\");'>";
-                                table += data[i][1] + "</a></td>";
+                                var eventLabel = (window.translations && window.translations[data[i][0]]) ? window.translations[data[i][0]] : data[i][1];
+                                table += eventLabel + "</a></td>";
                                 table += "<td>" + data[i][4] + "</td>";
                                 table += "<td>" + data[i][3] + "</td>";
                                 table += "<td>" + data[i][2] + "</td>";
@@ -568,12 +588,13 @@
                             table += "</tbody></table>"
 
                             if (data.length < 1) {
-                                table = "<div id='scansummary-content' class='alert alert-warning'><h4>No data.</h4>If the scan is still running please try again soon.</div>";
+                                table = "<div id='scansummary-content' class='alert alert-warning'><h4 data-translate='no_data'>No data.</h4><span data-translate='scan_running_try_again'>If the scan is still running please try again soon.</span></div>";
                             }
 
                             $("#loader").fadeOut(500);
                             $("#mainbody").append(table);
                             $("#scansummary-content").tablesorter();
+                            if (typeof window.translatePage === 'function') window.translatePage();
             });
         }
 
@@ -612,13 +633,14 @@
                                     fpcount++;
                                 }
                             }
-                            var crumbs = " <ul class='breadcrumb' id='breadcrumbs'> <li><a class='link' onClick='browseEventList(\"" + instanceId + "\");'>Browse</a>";
+                            var crumbs = " <ul class='breadcrumb' id='breadcrumbs'> <li><a class='link' onClick='browseEventList(\"" + instanceId + "\");' data-translate='browse'>Browse</a>";
                             crumbs += " <span class='divider'></span></li> <li><a class='link' onClick=";
                             crumbs += "'browseEventData(\"" + instanceId + "\",\"" + eventTypeLabel + "\",\"" + eventType + "\",\"";
                             crumbs += format + "\", " + filterFP + ");'>";
-                            crumbs += unescape(eventTypeLabel) + "</a></li>";
+                            var dispLabel = (window.translations && window.translations[eventType]) ? window.translations[eventType] : unescape(eventTypeLabel);
+                            crumbs += dispLabel + "</a></li>";
                             if (fpcount > 0) {
-                                crumbs += "<div class='pull-right text-center'><i class='glyphicon glyphicon-ban-circle'></i>&nbsp;&nbsp;Hide " + fpcount + " False Positives: ";
+                                crumbs += "<div class='pull-right text-center'><i class='glyphicon glyphicon-ban-circle'></i>&nbsp;&nbsp;<span data-translate='hide_fps'>Hide False Positives</span> (" + fpcount + "): ";
                                 crumbs += "<input class='vertical-align-top' type='checkbox' ";
                                 crumbs += "onClick=\"browseEventData('" + instanceId + "', '" + eventTypeLabel +"', '" + eventType + "'";
                                 crumbs += ",'" + format + "', ";
@@ -636,10 +658,10 @@
                             var table = "<table id='scansummary-content' class='table table-bordered table-striped small tablesorter'>";
                             table += "<thead><tr>";
                             table += "<th class='text-center'><input id='checkall' type='checkbox' onClick='switchSelectAll()'></th>";
-                            table += "<th>Data Element</th></th>";
-                            table += "<th>Source Data Element</th>";
-                            table += "<th>Source Module</th>";
-                            table += "<th>Identified</th>";
+                            table += "<th data-translate='data_element'>Data Element</th></th>";
+                            table += "<th data-translate='source_data_element'>Source Data Element</th>";
+                            table += "<th data-translate='source_module'>Source Module</th>";
+                            table += "<th data-translate='identified'>Identified</th>";
                             table += "</tr></thead><tbody>";
 
                             for (var i = 0; i < data.length; i++) {
@@ -653,7 +675,6 @@
                                 }
                                 table += "</td>";
                                 table += "<td><pre class='table-border-bg-inherit'>";
-                                //table += "<a href='${docroot}/entityinfo?id=" + data[i][7] + "'>" + data[i][1] + "</a>";
                                 table += sf.replace_sfurltag(data[i][1]);
                                 table += "</pre></td><td><pre class='table-border-bg-inherit'>";
                                 table += sf.replace_sfurltag(data[i][2]);
@@ -684,7 +705,7 @@
 
                                 lastChecked = this;
                             });
-
+                            if (typeof window.translatePage === 'function') window.translatePage();
                 });
             }
 
@@ -696,12 +717,13 @@
                     filterFP = null;
                 }
                 sf.fetchData('${docroot}/scaneventresultsunique', {'id': instanceId, 'eventType': eventType, 'filterfp': filterFP }, function(data) {
-                            var crumbs = " <ul class='breadcrumb' id='breadcrumbs'> <li><a class='link' onClick='browseEventList(\"" + instanceId + "\");'>Browse</a>";
+                            var crumbs = " <ul class='breadcrumb' id='breadcrumbs'> <li><a class='link' onClick='browseEventList(\"" + instanceId + "\");' data-translate='browse'>Browse</a>";
                             crumbs += " <span class='divider'></span></li> <li><a class='link' onClick=";
                             crumbs += "'browseEventData(\"" + instanceId + "\",\"" + eventTypeLabel + "\",\"" + eventType + "\",\"" + format;
                             crumbs += "\", " + filterFP + ");'>";
-                            crumbs += unescape(eventTypeLabel) + "</a></li>";
-                            crumbs += "<div class='pull-right text-center'><i class='glyphicon glyphicon-ban-circle'></i>&nbsp;&nbsp;&nbsp;&nbsp;Hide False Positives: ";
+                            var dispLabel = (window.translations && window.translations[eventType]) ? window.translations[eventType] : unescape(eventTypeLabel);
+                            crumbs += dispLabel + "</a></li>";
+                            crumbs += "<div class='pull-right text-center'><i class='glyphicon glyphicon-ban-circle'></i>&nbsp;&nbsp;&nbsp;&nbsp;<span data-translate='hide_fps_only'>Hide False Positives</span>: ";
                             crumbs += "<input class='vertical-align-top' type='checkbox' ";
                             crumbs += "onClick=\"browseEventData('" + instanceId + "', '" + eventTypeLabel +"', '" + eventType + "'";
                             crumbs += ",'" + format + "', ";
@@ -716,7 +738,7 @@
                             crumbs += "</ul>";
 
                             var table = "<table id='scansummary-content' class='table table-bordered table-striped small'>";
-                            table += "<thead><tr> <th>Unique Data Element</th><th>Occurrences</th></tr></thead><tbody>";
+                            table += "<thead><tr> <th data-translate='unique_data_element'>Unique Data Element</th><th data-translate='occurrences'>Occurrences</th></tr></thead><tbody>";
                             for (var i = 0; i < data.length; i++) {
                                 table += "<tr><td><pre class='table-border-bg-inherit'>";
                                 table += sf.replace_sfurltag(data[i][0]);
@@ -726,6 +748,7 @@
                             table += "</tbody></table>"
                             $("#loader").fadeOut(500);
                             $("#mainbody").append(crumbs + table);
+                            if (typeof window.translatePage === 'function') window.translatePage();
                 });
             }
 
@@ -736,10 +759,11 @@
 
                 if (format.indexOf("viz-bubble") == 0) {
                     sf.fetchData('${docroot}/scaneventresults', {'id': instanceId, 'eventType': eventType }, function(data) {
-                        var crumbs = " <ul class='breadcrumb' id='breadcrumbs'> <li><a class='link' onClick='browseEventList(\"" + instanceId + "\");'>Browse</a>";
+                        var crumbs = " <ul class='breadcrumb' id='breadcrumbs'> <li><a class='link' onClick='browseEventList(\"" + instanceId + "\");' data-translate='browse'>Browse</a>";
                         crumbs += " <span class='divider'>;</span></li> <li><a class='link' onClick=";
                         crumbs += "'browseEventData(\"" + instanceId + "\",\"" + eventTypeLabel + "\",\"" + eventType + "\",\"" + format + "\");'>";
-                        crumbs += unescape(eventTypeLabel) + "</a></li></ul>";
+                        var dispLabel = (window.translations && window.translations[eventType]) ? window.translations[eventType] : unescape(eventTypeLabel);
+                        crumbs += dispLabel + "</a></li></ul>";
                         itemList = []
                         for (var i = 0; i < data.length; i++) {
                             if (format == "viz-bubble-source") {
@@ -751,20 +775,23 @@
                         }
                         $("#loader").fadeOut(500);
                         $("#mainbody").append(crumbs + "<div id='scansummary-content' class='text-center'></div>");
-                        sf_viz_bubble("#scansummary-content", itemList)
+                        sf_viz_bubble("#scansummary-content", itemList);
+                        if (typeof window.translatePage === 'function') window.translatePage();
                     });
                 }
 
                 if (format == "viz-dendro") {
                     sf.fetchData("${docroot}/scanelementtypediscovery", {'id': instanceId, 'eventType': eventType }, function(data) {
-                        var crumbs = " <ul class='breadcrumb' id='breadcrumbs'> <li><a class='link' onClick='browseEventList(\"" + instanceId + "\");'>Browse</a>";
+                        var crumbs = " <ul class='breadcrumb' id='breadcrumbs'> <li><a class='link' onClick='browseEventList(\"" + instanceId + "\");' data-translate='browse'>Browse</a>";
                         crumbs += " <span class='divider'></span></li> <li><a class='link' onClick=";
                         crumbs += "'browseEventData(\"" + instanceId + "\",\"" + eventTypeLabel + "\",\"" + eventType + "\",\"" + format + "\");'>";
-                        crumbs += unescape(eventTypeLabel) + "</a></li></ul>";
+                        var dispLabel = (window.translations && window.translations[eventType]) ? window.translations[eventType] : unescape(eventTypeLabel);
+                        crumbs += dispLabel + "</a></li></ul>";
 
                         $("#loader").fadeOut(500);
                         $("#mainbody").append(crumbs + "<div id='scansummary-content' class='text-center'></div>");
                         sf_viz_dendrogram("#scansummary-content", data);
+                        if (typeof window.translatePage === 'function') window.translatePage();
                     });
                 }
             }
@@ -827,29 +854,30 @@
             navTo("btn-info");
             refresh = function() { viewScanConfig(instanceId); }
             sf.fetchData('${docroot}/scanopts', {'id': instanceId}, function(data) {
+                var statusLabel = data['meta'][5].toLowerCase();
                 table = "<div id='scansummary-content'>";
-                table += "<h4>Meta Information</h4>";
+                table += "<h4 data-translate='meta_information'>Meta Information</h4>";
                 table += "<table class='table table-bordered table-striped'>";
-                table += "<tr><td>Name:</td><td>" + data['meta'][0] + "</td></tr>";
-                table += "<tr><td>Internal ID:</td><td>${id}</td></tr>";
-                table += "<tr><td>Target:</td><td>" + data['meta'][1] + "</td></tr>";
-                table += "<tr><td>Started:</td><td>" + data['meta'][3] + "</td></tr>";
-                table += "<tr><td>Completed:</td><td>" + data['meta'][4] + "</td></tr>";
-                table += "<tr><td>Status:</td><td>" + data['meta'][5] + "</td></tr>";
+                table += "<tr><td data-translate='name_colon'>Name:</td><td>" + data['meta'][0] + "</td></tr>";
+                table += "<tr><td data-translate='internal_id_colon'>Internal ID:</td><td>${id}</td></tr>";
+                table += "<tr><td data-translate='target_colon'>Target:</td><td>" + data['meta'][1] + "</td></tr>";
+                table += "<tr><td data-translate='started_colon'>Started:</td><td>" + data['meta'][3] + "</td></tr>";
+                table += "<tr><td data-translate='completed_colon'>Completed:</td><td>" + data['meta'][4] + "</td></tr>";
+                table += "<tr><td data-translate='status_colon'>Status:</td><td><span data-translate='" + statusLabel + "'>" + data['meta'][5] + "</span></td></tr>";
                 table += "</table>";
-                table += "<h4>Global Settings</h4>";
+                table += "<h4 data-translate='global_settings'>Global Settings</h4>";
                 table += "<table class='table table-bordered table-striped' style='table-layout: fixed'>";
-                table += "<thead><tr><th>Option</th><th>Value</th></tr></thead><tbody>";
+                table += "<thead><tr><th data-translate='option'>Option</th><th data-translate='value'>Value</th></tr></thead><tbody>";
                 for (var key in data['config']) {
                     if (key.indexOf(":") > 0) {
                         continue;
                     }
-                    table += "<tr><td width=100%>" + data['configdesc'][key] + "</td><td>" + data['config'][key] + "</td></tr>";
+                    table += "<tr><td width=100% data-opt-key='" + key + "'>" + data['configdesc'][key] + "</td><td>" + data['config'][key] + "</td></tr>";
                 }
                 table += "</table>";
-                table += "<h4>Module Settings</h4>";
+                table += "<h4 data-translate='module_settings'>Module Settings</h4>";
                 table += "<div class='table-responsive'><table class='table table-bordered table-striped' style='table-layout: fixed'>";
-                table += "<thead><tr><th>Module</th> <th>Option</th> <th>Value</th></tr></thead><tbody>";
+                table += "<thead><tr><th data-translate='module'>Module</th> <th data-translate='option'>Option</th> <th data-translate='value'>Value</th></tr></thead><tbody>";
                 keys = [];
                 for (var key in data['config']) {
                     keys.push(key);
@@ -860,13 +888,14 @@
                     key = keys_s[i];
                     if (key.indexOf(":") > 0) {
                         bits = key.split(":");
-                        table += "<tr><td>" + bits[0] + "</td><td>" + data['configdesc'][key] + "</td><td>" + data['config'][key] + "</td></tr>";
+                        table += "<tr><td>" + bits[0] + "</td><td data-opt-key='" + key + "'>" + data['configdesc'][key] + "</td><td>" + data['config'][key] + "</td></tr>";
                     }
                 }
                 table += "</table></div></div>";
 
                 $("#loader").fadeOut(500);
                 $("#mainbody").append(table);
+                if (typeof window.translatePage === 'function') window.translatePage();
             });
         }
 
