@@ -3,10 +3,6 @@
 #
 # http://www.spiderfoot.net
 #
-# Written by: Michael Pellon <m@pellon.io>
-# Updated by: Chandrapal <bnchandrapal@protonmail.com>
-# Updated by: Steve Micallef <steve@binarypool.com>
-# Updated by: Steve Bate <svc-spiderfoot@stevebate.net>
 #    -> Inspired by https://github.com/combro2k/dockerfiles/tree/master/alpine-spiderfoot
 #
 # Usage:

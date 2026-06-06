@@ -4,10 +4,8 @@
 # Purpose:      SpiderFoot plug-in for looking up whether hosts are blocked by
 #               Yandex DNS.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     30/05/2018
-# Copyright:   (c) Steve Micallef 2018
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

@@ -4,10 +4,8 @@
 # Purpose:      SpiderFoot plug-in for scanning retrieved content by other
 #               modules (such as sfp_spider) and identifying credit card numbers.
 #
-# Author:      Krishnasis Mandal <krishnasis@hotmail.com>
 #
 # Created:     21/04/2020
-# Copyright:   (c) Steve Micallef
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

@@ -4,10 +4,8 @@
 # Purpose:      Searches the Tor search engine onionsearchengine.com for content
 #               related to the domain in question.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     27/10/2018
-# Copyright:   (c) Steve Micallef 2018
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

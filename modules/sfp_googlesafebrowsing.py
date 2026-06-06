@@ -4,10 +4,8 @@
 # Purpose:      SpiderFoot plug-in to check if the URL is included on any of the
 #               Google Safe Browsing lists
 #
-# Author:      Filip Aleksić <faleksicdev@gmail.com>
 #
 # Created:     2020-08-18
-# Copyright:   (c) Steve Micallef
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

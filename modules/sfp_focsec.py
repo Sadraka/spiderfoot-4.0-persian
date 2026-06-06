@@ -3,10 +3,8 @@
 # Name:        sfp_focsec
 # Purpose:     Look up IP address information from Focsec.
 #
-# Author:      <bcoles@gmail.com>
 #
 # Created:     2021-10-09
-# Copyright:   (c) bcoles 2021
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

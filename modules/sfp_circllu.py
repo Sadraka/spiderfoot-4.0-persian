@@ -3,10 +3,8 @@
 # Name:         sfp_circllu
 # Purpose:      Query circl.lu using their API
 #
-# Author:      Steve Micallef
 #
 # Created:     16/02/2018
-# Copyright:   (c) Steve Micallef 2018
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

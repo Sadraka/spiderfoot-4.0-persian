@@ -4,10 +4,8 @@
 # Purpose:      SpiderFoot plug-in for identifying non-standard HTTP headers
 #               in web server responses.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     01/12/2013
-# Copyright:   (c) Steve Micallef 2013
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

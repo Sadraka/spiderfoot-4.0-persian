@@ -2,10 +2,8 @@
 # Name:         sfp_clearbit
 # Purpose:      Query clearbit.com using their API.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     20/03/2017
-# Copyright:   (c) Steve Micallef
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

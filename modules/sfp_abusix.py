@@ -4,10 +4,8 @@
 # Purpose:     SpiderFoot plug-in for looking up whether IPs/Netblocks/Domains
 #              appear in the Abusix Mail Intelligence blacklist.
 #
-# Author:      <bcoles@gmail.com>
 #
 # Created:     2021-10-17
-# Copyright:   (c) bcoles 2021
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

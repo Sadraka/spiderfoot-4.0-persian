@@ -4,10 +4,8 @@
 # Purpose:      SpiderFoot plug-in for identifying potential Google Object Storage
 #               buckets related to the target.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     24/01/2020
-# Copyright:   (c) Steve Micallef 2020
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

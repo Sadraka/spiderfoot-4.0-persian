@@ -4,10 +4,8 @@
 # Purpose:      SpiderFoot plug-in for storing events to the local SpiderFoot
 #               SQLite database.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     14/05/2012
-# Copyright:   (c) Steve Micallef 2012
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

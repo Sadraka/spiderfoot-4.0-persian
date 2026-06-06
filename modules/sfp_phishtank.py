@@ -3,10 +3,8 @@
 # Name:         sfp_phishtank
 # Purpose:      Check if a host/domain is malicious according to PhishTank.
 #
-# Author:       steve@binarypool.com
 #
 # Created:     14/12/2013
-# Copyright:   (c) Steve Micallef, 2013
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

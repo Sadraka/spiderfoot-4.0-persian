@@ -4,10 +4,8 @@
 # Purpose:      Queries archive.org (Wayback machine) for historic versions of
 #               certain pages.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     20/07/2015
-# Copyright:   (c) Steve Micallef 2015
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

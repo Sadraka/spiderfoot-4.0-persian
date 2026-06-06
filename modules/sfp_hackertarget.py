@@ -5,10 +5,8 @@
 #               the same IP. Optionally, also perform a basic TCP/UDP port scan
 #               for commonly open ports using HackerTarget.com port scan tools.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     12/04/2014
-# Copyright:   (c) Steve Micallef 2014
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

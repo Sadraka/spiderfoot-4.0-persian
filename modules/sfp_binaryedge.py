@@ -3,10 +3,8 @@
 # Name:         sfp_binaryedge
 # Purpose:      Query binaryedge.io using their API
 #
-# Author:      Steve Micallef
 #
 # Created:     02/04/2019
-# Copyright:   (c) Steve Micallef 2019
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

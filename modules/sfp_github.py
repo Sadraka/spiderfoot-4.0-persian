@@ -4,10 +4,8 @@
 # Purpose:      Identifies public code repositories in Github associated with
 #               your target.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     21/07/2015
-# Copyright:   (c) Steve Micallef 2015
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

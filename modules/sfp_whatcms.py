@@ -3,10 +3,8 @@
 # Purpose:     SpiderFoot plug-in to check which web technology is used
 #              on a target website using WhatCMS API.
 #
-# Author:      <bcoles@gmail.com>
 #
 # Created:     2019-06-01
-# Copyright:   (c) bcoles 2019
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

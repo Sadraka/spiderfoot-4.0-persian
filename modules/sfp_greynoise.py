@@ -3,12 +3,10 @@
 # Name:         sfp_greynoise
 # Purpose:      Query GreyNoise's API
 #
-# Author:       Steve Micallef
 # Updated By:   Brad Chiappetta, GreyNoise
 #
 # Created:      20/11/2018
 # Updated:      15-Nov-2021
-# Copyright:    (c) Steve Micallef
 # Licence:      GPL
 # -------------------------------------------------------------------------------
 

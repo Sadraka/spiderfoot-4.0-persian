@@ -4,10 +4,8 @@
 # Purpose:      SpiderFoot plug-in for retrieving company information from
 #               OpenCorporates.
 #
-# Author:      <bcoles@gmail.com>
 #
 # Created:     2018-10-21
-# Copyright:   (c) bcoles 2018
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

@@ -5,10 +5,8 @@
 #               modules (such as sfp_spider) to identify phone numbers, and
 #               lookup carrier information in Google's libphonenumber DB.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     19/06/2016
-# Copyright:   (c) Steve Micallef 2016
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

@@ -4,10 +4,8 @@
 # Purpose:     Search EmailCrawlr for email addresses and phone numbers
 #              associated with a domain.
 #
-# Authors:     <bcoles@gmail.com>
 #
 # Created:     2020-06-19
-# Copyright:   (c) bcoles 2020
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

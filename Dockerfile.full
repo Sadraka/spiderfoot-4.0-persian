@@ -3,7 +3,6 @@
 #
 # http://www.spiderfoot.net
 #
-# Written by: TheTechromancer
 #
 
 FROM python:3

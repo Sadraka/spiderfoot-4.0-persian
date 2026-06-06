@@ -4,10 +4,8 @@
 # Purpose:     SpiderFoot plug-in for using the trufflehog tool.
 #              Tool: https://github.com/trufflesecurity/truffleHog
 #
-# Author:      <steve@binarypool.com>
 #
 # Created:     2022-04-02
-# Copyright:   (c) Steve Micallef 2022
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

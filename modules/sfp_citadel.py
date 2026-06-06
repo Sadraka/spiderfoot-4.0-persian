@@ -4,7 +4,6 @@
 # Purpose:     SpiderFoot plug-in to search Leak-Lookup using their API,
 #              for potential data breaches.
 #
-# Author:      sn <citadel.pw@protonmail.com>
 #
 # Created:     15/08/2017
 # Licence:     GPL

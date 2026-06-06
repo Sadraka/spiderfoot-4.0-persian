@@ -4,10 +4,8 @@
 # Purpose:      SpiderFoot plug-in for looking up whether IPs/Netblocks/Domains
 #               appear in an IP categorization table of hosting providers.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     16/08/2015
-# Copyright:   (c) Steve Micallef 2015
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

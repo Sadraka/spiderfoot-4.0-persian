@@ -4,10 +4,8 @@
 # Purpose:      Spiderfoot plugin to search spur.us API for any
 #               malicious activity by the target
 #
-# Author:      Krishnasis Mandal <krishnasis@hotmail.com>
 #
 # Created:     12/06/2020
-# Copyright:   (c) Steve Micallef
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

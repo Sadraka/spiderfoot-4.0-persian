@@ -4,10 +4,8 @@
 # Purpose:      SpiderFoot plug-in for scanning retrieved content by other
 #               modules (such as sfp_spider) and identifying ethereum addresses.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     03/09/2018
-# Copyright:   (c) Steve Micallef 2018
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

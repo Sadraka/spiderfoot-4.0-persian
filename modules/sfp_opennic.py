@@ -4,10 +4,8 @@
 # Purpose:     SpiderFoot plug-in for resolving host names on the OpenNIC
 #              alternative DNS system.
 #
-# Author:      <bcoles@gmail.com>
 #
 # Created:     2021-10-16
-# Copyright:   (c) bcoles 2021
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

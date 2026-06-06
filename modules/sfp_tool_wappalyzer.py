@@ -4,10 +4,8 @@
 # Purpose:      SpiderFoot plug-in for using the 'Wappalyzer' tool.
 #               Tool: https://github.com/EnableSecurity/wappalyzer
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     2022-04-02
-# Copyright:   (c) Steve Micallef 2022
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

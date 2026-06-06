@@ -4,10 +4,8 @@
 # Purpose:      SpiderFoot plug-in to identify the Geo-location of IP addresses
 #               identified by other modules using ipapi.com
 #
-# Author:      Krishnasis Mandal <krishnasis@hotmail.com>
 #
 # Created:     29/01/2021
-# Copyright:   (c) Steve Micallef
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

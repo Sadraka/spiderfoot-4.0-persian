@@ -2,10 +2,8 @@
 # Name:        sfp_scylla
 # Purpose:     Gather breach data from Scylla API.
 #
-# Author:      <bcoles@gmail.com>
 #
 # Created:     2019-09-06
-# Copyright:   (c) bcoles 2019
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

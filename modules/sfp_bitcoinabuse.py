@@ -3,10 +3,8 @@
 # Name:         sfp_bitcoinabuse
 # Purpose:      Check bitcoin address agains bitcoinabuse.com database
 #
-# Author:      Leo Trubach <leotrubach@gmail.com>
 #
 # Created:     2020-09-01
-# Copyright:   (c) Steve Micallef
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

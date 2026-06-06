@@ -3,10 +3,8 @@
 # Name:         sfp_securitytrails
 # Purpose:      Query securitytrails using their API
 #
-# Author:      Steve Micallef
 #
 # Created:     01/02/2017
-# Copyright:   (c) Steve Micallef 2017
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

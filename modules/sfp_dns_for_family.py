@@ -3,10 +3,8 @@
 # Name:        sfp_dns_for_family
 # Purpose:     Check if a host would be blocked by DNS for Family.
 #
-# Author:      <bcoles@gmail.com>
 #
 # Created:     2021-10-11
-# Copyright:   (c) bcoles 2021
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

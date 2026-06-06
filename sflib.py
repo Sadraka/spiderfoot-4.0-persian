@@ -3,10 +3,8 @@
 # Name:         sflib
 # Purpose:      Common functions used by SpiderFoot modules.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     26/03/2012
-# Copyright:   (c) Steve Micallef 2012
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

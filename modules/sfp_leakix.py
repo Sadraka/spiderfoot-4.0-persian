@@ -3,10 +3,8 @@
 # Name:        sfp_leakix
 # Purpose:     Search LeakIX for host data leaks, open ports, software and geoip.
 #
-# Authors:     <bcoles@gmail.com>
 #
 # Created:     2020-06-16
-# Copyright:   (c) bcoles 2020
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

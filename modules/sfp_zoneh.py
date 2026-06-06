@@ -4,10 +4,8 @@
 # Purpose:      Checks if a domain or IP appears on the zone-h.org defacement
 #               archive.
 #
-# Author:       steve@binarypool.com
 #
 # Created:     09/01/2014
-# Copyright:   (c) Steve Micallef, 2014
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

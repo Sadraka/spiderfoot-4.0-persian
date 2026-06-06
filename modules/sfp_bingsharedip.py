@@ -3,10 +3,8 @@
 # Name:         sfp_bingsharedip
 # Purpose:      Searches Bing for hosts sharing the same IP.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     12/04/2014
-# Copyright:   (c) Steve Micallef 2014
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

@@ -3,10 +3,8 @@
 # Name:        sfp_metadefender
 # Purpose:     Search MetaDefender API for IP address and domain reputation.
 #
-# Author:      <bcoles@gmail.com>
 #
 # Created:     2019-09-21
-# Copyright:   (c) bcoles 2019
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

@@ -4,10 +4,8 @@
 # Purpose:      SpiderFoot plug-in for attempting to resolve through brute-forcing
 #               common hostnames.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     06/07/2017
-# Copyright:   (c) Steve Micallef 2017
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

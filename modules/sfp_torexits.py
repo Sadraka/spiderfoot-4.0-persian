@@ -4,10 +4,8 @@
 # Purpose:     Checks if an IP address or netblock appears on the TOR Metrics
 #              exit node list.
 #
-# Author:       steve@binarypool.com
 #
 # Created:     14/12/2013
-# Copyright:   (c) Steve Micallef, 2013
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

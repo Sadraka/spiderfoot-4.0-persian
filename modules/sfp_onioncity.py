@@ -4,10 +4,8 @@
 # Purpose:      Searches the Tor search engine 'Onion City' using Google Custom
 #               Search for content related to the domain in question.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     15/07/2015
-# Copyright:   (c) Steve Micallef 2015
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

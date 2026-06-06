@@ -6,10 +6,8 @@
 #               see if those sites link back to the original site, indicating a
 #               potential relationship between the external sites.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     06/04/2012
-# Copyright:   (c) Steve Micallef 2012
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

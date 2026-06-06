@@ -3,10 +3,8 @@
 # Name:         sfdb
 # Purpose:      Common functions for working with the database back-end.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     15/05/2012
-# Copyright:   (c) Steve Micallef 2012
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

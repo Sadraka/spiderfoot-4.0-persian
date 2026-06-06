@@ -5,10 +5,8 @@
 #              to gather additional information about domain names and identified
 #              usernames.
 #
-# Author:      Krishnasis Mandal <krishnasis@hotmail.com>
 #
 # Created:     22/05/2020
-# Copyright:   (c) Steve Micallef
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

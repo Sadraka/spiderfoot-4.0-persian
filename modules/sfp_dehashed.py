@@ -2,10 +2,8 @@
 # Name:        sfp_dehashed
 # Purpose:     Gather breach data from Dehashed API.
 #
-# Author:      <krishnasis@hotmail.com>
 #
 # Created:     16-01-2021
-# Copyright:   (c) Steve Micallef
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

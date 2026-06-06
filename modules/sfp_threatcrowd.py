@@ -3,10 +3,8 @@
 # Name:         sfp_threatcrowd
 # Purpose:      Query threatcrowd.org for identified IP addresses.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     21/11/2016
-# Copyright:   (c) Steve Micallef
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

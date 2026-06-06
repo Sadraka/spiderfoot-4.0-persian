@@ -4,10 +4,8 @@
 # Purpose:      SpiderFoot plug-in for collecting raw DNS records.
 #               Also extracts hostnames from SPF records.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     07/07/2017
-# Copyright:   (c) Steve Micallef 2017
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

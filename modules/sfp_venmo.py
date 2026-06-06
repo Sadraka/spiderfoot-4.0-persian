@@ -2,10 +2,8 @@
 # Name:        sfp_venmo
 # Purpose:     Gather user information from Venmo API.
 #
-# Author:      <bcoles@gmail.com>
 #
 # Created:     2019-07-16
-# Copyright:   (c) bcoles 2019
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

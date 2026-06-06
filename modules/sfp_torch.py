@@ -4,10 +4,8 @@
 # Purpose:      Searches the Tor search engine 'TORCH' for content related
 #               to the domain in question.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     20/06/2017
-# Copyright:   (c) Steve Micallef 2017
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

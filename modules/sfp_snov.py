@@ -4,10 +4,8 @@
 # Purpose:      Spiderfoot plugin to search Snov.IO API for emails
 #               associated to target domain
 #
-# Author:      Krishnasis Mandal <krishnasis@hotmail.com>
 #
 # Created:     16/05/2020
-# Copyright:   (c) Steve Micallef
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

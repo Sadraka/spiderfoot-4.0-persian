@@ -3,10 +3,8 @@
 # Name:        sfp_fsecure_riddler
 # Purpose:     Query F-Secure Riddler.io API.
 #
-# Author:      <bcoles@gmail.com>
 #
 # Created:     2019-09-16
-# Copyright:   (c) bcoles 2019
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

@@ -4,10 +4,8 @@
 # Purpose:      SpiderFoot plug-in for searching Whois servers for domain names
 #               and netblocks identified.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     06/04/2015
-# Copyright:   (c) Steve Micallef 2012
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

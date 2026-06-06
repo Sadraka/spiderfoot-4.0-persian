@@ -3,10 +3,8 @@
 # Name:         sfp_projectdiscovery
 # Purpose:      Search for hosts/subdomains using chaos.projectdiscovery.io
 #
-# Author:      Filip Aleksić <faleksicdev@gmail.com>
 #
 # Created:     2020-09-04
-# Copyright:   (c) Steve Micallef
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

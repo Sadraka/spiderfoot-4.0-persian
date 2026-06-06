@@ -3,10 +3,8 @@
 # Name:         sfp_ipregistry
 # Purpose:      ipregistry database query module.
 #
-# Author:      Leo Trubach <leotrubach@gmail.com>
 #
 # Created:     2020-09-08
-# Copyright:   (c) Steve Micallef
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

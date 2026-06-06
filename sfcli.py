@@ -4,10 +4,8 @@
 # Name:        sfcli
 # Purpose:     Command Line Interface for SpiderFoot.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     03/05/2017
-# Copyright:   (c) Steve Micallef 2017
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

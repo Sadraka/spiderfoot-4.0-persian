@@ -4,10 +4,8 @@
 # Purpose:      SpiderFoot plug-in for identifying domains that look similar
 #               to the one being queried.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     26/11/2016
-# Copyright:   (c) Steve Micallef 2012
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

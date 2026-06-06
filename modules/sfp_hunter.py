@@ -2,10 +2,8 @@
 # Name:         sfp_hunter
 # Purpose:      Query hunter.io using their API.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     22/02/2017
-# Copyright:   (c) Steve Micallef
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

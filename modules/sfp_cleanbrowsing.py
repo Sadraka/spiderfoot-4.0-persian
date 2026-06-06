@@ -5,10 +5,8 @@
 #              CleanBrowsing.org DNS content family filters
 #              (185.228.168.168 and 185.228.168.169).
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     30/05/2018
-# Copyright:   (c) Steve Micallef 2018
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

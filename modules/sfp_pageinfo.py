@@ -5,10 +5,8 @@
 #               modules (such as sfp_spider) and building up information about
 #               the page, such as whether it uses Javascript, has forms, and more.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     02/05/2012
-# Copyright:   (c) Steve Micallef 2012
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

@@ -3,10 +3,8 @@
 # Name:        sfp_jsonwhoiscom
 # Purpose:     Search JsonWHOIS.com for WHOIS records associated with a domain.
 #
-# Authors:     <bcoles@gmail.com>
 #
 # Created:     2020-06-20
-# Copyright:   (c) bcoles 2020
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

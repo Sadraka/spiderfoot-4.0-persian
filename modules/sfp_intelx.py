@@ -4,10 +4,8 @@
 # Purpose:      Query IntelligenceX (intelx.io) for identified IP addresses,
 #               domains, e-mail addresses and phone numbers.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     28/04/2019
-# Copyright:   (c) Steve Micallef
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

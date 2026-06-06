@@ -2,10 +2,8 @@
 # Name:        sfp_fullcontact
 # Purpose:     Gather domain and e-mail information from FullContact.com API.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     06/02/2018
-# Copyright:   (c) Steve Micallef
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

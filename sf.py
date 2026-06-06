@@ -4,10 +4,8 @@
 # Name:         sf
 # Purpose:      Main wrapper for calling all SpiderFoot modules
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     03/04/2012
-# Copyright:   (c) Steve Micallef 2012
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 
@@ -90,7 +88,7 @@ def main():
 
     # Legacy way to run the server
     args = None
-    p = argparse.ArgumentParser(description=f"Advanced Analytical Junction {__version__}: Open Source Intelligence Automation.")
+    p = argparse.ArgumentParser(description=f"SpiderFoot {__version__}: Open Source Intelligence Automation.")
     p.add_argument("-d", "--debug", action='store_true', help="Enable debug output.")
     p.add_argument("-l", metavar="IP:port", help="IP and port to listen on.")
     p.add_argument("-m", metavar="mod1,mod2,...", type=str, help="Modules to enable.")
@@ -115,7 +113,7 @@ def main():
     args = p.parse_args()
 
     if args.version:
-        print(f"Advanced Analytical Junction {__version__}: Open Source Intelligence Automation.")
+        print(f"SpiderFoot {__version__}: Open Source Intelligence Automation.")
         sys.exit(0)
 
     if args.max_threads:
@@ -545,7 +543,7 @@ def start_web_server(sfWebUiConfig, sfConfig, loggingQueue=None):
         warn_msg = "\n********************************************************************\n"
         warn_msg += "Warning: passwd file contains no passwords. Authentication disabled.\n"
         warn_msg += "Please consider adding authentication to protect this instance!\n"
-        warn_msg += "Please refer to your organization's internal security policies.\n"
+        warn_msg += "Refer to https://www.spiderfoot.net/documentation/#security.\n"
         warn_msg += "********************************************************************\n"
         log.warning(warn_msg)
 
@@ -587,7 +585,7 @@ def start_web_server(sfWebUiConfig, sfConfig, loggingQueue=None):
 
     print("")
     print("*************************************************************")
-    print(" Use Advanced Analytical Junction by starting your web browser of choice and ")
+    print(" Use SpiderFoot by starting your web browser of choice and ")
     print(f" browse to {url}")
     print("*************************************************************")
     print("")

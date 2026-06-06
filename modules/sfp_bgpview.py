@@ -3,10 +3,8 @@
 # Name:        sfp_bgpview
 # Purpose:     Query BGPView API - https://bgpview.docs.apiary.io/
 #
-# Author:      <bcoles@gmail.com>
 #
 # Created:     2019-09-03
-# Copyright:   (c) bcoles 2019
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

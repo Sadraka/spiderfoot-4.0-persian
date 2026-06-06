@@ -3,10 +3,8 @@
 # Name:         sfp_tool_retirejs
 # Purpose:      SpiderFoot plug-in for using the 'Retire.js' tool.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     2022-04-02
-# Copyright:   (c) Steve Micallef 2022
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

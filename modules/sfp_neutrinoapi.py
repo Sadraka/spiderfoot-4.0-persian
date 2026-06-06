@@ -4,10 +4,8 @@
 # Purpose:     SpiderFoot plug-in to search NeutrinoAPI for IP address info,
 #              check IP address reputation, and search for phone location.
 #
-# Author:      <bcoles@gmail.com>
 #
 # Created:     2018-11-30
-# Copyright:   (c) bcoles 2018
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

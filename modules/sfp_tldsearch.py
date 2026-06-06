@@ -4,10 +4,8 @@
 # Purpose:      SpiderFoot plug-in for identifying the existence of this target
 #               on other TLDs.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     31/08/2013
-# Copyright:   (c) Steve Micallef 2013
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

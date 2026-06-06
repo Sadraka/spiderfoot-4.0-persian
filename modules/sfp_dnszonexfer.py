@@ -3,10 +3,8 @@
 # Name:         sfp_dnszonexfer
 # Purpose:      SpiderFoot plug-in for attempting a DNS zone transfer.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     22/08/2018
-# Copyright:   (c) Steve Micallef 2018
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

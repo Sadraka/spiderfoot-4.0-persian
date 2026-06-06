@@ -3,10 +3,8 @@
 # Name:         sfp_c99
 # Purpose:      SpiderFoot plug-in that queries c99 API
 #
-# Author:      Filip Aleksić <faleksicdev@gmail.com>
 #
 # Created:     2020-08-27
-# Copyright:   (c) Steve Micallef
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

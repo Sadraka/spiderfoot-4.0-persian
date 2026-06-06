@@ -7,10 +7,8 @@
 #              - https://blog.erbbysam.com/index.php/2019/02/09/dnsgrep/
 #              - https://github.com/erbbysam/DNSGrep
 #
-# Author:      <bcoles@gmail.com>
 #
 # Created:     2020-03-14
-# Copyright:   (c) bcoles 2020
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

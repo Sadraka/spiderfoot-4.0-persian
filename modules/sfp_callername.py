@@ -3,10 +3,8 @@
 # Purpose:     SpiderFoot plug-in to search CallerName.com for a phone number
 #              (US only) and retrieve location and reputation information.
 #
-# Author:      <bcoles@gmail.com>
 #
 # Created:     2019-05-28
-# Copyright:   (c) bcoles 2019
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

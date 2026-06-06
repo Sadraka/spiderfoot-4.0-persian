@@ -4,10 +4,8 @@
 # Purpose:     Checks if an IP address or netblock is malicious according to
 #              EmergingThreats.net.
 #
-# Author:      steve@binarypool.com
 #
 # Created:     16/05/2020
-# Copyright:   (c) Steve Micallef, 2020
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

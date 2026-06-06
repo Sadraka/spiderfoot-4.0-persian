@@ -4,10 +4,8 @@
 # Purpose:     SpiderFoot plug-in for using the WAFW00F tool.
 #              Tool: https://github.com/EnableSecurity/wafw00f
 #
-# Author:      <bcoles@gmail.com>
 #
 # Created:     2021-03-10
-# Copyright:   (c) bcoles 2021
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

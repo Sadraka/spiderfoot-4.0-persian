@@ -3,10 +3,8 @@
 # Name:         sfp_reversewhois
 # Purpose:      Scrape reversewhois.io
 #
-# Author:      TheTechromancer
 #
 # Created:     05/20/2021
-# Copyright:   (c) Steve Micallef 2021
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

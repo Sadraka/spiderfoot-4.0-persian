@@ -4,10 +4,8 @@
 # Purpose:     Spiderfoot plugin to query SocialLinks.io to gather intelligence
 #              from social media platforms and dark web.
 #
-# Author:      Krishnasis Mandal <krishnasis@hotmail.com>
 #
 # Created:     20/02/2021
-# Copyright:   (c) Steve Micallef
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

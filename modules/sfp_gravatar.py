@@ -4,10 +4,8 @@
 #              and retrieve user information, including username, name, phone
 #              numbers, additional email addresses, and social media usernames.
 #
-# Author:      <bcoles@gmail.com>
 #
 # Created:     2019-05-26
-# Copyright:   (c) bcoles 2019
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

@@ -3,10 +3,8 @@
 # Name:         sfp_tool_nmap
 # Purpose:      SpiderFoot plug-in for using nmap to perform OS fingerprinting.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     03/05/2020
-# Copyright:   (c) Steve Micallef 2020
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

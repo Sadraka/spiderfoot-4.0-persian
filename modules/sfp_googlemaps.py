@@ -4,10 +4,8 @@
 # Purpose:      SpiderFoot plug-in to identify historical certificates for a domain
 #               from googlemaps.sh, and from this identify hostnames.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     18/03/2017
-# Copyright:   (c) Steve Micallef 2017
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

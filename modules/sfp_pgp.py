@@ -5,10 +5,8 @@
 #               key servers as well as finding e-mail addresses belonging to
 #               your target.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     17/02/2015
-# Copyright:   (c) Steve Micallef 2015
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

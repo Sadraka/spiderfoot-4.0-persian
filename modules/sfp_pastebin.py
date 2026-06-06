@@ -4,10 +4,8 @@
 # Purpose:      Searches Google for PasteBin content related to the domain in
 #               question.
 #
-# Author:      Steve Micallef <steve@binarypool.com> and ShellCodeNoobx
 #
 # Created:     20/03/2014
-# Copyright:   (c) Steve Micallef 2014
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

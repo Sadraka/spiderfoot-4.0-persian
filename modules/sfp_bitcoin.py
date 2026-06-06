@@ -4,10 +4,8 @@
 # Purpose:      SpiderFoot plug-in for scanning retrieved content by other
 #               modules (such as sfp_spider) and identifying bitcoin numbers.
 #
-# Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     27/05/2017
-# Copyright:   (c) Steve Micallef 2017
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 
