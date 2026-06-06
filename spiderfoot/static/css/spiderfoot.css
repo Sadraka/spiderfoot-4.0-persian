@@ -247,17 +247,34 @@ html[dir="rtl"] .brand-logo {
   padding-right: 0;
 }
 
-html[dir="rtl"] .navbar-nav {
-  float: right !important;
-  margin: 0;
-}
-
-html[dir="rtl"] .navbar-nav>li {
-  float: right !important;
-}
-
-html[dir="rtl"] .navbar-right {
+html[dir="rtl"] .navbar-toggle {
   float: left !important;
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+html[dir="rtl"] .navbar-collapse {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+html[dir="rtl"] .navbar-nav {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  html[dir="rtl"] .navbar-nav {
+    float: right !important;
+  }
+
+  html[dir="rtl"] .navbar-nav > li {
+    float: right !important;
+  }
+
+  html[dir="rtl"] .navbar-right {
+    float: left !important;
+  }
 }
 
 html[dir="rtl"] .pull-right {
