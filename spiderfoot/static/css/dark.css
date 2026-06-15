@@ -95,6 +95,14 @@ a {
   display: none;
 }
 
+.brand-logo.light {
+  display: none;
+}
+
+.brand-logo.dark {
+  display: inline-flex;
+}
+
 .fade.in {
   background: #1b1b1b !important;
 }

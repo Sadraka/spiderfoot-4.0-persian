@@ -15,10 +15,25 @@ body {
 }
 
 .brand-logo {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   float: left;
   padding-top: 5px;
   padding-right: 20px;
+}
+
+.brand-logo.light {
+  display: inline-flex;
+}
+
+.brand-logo.dark {
+  display: none;
+}
+
+.brand-text {
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .spiderfoot-header-image {
