@@ -646,3 +646,24 @@ html[dir="rtl"] #scansummary-content h4 {
   text-align: right;
   direction: rtl;
 }
+
+/* RTL: About Modal alignment and text flow */
+html[dir="rtl"] #aboutmodal {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+html[dir="rtl"] #aboutmodal .modal-header .modal-title {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+html[dir="rtl"] #aboutmodal .modal-body p {
+  text-align: right !important;
+  direction: rtl !important;
+  unicode-bidi: normal !important;
+}
+
+html[dir="rtl"] #aboutmodal .modal-body span {
+  unicode-bidi: normal !important;
+}
