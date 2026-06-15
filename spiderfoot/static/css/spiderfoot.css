@@ -11,41 +11,39 @@ body {
   image-rendering: crisp-edges;
   -ms-interpolation-mode: nearest-neighbor;
   /* IE (non-standard property) */
-  margin-top: -10px;
+  margin-top: 0 !important;
 }
 
 .brand-logo {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  direction: ltr !important;
+  gap: 8px;
   float: left;
-  padding-top: 5px;
-  padding-right: 20px;
+  padding: 0 20px 0 0 !important;
+  margin: 0 !important;
+  height: 50px;
+  direction: ltr !important;
 }
 
 .brand-logo.light {
-  display: inline-flex;
+  display: inline-flex !important;
 }
 
 .brand-logo.dark {
-  display: none;
+  display: none !important;
 }
 
 .brand-text {
   font-weight: bold;
   font-size: 12px;
-}
-
-.brand-logo .spiderfoot-header-image {
-  padding-top: 0 !important;
+  vertical-align: middle;
 }
 
 .spiderfoot-header-image {
   height: 35px;
-  padding-top: 5px;
+  padding-top: 0;
   image-rendering: auto;
+  vertical-align: middle;
 }
 
 table {
@@ -239,6 +237,16 @@ input:checked+.slider:before {
 
 .footer {
   padding: 10px;
+}
+
+/* در حالت LTR متن فارسی مخفی باشه */
+html[dir="ltr"] #footer-persian {
+  display: none !important;
+}
+
+/* در LTR علامت © رو از footer-english بگیریم */
+html[dir="ltr"] #footer-copy::after {
+  content: " ";
 }
 
 .download-button {

@@ -44,14 +44,20 @@ let lang = localStorage.getItem("lang") || "fa";
 
 // Function to apply language styling & direction
 const applyLangStyles = (currentLang) => {
+    const footerPersian = document.getElementById('footer-persian');
+    const footerEnglish = document.getElementById('footer-english');
     if (currentLang === "fa") {
         document.documentElement.setAttribute("dir", "rtl");
         document.documentElement.setAttribute("lang", "fa");
         document.body.classList.add("rtl-mode");
+        if (footerPersian) footerPersian.style.display = 'inline';
+        if (footerEnglish) footerEnglish.style.order = '2';
     } else {
         document.documentElement.setAttribute("dir", "ltr");
         document.documentElement.setAttribute("lang", "en");
         document.body.classList.remove("rtl-mode");
+        if (footerPersian) footerPersian.style.display = 'none';
+        if (footerEnglish) footerEnglish.style.order = '';
     }
 };
 
